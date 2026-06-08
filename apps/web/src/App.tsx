@@ -133,21 +133,11 @@
 
 // export default App;
 
-// import LoginPage from "./pages/login";
-
-// function App() {
-//   return <LoginPage />;
-// }
-
-// export default App;
+import LoginPage from "./pages/login";
 
 function App() {
-  return (
-    <div style={{ padding: "20px" }}>
-      <h1>Eraxis Working</h1>
-      <p>Deployment successful.</p>
-    </div>
-  );
+  return <LoginPage />;
 }
 
 export default App;
+
