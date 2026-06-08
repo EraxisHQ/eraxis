@@ -122,21 +122,21 @@
 // export default App
 
 
-function App() {
-  return (
-    <div>
-      <h1>Eraxis</h1>
-      <p>Platform initialization successful.</p>
-    </div>
-  );
-}
-
-// export default App;
-
-// import LoginPage from "./pages/login";
-
 // function App() {
-//   return <LoginPage />;
+//   return (
+//     <div>
+//       <h1>Eraxis</h1>
+//       <p>Platform initialization successful.</p>
+//     </div>
+//   );
 // }
 
 // export default App;
+
+import LoginPage from "./pages/login";
+
+function App() {
+  return <LoginPage />;
+}
+
+export default App;
