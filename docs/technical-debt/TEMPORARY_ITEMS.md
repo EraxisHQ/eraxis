@@ -57,3 +57,20 @@ Expand AuthUser with tenant, role and permission information
 
 Status:
 OPEN
+=======================================================
+TD-004
+
+Module:
+Login
+
+Temporary Item:
+Direct App.tsx page rendering
+
+Reason:
+Router not implemented
+
+Future Fix:
+Replace with React Router
+
+Status:
+OPEN
