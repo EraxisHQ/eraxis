@@ -41,3 +41,19 @@ DEFERRED
 Priority:
 LOW
 ===================================================
+TD-003
+
+Module:
+Authentication
+
+Temporary Item:
+Minimal Auth Context
+
+Reason:
+Tenant, User, RBAC modules not yet implemented
+
+Future Fix:
+Expand AuthUser with tenant, role and permission information
+
+Status:
+OPEN
