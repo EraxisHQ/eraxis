@@ -2,8 +2,9 @@ import {
   createContext,
   useContext,
   useState,
-  ReactNode,
 } from "react";
+
+import type { ReactNode } from "react";
 
 import type { AuthUser } from "../types/auth-user";
 

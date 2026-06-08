@@ -1,0 +1,1 @@
+Eraxis uses type-only imports for TypeScript types.
