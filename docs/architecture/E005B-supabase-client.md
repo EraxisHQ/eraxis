@@ -19,3 +19,24 @@ Connect Eraxis frontend to Supabase.
 ## Status
 
 Implemented
+
+## Purpose
+
+Connect Eraxis frontend to Supabase services.
+
+## Services
+
+* Authentication
+* Database
+* Storage
+
+## Files
+
+apps/web/src/lib/supabase.ts
+
+apps/web/.env
+
+## Status
+
+Implemented
+
