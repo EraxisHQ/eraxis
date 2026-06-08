@@ -20,3 +20,24 @@ Before E020
 
 Status:
 OPEN
+=====================================================
+TD-002
+
+Module:
+Infrastructure
+
+Current:
+apps/web/src/lib/supabase.ts
+
+Future:
+packages/infrastructure/supabase
+
+Reason:
+Single app currently. Shared infrastructure package will be created when a second application or service requires it.
+
+Status:
+DEFERRED
+
+Priority:
+LOW
+===================================================
