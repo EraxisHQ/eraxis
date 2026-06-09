@@ -39,8 +39,8 @@ export default function Topbar() {
                 {/* <button>Theme</button> */}
                 <button onClick={toggleTheme}>
                     {theme === "light"
-                        ? "Dark"
-                        : "Light"}
+                        ? "🌙 Dark"
+                        : "☀️ Light"}
                 </button>
                 <button>Language</button>
                 <button>User</button>

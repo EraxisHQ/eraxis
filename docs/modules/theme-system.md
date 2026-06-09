@@ -15,6 +15,12 @@ Features
 - Theme Persistence
 - Theme Toggle
 
+Current Features
+
+✓ Light Theme
+✓ Dark Theme
+✓ Local Storage Persistence
+
 Technical Debt
 
 - TD-011
