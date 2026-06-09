@@ -84,4 +84,22 @@ Replace with React Router
 Status:
 OPEN
 ==========================================
+TD-006
 
+Module:
+Authentication
+
+Temporary Item:
+Auth state stored only in React Context
+
+Reason:
+Global state architecture not finalized
+
+Future Fix:
+Evaluate Zustand later
+
+Status:
+OPEN
+
+Priority:
+LOW
