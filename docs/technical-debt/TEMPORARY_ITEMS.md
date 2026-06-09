@@ -162,3 +162,47 @@ OPEN
 
 Priority:
 MEDIUM
+=====================================
+TD-009
+
+Module:
+Navigation
+
+Temporary Item:
+Hardcoded sidebar menu
+
+Reason:
+Plugin registry not implemented
+
+Future Fix:
+Generate menu from plugin manifests
+
+Target:
+E019 Plugin Registry
+
+Status:
+OPEN
+
+Priority:
+MEDIUM
+TD-010
+
+Module:
+Dashboard Shell
+
+Temporary Item:
+Placeholder topbar controls
+
+Reason:
+Theme, localization and profile modules not implemented
+
+Future Fix:
+Connect controls to actual services
+
+Status:
+OPEN
+
+Priority:
+LOW
+==================================
+
