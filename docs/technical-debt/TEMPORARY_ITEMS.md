@@ -280,3 +280,26 @@ OPEN
 Priority:
 LOW
 ===================================================
+TD-012
+
+Module:
+Localization
+
+Temporary Item:
+Translation dictionaries stored in frontend
+
+Reason:
+Translation service not implemented
+
+Future Fix:
+Move translations to shared localization package
+
+Target:
+After Plugin Registry
+
+Status:
+OPEN
+
+Priority:
+LOW
+=====================================
