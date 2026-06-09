@@ -14,6 +14,17 @@ Features
 - Language Persistence
 - Translation Dictionary
 
+Current Languages
+
+✓ English
+✓ Hindi
+✓ Odia
+✓ Russian
+
+Persistence
+
+✓ Local Storage
+
 Technical Debt
 
 - TD-012

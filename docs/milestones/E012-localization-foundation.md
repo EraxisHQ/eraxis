@@ -1,7 +1,7 @@
 # E012 Localization Foundation
 
 Status:
-IN PROGRESS
+COMPLETED
 
 Completed
 
@@ -12,8 +12,8 @@ Completed
 □ Localization Hook
 □ Language Switcher
 □ Persistence
-
-Pending
 □ Translate Navigation
 □ Translate Dashboard Widgets
 □ Testing
+
+Pending
