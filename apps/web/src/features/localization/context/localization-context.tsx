@@ -27,6 +27,7 @@ import {
 import { en } from "../translations/en";
 import { hi } from "../translations/hi";
 import { od } from "../translations/od";
+import { ru } from "../translations/ru";
 
 type TranslationDictionary =
   typeof en;
@@ -66,7 +67,8 @@ export function LocalizationProvider({
     if (
       savedLanguage === "en" ||
       savedLanguage === "hi" ||
-      savedLanguage === "od"
+      savedLanguage === "od" ||
+      savedLanguage === "ru"
     ) {
       setLanguage(savedLanguage);
     }
@@ -84,6 +86,8 @@ export function LocalizationProvider({
       ? hi
       : language === "od"
       ? od
+      : language === "ru"
+      ? ru
       : en;
 
   return (

@@ -14,4 +14,6 @@ Completed
 □ Persistence
 
 Pending
+□ Translate Navigation
+□ Translate Dashboard Widgets
 □ Testing
