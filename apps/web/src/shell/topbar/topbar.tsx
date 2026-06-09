@@ -70,6 +70,10 @@ export default function Topbar() {
                     <option value="od">
                         Odia
                     </option>
+
+                    <option value="ru">
+                        Russian
+                    </option>
                 </select>
                 <button>User</button>
             </div>
