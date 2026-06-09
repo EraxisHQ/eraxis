@@ -257,3 +257,26 @@ OPEN
 Priority:
 LOW
 =======================================
+TD-011
+
+Module:
+Theme
+
+Temporary Item:
+Theme preference stored in Local Storage
+
+Reason:
+User Preferences module not implemented
+
+Future Fix:
+Store theme in user profile settings
+
+Target:
+After User Module
+
+Status:
+OPEN
+
+Priority:
+LOW
+===================================================
