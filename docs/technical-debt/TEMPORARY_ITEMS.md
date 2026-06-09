@@ -66,6 +66,9 @@ AuthUser should contain:
 
 Status:
 OPEN
+
+Priority:
+HIGH
 =======================================================
 TD-004
 
@@ -83,6 +86,9 @@ Replace with React Router
 
 Status:
 OPEN
+
+Target:
+E009 Protected Routes / Router
 ==========================================
 TD-006
 
@@ -90,16 +96,69 @@ Module:
 Authentication
 
 Temporary Item:
-Auth state stored only in React Context
+Authentication state managed only through React Context
 
 Reason:
-Global state architecture not finalized
+Application state architecture not finalized
 
 Future Fix:
-Evaluate Zustand later
+Evaluate:
+
+- React Context
+- Zustand
+- Redux Toolkit
+
+and standardize on one approach
 
 Status:
 OPEN
 
 Priority:
 LOW
+=======================================
+TD-007
+
+Module:
+UI
+
+Temporary Item:
+Theme engine not implemented
+
+Reason:
+Dashboard shell not built
+
+Future Fix:
+
+- Theme Provider
+- Dark Mode
+- Light Mode
+- User Theme Preferences
+
+Status:
+OPEN
+
+Priority:
+MEDIUM
+==============================
+TD-008
+
+Module:
+Localization
+
+Temporary Item:
+Multi-language system not implemented
+
+Reason:
+Core localization infrastructure not built
+
+Future Fix:
+
+- i18n Framework
+- Translation Files
+- Language Switcher
+
+Status:
+OPEN
+
+Priority:
+MEDIUM
