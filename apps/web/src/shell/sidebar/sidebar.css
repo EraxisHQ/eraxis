@@ -42,3 +42,7 @@
 .sidebar-nav li:hover {
   background: var(--color-sidebar-hover);
 }
+
+.sidebar-nav li:first-child {
+  background: var(--color-primary);
+}

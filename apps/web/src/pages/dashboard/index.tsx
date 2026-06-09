@@ -1,29 +1,3 @@
-// /**
-//  * =====================================
-//  * Eraxis
-//  * Module: Dashboard
-//  *
-//  * Purpose:
-//  * Main dashboard page.
-//  *
-//  * Technical Debt:
-//  * - TD-006
-//  *
-//  * =====================================
-//  */
-
-// export default function DashboardPage() {
-//   return (
-//     <div style={{ padding: "24px" }}>
-//       <h1>Welcome to Eraxis</h1>
-
-//       <p>Core Platform Ready</p>
-
-//       <p>Current Tenant: Not Assigned</p>
-//     </div>
-//   );
-// }
-
 /**
  * =====================================
  * Eraxis
@@ -38,15 +12,52 @@
  */
 
 import DashboardLayout from "../../shell/dashboard-layout/dashboard-layout";
+import "./dashboard.css";
 
 export default function DashboardPage() {
   return (
     <DashboardLayout>
-      <h1>Welcome to Eraxis</h1>
+      <div className="dashboard-page">
 
-      <p>Core Platform Ready</p>
+        <section className="dashboard-header">
+          <h1>Welcome to Eraxis</h1>
+          <p>Core Platform Ready</p>
+        </section>
 
-      <p>Current Tenant: Not Assigned</p>
+        <section className="stats-grid">
+          <div className="stat-card">
+            <h3>Applications</h3>
+            <p>0</p>
+          </div>
+
+          <div className="stat-card">
+            <h3>Users</h3>
+            <p>0</p>
+          </div>
+
+          <div className="stat-card">
+            <h3>Tenants</h3>
+            <p>0</p>
+          </div>
+        </section>
+
+        <section className="info-grid">
+
+          <div className="panel">
+            <h2>System Status</h2>
+
+            <p>Platform operational.</p>
+          </div>
+
+          <div className="panel">
+            <h2>Recent Activity</h2>
+
+            <p>No activity available.</p>
+          </div>
+
+        </section>
+
+      </div>
     </DashboardLayout>
   );
 }

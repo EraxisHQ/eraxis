@@ -2,7 +2,7 @@
 
 ## Status
 
-Completed
+COMPLETED
 
 ## Objective
 

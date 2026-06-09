@@ -61,3 +61,31 @@ Typography:
 Layout:
 - Fixed Sidebar
 - Fixed Topbar
+
+Current Components
+
+- Sidebar
+- Topbar
+- Content Area
+
+Planned Components
+
+- Notification Center
+- User Profile
+- Global Search
+- Plugin Navigation
+
+Current Components
+
+- Sidebar
+- Topbar
+- Dashboard Widgets
+- Statistics Cards
+
+Dashboard Widgets
+
+- Applications Count
+- Users Count
+- Tenants Count
+- System Status
+- Recent Activity
