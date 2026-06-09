@@ -16,6 +16,10 @@ import "./topbar.css";
 import { useTheme }
     from "../../features/theme/hooks/use-theme";
 
+import {
+    useLocalization,
+} from "../../features/localization/hooks/use-localization";
+
 export default function Topbar() {
 
     const {
@@ -23,6 +27,10 @@ export default function Topbar() {
         toggleTheme,
     } = useTheme();
 
+    const {
+        language,
+        setLanguage,
+    } = useLocalization();
 
     return (
         <header className="topbar">
@@ -42,7 +50,27 @@ export default function Topbar() {
                         ? "🌙 Dark"
                         : "☀️ Light"}
                 </button>
-                <button>Language</button>
+                {/* <button>Language</button> */}
+                <select
+                    value={language}
+                    onChange={(event) =>
+                        setLanguage(
+                            event.target.value as any
+                        )
+                    }
+                >
+                    <option value="en">
+                        English
+                    </option>
+
+                    <option value="hi">
+                        Hindi
+                    </option>
+
+                    <option value="od">
+                        Odia
+                    </option>
+                </select>
                 <button>User</button>
             </div>
         </header>

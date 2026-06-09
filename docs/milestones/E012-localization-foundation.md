@@ -8,11 +8,10 @@ Completed
 □ Language Type
 □ Constants
 □ Translation Files
-
-Pending
-
 □ Localization Context
 □ Localization Hook
 □ Language Switcher
 □ Persistence
+
+Pending
 □ Testing

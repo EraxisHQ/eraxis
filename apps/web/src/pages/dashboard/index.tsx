@@ -13,14 +13,24 @@
 
 import DashboardLayout from "../../shell/dashboard-layout/dashboard-layout";
 import "./dashboard.css";
+import {
+  useLocalization,
+} from "../../features/localization/hooks/use-localization";
 
 export default function DashboardPage() {
+  const {
+    translations,
+  } = useLocalization();
+
   return (
     <DashboardLayout>
       <div className="dashboard-page">
 
         <section className="dashboard-header">
-          <h1>Welcome to Eraxis</h1>
+          {/* <h1>Welcome to Eraxis</h1> */}
+          <h1>
+            {translations.welcome}
+          </h1>
           <p>Core Platform Ready</p>
         </section>
 

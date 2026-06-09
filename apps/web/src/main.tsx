@@ -8,18 +8,18 @@ import {
   ThemeProvider,
 } from "./features/theme/context/theme-context";
 
-// createRoot(document.getElementById('root')!).render(
-//   <StrictMode>
-//     <App />
-//   </StrictMode>
-// );
+import {
+  LocalizationProvider,
+} from "./features/localization/context/localization-context";
 
 createRoot(
   document.getElementById("root")!
 ).render(
   <StrictMode>
     <ThemeProvider>
-      <App />
+      <LocalizationProvider>
+        <App />
+      </LocalizationProvider>
     </ThemeProvider>
   </StrictMode>
 );
