@@ -46,3 +46,23 @@
 .sidebar-nav li:first-child {
   background: var(--color-primary);
 }
+.nav-link {
+  display: block;
+
+  padding: 12px;
+
+  border-radius:
+    var(--radius-sm);
+
+  color:
+    var(--color-text-primary);
+
+  text-decoration: none;
+}
+
+.nav-link.active {
+  background:
+    var(--color-primary);
+
+  color: white;
+}
