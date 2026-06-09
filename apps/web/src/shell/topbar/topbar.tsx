@@ -13,7 +13,17 @@
 
 import "./topbar.css";
 
+import { useTheme }
+    from "../../features/theme/hooks/use-theme";
+
 export default function Topbar() {
+
+    const {
+        theme,
+        toggleTheme,
+    } = useTheme();
+
+
     return (
         <header className="topbar">
             {/* <div>
@@ -26,7 +36,12 @@ export default function Topbar() {
             />
 
             <div className="topbar-actions">
-                <button>Theme</button>
+                {/* <button>Theme</button> */}
+                <button onClick={toggleTheme}>
+                    {theme === "light"
+                        ? "Dark"
+                        : "Light"}
+                </button>
                 <button>Language</button>
                 <button>User</button>
             </div>

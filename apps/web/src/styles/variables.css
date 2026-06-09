@@ -31,4 +31,19 @@
 
   --shadow-md:
     0 4px 12px rgba(0,0,0,0.08);
+
+    [data-theme="dark"] {
+  --color-primary: #3b82f6;
+
+  --color-sidebar: #020617;
+  --color-sidebar-hover: #1e293b;
+
+  --color-background: #0f172a;
+  --color-surface: #1e293b;
+
+  --color-border: #334155;
+
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+}
 }
