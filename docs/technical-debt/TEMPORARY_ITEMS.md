@@ -7,21 +7,23 @@ Location:
 packages/core/auth/services/auth.service.ts
 
 Temporary Item:
-Direct import from apps/web
+Direct Supabase dependency
 
 Reason:
-Supabase infrastructure package not built yet
+Infrastructure package not implemented
 
 Future Fix:
-Move to packages/infrastructure/supabase
+Move Supabase client access to:
 
-Target:
-Before E020
+packages/infrastructure/supabase
 
 Status:
 OPEN
+
+Priority:
+MEDIUM
 =====================================================
-TD-002
+## TD-002
 
 Module:
 Infrastructure
@@ -41,7 +43,7 @@ DEFERRED
 Priority:
 LOW
 ===================================================
-TD-003
+## TD-003
 
 Module:
 Authentication
@@ -53,7 +55,14 @@ Reason:
 Tenant, User, RBAC modules not yet implemented
 
 Future Fix:
-Expand AuthUser with tenant, role and permission information
+
+AuthUser should contain:
+
+- userId
+- tenantId
+- branchId
+- roleId
+- permissions
 
 Status:
 OPEN
@@ -74,3 +83,28 @@ Replace with React Router
 
 Status:
 OPEN
+==========================================
+TD-005
+
+Module:
+Deployment
+
+Location:
+Vercel
+
+Temporary Item:
+Manual environment variable setup
+
+Reason:
+Initial project setup
+
+Future Fix:
+Create deployment documentation
+and infrastructure checklist
+
+Status:
+CLOSED
+
+Priority:
+LOW
+===========================================
