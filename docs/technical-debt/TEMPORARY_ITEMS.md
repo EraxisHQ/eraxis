@@ -70,32 +70,6 @@ OPEN
 Priority:
 HIGH
 =======================================================
-TD-004
-
-Module:
-Routing
-
-Temporary Item:
-Basic routing only
-
-Reason:
-Protected routes and plugin routes not implemented
-
-Future Fix:
-Add:
-- Protected Routes
-- Plugin Routing
-- Route Guards
-
-Status:
-PARTIALLY RESOLVED
-
-Priority:
-MEDIUM
-
-Target:
-E009 Protected Routes / Router
-==========================================
 TD-006
 
 Module:
