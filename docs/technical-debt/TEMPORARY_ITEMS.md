@@ -73,19 +73,25 @@ HIGH
 TD-004
 
 Module:
-Login
+Routing
 
 Temporary Item:
-Direct App.tsx page rendering
+Basic routing only
 
 Reason:
-Router not implemented
+Protected routes and plugin routes not implemented
 
 Future Fix:
-Replace with React Router
+Add:
+- Protected Routes
+- Plugin Routing
+- Route Guards
 
 Status:
-OPEN
+PARTIALLY RESOLVED
+
+Priority:
+MEDIUM
 
 Target:
 E009 Protected Routes / Router
@@ -205,4 +211,49 @@ OPEN
 Priority:
 LOW
 ==================================
+TD-009
 
+Module:
+Navigation
+
+Temporary Item:
+Sidebar menu hardcoded
+
+Reason:
+Plugin Registry not implemented
+
+Future Fix:
+Generate menu from plugin manifests
+
+Target:
+E019
+
+Status:
+OPEN
+
+Priority:
+MEDIUM
+==========================================
+TD-010
+
+Module:
+Dashboard Shell
+
+Temporary Item:
+Topbar controls are placeholders
+
+Reason:
+Theme, localization and profile modules not implemented
+
+Future Fix:
+Connect controls to actual services
+
+Target:
+E011-E014
+
+Status:
+OPEN
+
+Priority:
+LOW
+=======================================
