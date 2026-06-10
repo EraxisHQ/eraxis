@@ -8,10 +8,27 @@
  * =====================================
  */
 
+/**
+ * =====================================
+ * Eraxis
+ * Module: Settings
+ *
+ * Purpose:
+ * Centralized platform configuration.
+ *
+ * Status:
+ * Placeholder Page
+ * =====================================
+ */
+
 export default function SettingsPage() {
   return (
-    <h1>
-      Settings
-    </h1>
+    <div>
+      <h1>Settings</h1>
+
+      <p>
+        Settings module under development.
+      </p>
+    </div>
   );
 }

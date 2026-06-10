@@ -20,6 +20,7 @@ import {
 
 import LoginPage from "../../pages/login";
 import DashboardPage from "../../pages/dashboard";
+import SettingsPage from "../../pages/settings";
 
 export default function AppRouter() {
   return (
@@ -35,6 +36,11 @@ export default function AppRouter() {
           element={<DashboardPage />}
         />
       </Routes>
+
+      <Route
+        path="/settings"
+        element={<SettingsPage />}
+      />
     </BrowserRouter>
   );
 }
