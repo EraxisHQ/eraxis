@@ -48,3 +48,39 @@
 .settings-link:hover {
   background: var(--color-sidebar-hover);
 }
+
+.settings-card {
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  padding: 24px;
+
+  max-width: 500px;
+
+  margin-top: 24px;
+}
+
+.settings-card h2 {
+  margin-bottom: 12px;
+}
+
+.settings-card p {
+  margin-bottom: 16px;
+}
+
+.settings-card button {
+  padding: 10px 16px;
+
+  border: 1px solid var(--color-border);
+
+  background: var(--color-primary);
+
+  color: white;
+
+  border-radius: var(--radius-sm);
+
+  cursor: pointer;
+}
