@@ -52,12 +52,12 @@ export default function AppRouter() {
           path="/settings"
           element={<SettingsPage />}
         />
-      </Routes>
-
+     
       <Route
-  path="/profile"
-  element={<ProfilePage />}
-/>
+        path="/profile"
+        element={<ProfilePage />}
+      />
+       </Routes>
     </BrowserRouter>
   );
 }
