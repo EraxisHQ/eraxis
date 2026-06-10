@@ -358,3 +358,29 @@ OPEN
 
 Priority:
 MEDIUM
+=============================
+TD-016
+
+Module:
+Tenants
+
+Temporary Item:
+Hardcoded Tenant
+
+Location:
+default-tenant.ts
+
+Reason:
+Tenant Management not implemented.
+
+Future Fix:
+Load tenant from authenticated session.
+
+Target:
+E018
+
+Status:
+OPEN
+
+Priority:
+MEDIUM

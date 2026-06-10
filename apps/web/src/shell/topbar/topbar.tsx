@@ -24,6 +24,10 @@ import {
     useUser,
 } from "../../features/users/hooks/use-user";
 
+import {
+  useTenant,
+} from "../../features/tenants/hooks/use-tenant";
+
 export default function Topbar() {
 
     const {
@@ -38,6 +42,9 @@ export default function Topbar() {
 
     const user =
         useUser();
+
+        const tenant =
+  useTenant();
 
     return (
         <header className="topbar">
@@ -83,6 +90,9 @@ export default function Topbar() {
                     </option>
                 </select>
                 {/* <button>User</button> */}
+                <button>
+  {tenant.code}
+</button>
                 <button>
                     {user.firstName}
                 </button>
