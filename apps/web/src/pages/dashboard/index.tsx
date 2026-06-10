@@ -18,11 +18,6 @@ import {
 } from "../../features/localization/hooks/use-localization";
 
 
-import {
-  usePermission,
-} from "../../features/rbac/hooks/use-permission";
-
-
 export default function DashboardPage() {
   const {
     translations,
