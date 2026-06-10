@@ -40,9 +40,4 @@ export const NAVIGATION_ITEMS:
     group: "Administration",
   },
 
- {
-  label: "Settings",
-  path: ROUTES.SETTINGS,
-  group: "Administration",
-},
 ];
