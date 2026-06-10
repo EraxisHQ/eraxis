@@ -11,7 +11,6 @@
  *
  * =====================================
  */
-
 import {
   BrowserRouter,
   Routes,
@@ -20,6 +19,8 @@ import {
 
 import LoginPage from "../../pages/login";
 import DashboardPage from "../../pages/dashboard";
+import ApplicationsPage from "../../pages/applications";
+import AdministrationPage from "../../pages/administration";
 import SettingsPage from "../../pages/settings";
 
 export default function AppRouter() {
@@ -35,12 +36,22 @@ export default function AppRouter() {
           path="/dashboard"
           element={<DashboardPage />}
         />
-      </Routes>
 
-      <Route
-        path="/settings"
-        element={<SettingsPage />}
-      />
+        <Route
+          path="/applications"
+          element={<ApplicationsPage />}
+        />
+
+        <Route
+          path="/administration"
+          element={<AdministrationPage />}
+        />
+
+        <Route
+          path="/settings"
+          element={<SettingsPage />}
+        />
+      </Routes>
     </BrowserRouter>
   );
 }
