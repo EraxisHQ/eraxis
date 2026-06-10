@@ -24,12 +24,17 @@ import {
   TenantProvider,
 } from "./features/tenants/providers/tenant-provider";
 
+import {
+  ApplicationProvider,
+} from "./features/application-registry/providers/application-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
   <StrictMode>
     <ThemeProvider>
       <LocalizationProvider>
+        <ApplicationProvider>
         <TenantProvider>
         <UserProvider>
           <PermissionProvider>
@@ -37,6 +42,7 @@ createRoot(
           </PermissionProvider>
         </UserProvider>
         </TenantProvider>
+        </ApplicationProvider>
       </LocalizationProvider>
     </ThemeProvider>
   </StrictMode>

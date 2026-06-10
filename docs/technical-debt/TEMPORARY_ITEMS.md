@@ -52,7 +52,8 @@ Temporary Item:
 Minimal Auth Context
 
 Reason:
-Tenant, User, RBAC modules not yet implemented
+Auth context not yet integrated with
+User Provider, Tenant Provider and RBAC.
 
 Future Fix:
 
@@ -60,9 +61,11 @@ AuthUser should contain:
 
 - userId
 - tenantId
-- branchId
 - roleId
 - permissions
+
+Target:
+E020
 
 Status:
 OPEN
@@ -96,53 +99,6 @@ OPEN
 Priority:
 LOW
 =======================================
-TD-007
-
-Module:
-UI
-
-Temporary Item:
-Theme engine not implemented
-
-Reason:
-Dashboard shell not built
-
-Future Fix:
-
-- Theme Provider
-- Dark Mode
-- Light Mode
-- User Theme Preferences
-
-Status:
-OPEN
-
-Priority:
-MEDIUM
-==============================
-TD-008
-
-Module:
-Localization
-
-Temporary Item:
-Multi-language system not implemented
-
-Reason:
-Core localization infrastructure not built
-
-Future Fix:
-
-- i18n Framework
-- Translation Files
-- Language Switcher
-
-Status:
-OPEN
-
-Priority:
-MEDIUM
-=====================================
 TD-009
 
 Module:
@@ -185,52 +141,7 @@ OPEN
 Priority:
 LOW
 ==================================
-TD-009
 
-Module:
-Navigation
-
-Temporary Item:
-Sidebar menu hardcoded
-
-Reason:
-Plugin Registry not implemented
-
-Future Fix:
-Generate menu from plugin manifests
-
-Target:
-E019
-
-Status:
-OPEN
-
-Priority:
-MEDIUM
-==========================================
-TD-010
-
-Module:
-Dashboard Shell
-
-Temporary Item:
-Topbar controls are placeholders
-
-Reason:
-Theme, localization and profile modules not implemented
-
-Future Fix:
-Connect controls to actual services
-
-Target:
-E011-E014
-
-Status:
-OPEN
-
-Priority:
-LOW
-=======================================
 TD-011
 
 Module:
@@ -297,7 +208,7 @@ Populate role and permissions
 from authenticated user.
 
 Target:
-E016
+E020
 
 Status:
 OPEN
@@ -323,7 +234,7 @@ Future Fix:
 Load user from auth session.
 
 Target:
-E017
+E020
 
 Status:
 OPEN
@@ -351,7 +262,7 @@ Load tenant from
 authenticated session.
 
 Target:
-E018
+E020
 
 Status:
 OPEN
@@ -359,28 +270,3 @@ OPEN
 Priority:
 MEDIUM
 =============================
-TD-016
-
-Module:
-Tenants
-
-Temporary Item:
-Hardcoded Tenant
-
-Location:
-default-tenant.ts
-
-Reason:
-Tenant Management not implemented.
-
-Future Fix:
-Load tenant from authenticated session.
-
-Target:
-E018
-
-Status:
-OPEN
-
-Priority:
-MEDIUM

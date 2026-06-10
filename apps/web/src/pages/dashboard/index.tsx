@@ -17,11 +17,17 @@ import {
   useLocalization,
 } from "../../features/localization/hooks/use-localization";
 
+import {
+  useApplications,
+} from "../../features/application-registry/hooks/use-applications";
 
 export default function DashboardPage() {
   const {
     translations,
   } = useLocalization();
+
+  const apps =
+    useApplications();
 
   return (
     <DashboardLayout>
@@ -67,6 +73,10 @@ export default function DashboardPage() {
           </div>
 
         </section>
+        <p>
+          Registered Apps:
+          {apps.length}
+        </p>
       </div>
     </DashboardLayout>
   );
