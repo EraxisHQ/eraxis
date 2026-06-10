@@ -1,7 +1,7 @@
 # E014 Breadcrumb Foundation
 
 Status:
-IN PROGRESS
+COMPLETED
 
 Completed
 
@@ -9,8 +9,8 @@ Completed
 ✓ Config
 ✓ Hook
 ✓ Component
+✓ Layout Integration
+✓ Testing
 
 Pending
 
-□ Layout Integration
-□ Testing
