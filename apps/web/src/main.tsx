@@ -28,21 +28,27 @@ import {
   ApplicationProvider,
 } from "./features/application-registry/providers/application-provider";
 
+import {
+  PluginProvider,
+} from "./features/plugin-registry/providers/plugin-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
   <StrictMode>
     <ThemeProvider>
       <LocalizationProvider>
-        <ApplicationProvider>
-        <TenantProvider>
-        <UserProvider>
-          <PermissionProvider>
-            <App />
-          </PermissionProvider>
-        </UserProvider>
-        </TenantProvider>
-        </ApplicationProvider>
+        <PluginProvider>
+          <ApplicationProvider>
+            <TenantProvider>
+              <UserProvider>
+                <PermissionProvider>
+                  <App />
+                </PermissionProvider>
+              </UserProvider>
+            </TenantProvider>
+          </ApplicationProvider>
+        </PluginProvider>
       </LocalizationProvider>
     </ThemeProvider>
   </StrictMode>

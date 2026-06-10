@@ -17,12 +17,17 @@ import {
   useLocalization,
 } from "../../features/localization/hooks/use-localization";
 
-
+import {
+  usePlugins,
+} from "../../features/plugin-registry/hooks/use-plugins";
 
 export default function DashboardPage() {
   const {
     translations,
   } = useLocalization();
+
+const plugins =
+  usePlugins();
 
 
   return (
@@ -69,6 +74,11 @@ export default function DashboardPage() {
           </div>
 
         </section>
+
+<p>
+  Registered Plugins:
+  {plugins.length}
+</p>
 
       </div>
     </DashboardLayout>
