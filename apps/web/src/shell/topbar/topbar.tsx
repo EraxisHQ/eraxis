@@ -25,8 +25,12 @@ import {
 } from "../../features/users/hooks/use-user";
 
 import {
-  useTenant,
+    useTenant,
 } from "../../features/tenants/hooks/use-tenant";
+
+import {
+    Link,
+} from "react-router-dom";
 
 export default function Topbar() {
 
@@ -43,8 +47,8 @@ export default function Topbar() {
     const user =
         useUser();
 
-        const tenant =
-  useTenant();
+    const tenant =
+        useTenant();
 
     return (
         <header className="topbar">
@@ -91,11 +95,16 @@ export default function Topbar() {
                 </select>
                 {/* <button>User</button> */}
                 <button>
-  {tenant.code}
-</button>
-                <button>
-                    {user.firstName}
+                    {tenant.code}
                 </button>
+                {/* <button>
+                    {user.firstName}
+                </button> */}
+                <Link to="/profile">
+                    <button>
+                        {user.firstName}
+                    </button>
+                </Link>
             </div>
         </header>
     );
