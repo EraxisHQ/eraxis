@@ -32,12 +32,17 @@ import {
   PluginProvider,
 } from "./features/plugin-registry/providers/plugin-provider";
 
+import {
+  ProfileProvider,
+} from "./features/profile/providers/profile-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
   <StrictMode>
     <ThemeProvider>
       <LocalizationProvider>
+        <ProfileProvider>
         <PluginProvider>
           <ApplicationProvider>
             <TenantProvider>
@@ -49,6 +54,7 @@ createRoot(
             </TenantProvider>
           </ApplicationProvider>
         </PluginProvider>
+        </ProfileProvider>
       </LocalizationProvider>
     </ThemeProvider>
   </StrictMode>

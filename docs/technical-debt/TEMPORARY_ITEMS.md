@@ -270,3 +270,26 @@ OPEN
 Priority:
 MEDIUM
 =============================
+TD-016
+
+Module:
+Profile
+
+Temporary Item:
+Hardcoded Profile
+
+Location:
+default-profile.ts
+
+Future Fix:
+Load profile from authenticated user.
+
+Target:
+User Management Phase
+
+Status:
+OPEN
+
+Priority:
+LOW
+=====================

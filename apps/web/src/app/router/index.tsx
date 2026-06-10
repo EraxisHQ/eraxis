@@ -22,6 +22,7 @@ import DashboardPage from "../../pages/dashboard";
 import ApplicationsPage from "../../pages/applications";
 import AdministrationPage from "../../pages/administration";
 import SettingsPage from "../../pages/settings";
+import ProfilePage from "../../pages/profile";
 
 export default function AppRouter() {
   return (
@@ -52,6 +53,11 @@ export default function AppRouter() {
           element={<SettingsPage />}
         />
       </Routes>
+
+      <Route
+  path="/profile"
+  element={<ProfilePage />}
+/>
     </BrowserRouter>
   );
 }
