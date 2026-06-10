@@ -1,7 +1,7 @@
 # E016 User Foundation
 
 Status:
-IN PROGRESS
+COMPLETED
 
 Completed
 
@@ -13,10 +13,15 @@ Completed
 
 ✓ User Hook
 
-Pending
+✓ Provider Registration
 
-□ Registration
+✓ Topbar Integration
 
-□ Testing
+✓ Testing
+
+✓ Documentation
 
 □ Documentation
+
+Pending
+

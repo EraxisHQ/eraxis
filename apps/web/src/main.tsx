@@ -20,17 +20,23 @@ import {
   UserProvider,
 } from "./features/users/providers/user-provider";
 
+import {
+  TenantProvider,
+} from "./features/tenants/providers/tenant-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
   <StrictMode>
     <ThemeProvider>
       <LocalizationProvider>
+        <TenantProvider>
         <UserProvider>
           <PermissionProvider>
             <App />
           </PermissionProvider>
         </UserProvider>
+        </TenantProvider>
       </LocalizationProvider>
     </ThemeProvider>
   </StrictMode>

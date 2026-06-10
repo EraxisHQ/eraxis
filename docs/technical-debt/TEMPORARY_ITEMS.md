@@ -305,7 +305,7 @@ OPEN
 Priority:
 MEDIUM
 =======================================
-TD-012
+TD-014
 
 Module:
 Users
@@ -324,6 +324,34 @@ Load user from auth session.
 
 Target:
 E017
+
+Status:
+OPEN
+
+Priority:
+MEDIUM
+=============================
+TD-015
+
+Module:
+Tenants
+
+Temporary Item:
+Hardcoded Tenant
+
+Location:
+default-tenant.ts
+
+Reason:
+Tenant Management module
+not implemented yet.
+
+Future Fix:
+Load tenant from
+authenticated session.
+
+Target:
+E018
 
 Status:
 OPEN
