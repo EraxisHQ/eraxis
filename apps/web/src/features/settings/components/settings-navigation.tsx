@@ -11,18 +11,18 @@ export default function SettingsNavigation() {
     useSettings();
 
   return (
-    <div>
+    <>
       {sections.map(
         (section) => (
-          <div key={section.id}>
-            <Link
-              to={section.route}
-            >
-              {section.name}
-            </Link>
-          </div>
+          <Link
+            key={section.id}
+            className="settings-link"
+            to={section.route}
+          >
+            {section.name}
+          </Link>
         )
       )}
-    </div>
+    </>
   );
 }

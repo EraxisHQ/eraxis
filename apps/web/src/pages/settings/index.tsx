@@ -27,14 +27,35 @@ import DashboardLayout
 import SettingsNavigation
   from "../../features/settings/components/settings-navigation";
 
+import "./settings.css";
+
 export default function SettingsPage() {
-  return (
-    <DashboardLayout>
+ return (
+  <DashboardLayout>
 
-      <h1>Settings</h1>
+    <h1>Settings</h1>
 
-      <SettingsNavigation />
+    <div className="settings-layout">
 
-    </DashboardLayout>
-  );
+      <aside className="settings-sidebar">
+        <SettingsNavigation />
+      </aside>
+
+      <section className="settings-content">
+
+        <h2>
+          Welcome to Settings
+        </h2>
+
+        <p>
+          Select a settings section
+          from the left menu.
+        </p>
+
+      </section>
+
+    </div>
+
+  </DashboardLayout>
+);
 }
