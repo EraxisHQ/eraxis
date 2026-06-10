@@ -26,8 +26,6 @@ export default function DashboardPage() {
     translations,
   } = useLocalization();
 
-const plugins =
-  usePlugins();
 
 
   return (
@@ -75,10 +73,7 @@ const plugins =
 
         </section>
 
-<p>
-  Registered Plugins:
-  {plugins.length}
-</p>
+
 
       </div>
     </DashboardLayout>
