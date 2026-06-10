@@ -16,6 +16,7 @@ import "./dashboard-layout.css";
 
 import Sidebar from "../sidebar/sidebar";
 import Topbar from "../topbar/topbar";
+import Breadcrumbs from "../../features/breadcrumbs/components/breadcrumbs";
 
 type Props = {
   children: React.ReactNode;
@@ -34,6 +35,12 @@ export default function DashboardLayout({
         <main className="layout-content">
           {children}
         </main>
+
+        <main className="layout-content">
+          <Breadcrumbs />
+          {children}
+        </main>
+        
       </div>
     </div>
   );
