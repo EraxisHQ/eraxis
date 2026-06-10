@@ -17,10 +17,21 @@ import {
   useLocalization,
 } from "../../features/localization/hooks/use-localization";
 
+
+import {
+  usePermission,
+} from "../../features/rbac/hooks/use-permission";
+
+
 export default function DashboardPage() {
   const {
     translations,
   } = useLocalization();
+
+  const canViewSettings =
+  usePermission(
+    "settings:view"
+  );
 
   return (
     <DashboardLayout>
@@ -66,7 +77,12 @@ export default function DashboardPage() {
           </div>
 
         </section>
-
+<p>
+  Settings Access:
+  {canViewSettings
+    ? " Yes"
+    : " No"}
+</p>
       </div>
     </DashboardLayout>
   );

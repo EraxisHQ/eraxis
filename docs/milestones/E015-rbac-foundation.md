@@ -1,16 +1,18 @@
 # E015 RBAC Foundation
 
 Status:
-IN PROGRESS
+COMPLETED
 
 Completed
 
 ✓ Permission Types
 ✓ Role Types
 ✓ Constants
-
+✓ Permission Constants
+✓ Permission Provider
+✓ Permission Hook
+✓ Provider Registration
+✓ Testing
+✓ Documentation
 Pending
-
-□ Permission Provider
-□ Permission Hook
 □ Testing

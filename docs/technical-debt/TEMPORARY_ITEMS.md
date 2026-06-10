@@ -277,3 +277,30 @@ OPEN
 Priority:
 LOW
 =====================================
+TD-013
+
+Module:
+RBAC
+
+Temporary Item:
+Hardcoded Super Admin
+
+Location:
+permission-provider.tsx
+
+Reason:
+Authentication and User
+Management not implemented.
+
+Future Fix:
+Populate role and permissions
+from authenticated user.
+
+Target:
+E016
+
+Status:
+OPEN
+
+Priority:
+MEDIUM

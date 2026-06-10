@@ -16,3 +16,10 @@ Benefits
 - Security
 - Scalability
 - Plugin Support
+
+
+Initial Implementation
+
+Super Admin role is temporarily
+hardcoded until user management
+is implemented.

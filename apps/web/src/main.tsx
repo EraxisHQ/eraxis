@@ -12,13 +12,19 @@ import {
   LocalizationProvider,
 } from "./features/localization/context/localization-context";
 
+import {
+  PermissionProvider,
+} from "./features/rbac/providers/permission-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
   <StrictMode>
     <ThemeProvider>
       <LocalizationProvider>
+        <PermissionProvider>
         <App />
+          </PermissionProvider>
       </LocalizationProvider>
     </ThemeProvider>
   </StrictMode>
