@@ -23,6 +23,20 @@ import ApplicationsPage from "../../pages/applications";
 import AdministrationPage from "../../pages/administration";
 import SettingsPage from "../../pages/settings";
 import ProfilePage from "../../pages/profile";
+import AppearanceSettingsPage
+  from "../../pages/settings/appearance";
+
+import LocalizationSettingsPage
+  from "../../pages/settings/localization";
+
+import ProfileSettingsPage
+  from "../../pages/settings/profile";
+
+import TenantSettingsPage
+  from "../../pages/settings/tenant";
+
+import SystemSettingsPage
+  from "../../pages/settings/system";
 
 export default function AppRouter() {
   return (
@@ -49,15 +63,51 @@ export default function AppRouter() {
         />
 
         <Route
+          path="/profile"
+          element={<ProfilePage />}
+        />
+
+
+        <Route
           path="/settings"
           element={<SettingsPage />}
         />
-     
-      <Route
-        path="/profile"
-        element={<ProfilePage />}
-      />
-       </Routes>
+
+        <Route
+          path="/settings/appearance"
+          element={
+            <AppearanceSettingsPage />
+          }
+        />
+
+        <Route
+          path="/settings/localization"
+          element={
+            <LocalizationSettingsPage />
+          }
+        />
+
+        <Route
+          path="/settings/profile"
+          element={
+            <ProfileSettingsPage />
+          }
+        />
+
+        <Route
+          path="/settings/tenant"
+          element={
+            <TenantSettingsPage />
+          }
+        />
+
+        <Route
+          path="/settings/system"
+          element={
+            <SystemSettingsPage />
+          }
+        />
+      </Routes>
     </BrowserRouter>
   );
 }

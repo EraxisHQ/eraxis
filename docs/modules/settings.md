@@ -1,22 +1,48 @@
 # Settings Module
 
-Status:
-PLANNED
+## Purpose
 
-Purpose
+Provide a centralized location for platform and user configuration.
 
-Centralized platform configuration.
+## Current Sections
 
-Future Sections
+* Appearance
+* Localization
+* Profile
+* Tenant
+* System
 
-- Appearance
-- Localization
-- Profile
-- Notifications
-- Security
-- Integrations
-- Audit
+## Features
 
-Current State
+### Appearance
 
-Placeholder page only.
+* Theme Management
+* Dark Mode
+* Light Mode
+
+### Localization
+
+* Language Selection
+
+### Profile
+
+* User Information
+* Profile Preferences
+
+### Tenant
+
+* Tenant Information
+
+### System
+
+* Version Information
+* Environment Information
+
+## Future Enhancements
+
+* Notification Preferences
+* Security Settings
+* API Keys
+* Billing
+* AI Configuration
+* Audit Preferences

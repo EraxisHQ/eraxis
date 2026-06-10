@@ -293,3 +293,21 @@ OPEN
 Priority:
 LOW
 =====================
+TD-018
+Module:
+Settings
+
+Temporary Item:
+Static Settings Sections
+
+Reason:
+Plugin-based settings registry not implemented.
+
+Future Fix:
+Generate settings sections from plugin manifests.
+
+Status:
+OPEN
+
+Priority:
+LOW

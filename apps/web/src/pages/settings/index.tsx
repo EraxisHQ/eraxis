@@ -21,14 +21,20 @@
  * =====================================
  */
 
+import DashboardLayout
+  from "../../shell/dashboard-layout/dashboard-layout";
+
+import SettingsNavigation
+  from "../../features/settings/components/settings-navigation";
+
 export default function SettingsPage() {
   return (
-    <div>
+    <DashboardLayout>
+
       <h1>Settings</h1>
 
-      <p>
-        Settings module under development.
-      </p>
-    </div>
+      <SettingsNavigation />
+
+    </DashboardLayout>
   );
 }
