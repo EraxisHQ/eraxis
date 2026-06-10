@@ -304,3 +304,29 @@ OPEN
 
 Priority:
 MEDIUM
+=======================================
+TD-012
+
+Module:
+Users
+
+Temporary Item:
+Hardcoded User
+
+Location:
+default-user.ts
+
+Reason:
+Authentication integration not completed.
+
+Future Fix:
+Load user from auth session.
+
+Target:
+E017
+
+Status:
+OPEN
+
+Priority:
+MEDIUM

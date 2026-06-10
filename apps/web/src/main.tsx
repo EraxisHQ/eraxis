@@ -16,15 +16,21 @@ import {
   PermissionProvider,
 } from "./features/rbac/providers/permission-provider";
 
+import {
+  UserProvider,
+} from "./features/users/providers/user-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
   <StrictMode>
     <ThemeProvider>
       <LocalizationProvider>
-        <PermissionProvider>
-        <App />
+        <UserProvider>
+          <PermissionProvider>
+            <App />
           </PermissionProvider>
+        </UserProvider>
       </LocalizationProvider>
     </ThemeProvider>
   </StrictMode>

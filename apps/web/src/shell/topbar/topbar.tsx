@@ -20,6 +20,10 @@ import {
     useLocalization,
 } from "../../features/localization/hooks/use-localization";
 
+import {
+    useUser,
+} from "../../features/users/hooks/use-user";
+
 export default function Topbar() {
 
     const {
@@ -31,6 +35,9 @@ export default function Topbar() {
         language,
         setLanguage,
     } = useLocalization();
+
+    const user =
+        useUser();
 
     return (
         <header className="topbar">
@@ -75,7 +82,10 @@ export default function Topbar() {
                         Russian
                     </option>
                 </select>
-                <button>User</button>
+                {/* <button>User</button> */}
+                <button>
+                    {user.firstName}
+                </button>
             </div>
         </header>
     );
