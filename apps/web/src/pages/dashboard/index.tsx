@@ -28,11 +28,6 @@ export default function DashboardPage() {
     translations,
   } = useLocalization();
 
-  const canViewSettings =
-  usePermission(
-    "settings:view"
-  );
-
   return (
     <DashboardLayout>
       <div className="dashboard-page">
@@ -77,12 +72,6 @@ export default function DashboardPage() {
           </div>
 
         </section>
-<p>
-  Settings Access:
-  {canViewSettings
-    ? " Yes"
-    : " No"}
-</p>
       </div>
     </DashboardLayout>
   );
