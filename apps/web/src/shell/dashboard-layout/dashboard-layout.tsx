@@ -33,14 +33,10 @@ export default function DashboardLayout({
         <Topbar />
 
         <main className="layout-content">
-          {children}
-        </main>
-
-        <main className="layout-content">
           <Breadcrumbs />
+
           {children}
         </main>
-        
       </div>
     </div>
   );
