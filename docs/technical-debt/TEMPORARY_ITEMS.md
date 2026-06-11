@@ -362,6 +362,9 @@ Notifications
 Temporary Item:
 Hardcoded Notifications
 
+Location:
+default-notifications.ts
+
 Reason:
 Backend notification service not implemented.
 
@@ -373,3 +376,4 @@ OPEN
 
 Priority:
 LOW
+==================================
