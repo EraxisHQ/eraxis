@@ -56,6 +56,10 @@ import {
   CommandProvider,
 } from "./features/command-palette/providers/command-provider";
 
+import {
+  FeatureFlagProvider,
+} from "./features/feature-flags/providers/feature-flag-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
@@ -69,15 +73,17 @@ createRoot(
                 <AuditProvider>
                   <DashboardProvider>
                     <SearchProvider>
-		    <CommandProvider>
-                      <TenantProvider>
-                        <UserProvider>
-                          <PermissionProvider>
-                            <App />
-                          </PermissionProvider>
-                        </UserProvider>
-                      </TenantProvider>
-		      </CommandProvider>
+                      <FeatureFlagProvider>
+                        <CommandProvider>
+                          <TenantProvider>
+                            <UserProvider>
+                              <PermissionProvider>
+                                <App />
+                              </PermissionProvider>
+                            </UserProvider>
+                          </TenantProvider>
+                        </CommandProvider>
+                      </FeatureFlagProvider>
                     </SearchProvider>
                   </DashboardProvider>
                 </AuditProvider>

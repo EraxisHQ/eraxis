@@ -38,6 +38,9 @@ import TenantSettingsPage
 import SystemSettingsPage
   from "../../pages/settings/system";
 
+import FeatureSettingsPage
+  from "../../pages/settings/features";
+  
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -105,6 +108,12 @@ export default function AppRouter() {
           path="/settings/system"
           element={
             <SystemSettingsPage />
+          }
+        />
+        <Route
+          path="/settings/features"
+          element={
+            <FeatureSettingsPage />
           }
         />
       </Routes>
