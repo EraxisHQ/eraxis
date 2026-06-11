@@ -36,6 +36,10 @@ import {
   ProfileProvider,
 } from "./features/profile/providers/profile-provider";
 
+import {
+  NotificationProvider,
+} from "./features/notifications/providers/notification-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
@@ -45,6 +49,7 @@ createRoot(
         <ProfileProvider>
         <PluginProvider>
           <ApplicationProvider>
+            <NotificationProvider>
             <TenantProvider>
               <UserProvider>
                 <PermissionProvider>
@@ -52,6 +57,7 @@ createRoot(
                 </PermissionProvider>
               </UserProvider>
             </TenantProvider>
+            </NotificationProvider>
           </ApplicationProvider>
         </PluginProvider>
         </ProfileProvider>

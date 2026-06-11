@@ -28,6 +28,9 @@ import {
 import UserMenu
     from "../../features/user-menu/components/user-menu";
 
+import NotificationBadge
+  from "../../features/notifications/components/notification-badge";
+
 export default function Topbar() {
 
     const {
@@ -52,6 +55,7 @@ export default function Topbar() {
             />
 
             <div className="topbar-actions">
+                <NotificationBadge />
 
                 <button onClick={toggleTheme}>
                     {theme === "light"

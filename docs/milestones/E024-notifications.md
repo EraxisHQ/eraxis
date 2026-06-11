@@ -15,13 +15,13 @@ IN PROGRESS
 
 [x] Notification Hook
 
-□ Notification Badge
+[x] Notification Badge
 
 ## Integration
 
-□ Provider Registration
+[x] Provider Registration
 
-□ Topbar Integration
+[x] Topbar Integration
 
 ## Documentation
 
