@@ -443,5 +443,31 @@ OPEN
 Priority:
 LOW
 ====================================
+TD-025
+
+Module:
+Command Palette
+
+Temporary Item:
+Static Commands
+
+Location:
+default-commands.ts
+
+Reason:
+Plugin command registry not implemented.
+
+Future Fix:
+Generate commands from plugin registry.
+
+Status:
+OPEN
+
+Priority:
+LOW
+==========================================
+
+
+
 
 
