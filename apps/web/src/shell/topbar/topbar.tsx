@@ -29,7 +29,10 @@ import UserMenu
     from "../../features/user-menu/components/user-menu";
 
 import NotificationBadge
-  from "../../features/notifications/components/notification-badge";
+    from "../../features/notifications/components/notification-badge";
+
+import AuditBadge
+    from "../../features/audit/components/audit-badge";
 
 export default function Topbar() {
 
@@ -56,7 +59,7 @@ export default function Topbar() {
 
             <div className="topbar-actions">
                 <NotificationBadge />
-
+                <AuditBadge />
                 <button onClick={toggleTheme}>
                     {theme === "light"
                         ? "🌙 Dark"
@@ -95,7 +98,6 @@ export default function Topbar() {
                 <UserMenu />
 
             </div>
-
         </header>
     );
 }

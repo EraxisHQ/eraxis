@@ -40,6 +40,10 @@ import {
   NotificationProvider,
 } from "./features/notifications/providers/notification-provider";
 
+import {
+  AuditProvider,
+} from "./features/audit/providers/audit-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
@@ -47,19 +51,21 @@ createRoot(
     <ThemeProvider>
       <LocalizationProvider>
         <ProfileProvider>
-        <PluginProvider>
-          <ApplicationProvider>
-            <NotificationProvider>
-            <TenantProvider>
-              <UserProvider>
-                <PermissionProvider>
-                  <App />
-                </PermissionProvider>
-              </UserProvider>
-            </TenantProvider>
-            </NotificationProvider>
-          </ApplicationProvider>
-        </PluginProvider>
+          <PluginProvider>
+            <ApplicationProvider>
+              <NotificationProvider>
+                <AuditProvider>
+                  <TenantProvider>
+                    <UserProvider>
+                      <PermissionProvider>
+                        <App />
+                      </PermissionProvider>
+                    </UserProvider>
+                  </TenantProvider>
+                </AuditProvider>
+              </NotificationProvider>
+            </ApplicationProvider>
+          </PluginProvider>
         </ProfileProvider>
       </LocalizationProvider>
     </ThemeProvider>
