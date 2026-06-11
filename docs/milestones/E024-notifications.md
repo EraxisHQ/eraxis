@@ -9,11 +9,11 @@ IN PROGRESS
 
 □ Default Notifications
 
-□ Notification Context
+[x] Notification Context
 
-□ Notification Provider
+[x] Notification Provider
 
-□ Notification Hook
+[x] Notification Hook
 
 □ Notification Badge
 
