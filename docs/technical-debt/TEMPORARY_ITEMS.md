@@ -333,3 +333,23 @@ OPEN
 
 Priority:
 LOW
+=========================================
+TD-020
+
+Module:
+User Menu
+
+Temporary Item:
+Static Menu Items
+
+Reason:
+Permission-aware menu generation not implemented.
+
+Future Fix:
+Generate menu items based on RBAC permissions.
+
+Status:
+OPEN
+
+Priority:
+LOW
