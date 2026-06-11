@@ -489,6 +489,25 @@ OPEN
 Priority:
 LOW
 =================================
+TD-027
 
+Module:
+User Preferences
+
+Temporary Item:
+Preferences stored in memory
+
+Reason:
+Backend persistence not implemented.
+
+Future Fix:
+Store preferences in user profile service.
+
+Status:
+OPEN
+
+Priority:
+LOW
+=========================================
 
 

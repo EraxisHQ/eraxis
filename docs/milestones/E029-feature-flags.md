@@ -1,7 +1,7 @@
 # E029 Feature Flags
 
 Status:
-IN PROGRESS
+COMPLETED
 
 ## Foundation
 
@@ -36,3 +36,23 @@ IN PROGRESS
 □ Provider Working
 
 □ Feature Toggle Working
+
+
+
+[x] Feature Flag Type
+
+[x] Default Feature Flags
+
+[x] Feature Flag Context
+
+[x] Feature Flag Provider
+
+[x] Feature Flag Hook
+
+[x] Provider Registration
+
+[x] Feature Toggle Visibility
+
+[x] Feature Flags Visible
+
+[x] Provider Working
