@@ -13,24 +13,20 @@
 
 import "./topbar.css";
 
-import { useTheme }
-    from "../../features/theme/hooks/use-theme";
+import {
+    useTheme,
+} from "../../features/theme/hooks/use-theme";
 
 import {
     useLocalization,
 } from "../../features/localization/hooks/use-localization";
 
 import {
-    useUser,
-} from "../../features/users/hooks/use-user";
-
-import {
     useTenant,
 } from "../../features/tenants/hooks/use-tenant";
 
-import {
-    Link,
-} from "react-router-dom";
+import UserMenu
+    from "../../features/user-menu/components/user-menu";
 
 export default function Topbar() {
 
@@ -44,17 +40,11 @@ export default function Topbar() {
         setLanguage,
     } = useLocalization();
 
-    const user =
-        useUser();
-
     const tenant =
         useTenant();
 
     return (
         <header className="topbar">
-            {/* <div>
-        Search
-      </div> */}
 
             <input
                 className="search-box"
@@ -62,13 +52,13 @@ export default function Topbar() {
             />
 
             <div className="topbar-actions">
-                {/* <button>Theme</button> */}
+
                 <button onClick={toggleTheme}>
                     {theme === "light"
                         ? "🌙 Dark"
                         : "☀️ Light"}
                 </button>
-                {/* <button>Language</button> */}
+
                 <select
                     value={language}
                     onChange={(event) =>
@@ -93,19 +83,15 @@ export default function Topbar() {
                         Russian
                     </option>
                 </select>
-                {/* <button>User</button> */}
+
                 <button>
                     {tenant.code}
                 </button>
-                {/* <button>
-                    {user.firstName}
-                </button> */}
-                <Link to="/profile">
-                    <button>
-                        {user.firstName}
-                    </button>
-                </Link>
+
+                <UserMenu />
+
             </div>
+
         </header>
     );
 }
