@@ -15,15 +15,15 @@ IN PROGRESS
 
 ### Integration
 
-[ ] Topbar Integration
+[x] Topbar Integration
 
 ### Navigation
 
-[ ] Profile Navigation
+[x] Profile Navigation
 
-[ ] Settings Navigation
+[x] Settings Navigation
 
-[ ] Logout Placeholder
+[x] Logout Placeholder
 
 ### Documentation
 
