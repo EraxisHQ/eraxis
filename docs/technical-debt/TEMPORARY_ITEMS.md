@@ -458,16 +458,37 @@ Reason:
 Plugin command registry not implemented.
 
 Future Fix:
-Generate commands from plugin registry.
+Generate commands dynamically from plugin manifests.
 
 Status:
 OPEN
 
 Priority:
 LOW
-==========================================
+====================================
+TD-026
 
+Module:
+Feature Flags
 
+Temporary Item:
+Static Feature Flags
+
+Location:
+default-feature-flags.ts
+
+Reason:
+Feature management service not implemented.
+
+Future Fix:
+Load feature flags from configuration service.
+
+Status:
+OPEN
+
+Priority:
+LOW
+=================================
 
 
 
