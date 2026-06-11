@@ -385,6 +385,9 @@ Audit
 Temporary Item:
 Hardcoded Audit Logs
 
+Location:
+default-audit-logs.ts
+
 Reason:
 Backend audit service not implemented.
 
@@ -397,3 +400,30 @@ OPEN
 Priority:
 LOW
 ===========================================
+TD-023
+
+Module:
+Dashboard
+
+Temporary Item:
+Hardcoded Dashboard Widgets
+
+Location:
+default-widgets.ts
+
+Reason:
+Widget registry not implemented.
+
+Future Fix:
+Load widgets from plugin registry.
+
+Status:
+OPEN
+
+Priority:
+LOW
+================================
+
+
+
+
