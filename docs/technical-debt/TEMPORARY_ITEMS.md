@@ -353,3 +353,23 @@ OPEN
 
 Priority:
 LOW
+==============================================
+TD-021
+
+Module:
+Notifications
+
+Temporary Item:
+Hardcoded Notifications
+
+Reason:
+Backend notification service not implemented.
+
+Future Fix:
+Load notifications from notification service.
+
+Status:
+OPEN
+
+Priority:
+LOW
