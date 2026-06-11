@@ -423,7 +423,25 @@ OPEN
 Priority:
 LOW
 ================================
+TD-024
 
+Module:
+Search
 
+Temporary Item:
+Static Search Dataset
+
+Reason:
+Global search index not implemented.
+
+Future Fix:
+Generate searchable items from plugins.
+
+Status:
+OPEN
+
+Priority:
+LOW
+====================================
 
 
