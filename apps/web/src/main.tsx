@@ -44,6 +44,10 @@ import {
   AuditProvider,
 } from "./features/audit/providers/audit-provider";
 
+import {
+  DashboardProvider,
+} from "./features/dashboard/providers/dashboard-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
@@ -55,13 +59,15 @@ createRoot(
             <ApplicationProvider>
               <NotificationProvider>
                 <AuditProvider>
-                  <TenantProvider>
-                    <UserProvider>
-                      <PermissionProvider>
-                        <App />
-                      </PermissionProvider>
-                    </UserProvider>
-                  </TenantProvider>
+                  <DashboardProvider>
+                    <TenantProvider>
+                      <UserProvider>
+                        <PermissionProvider>
+                          <App />
+                        </PermissionProvider>
+                      </UserProvider>
+                    </TenantProvider>
+                  </DashboardProvider>
                 </AuditProvider>
               </NotificationProvider>
             </ApplicationProvider>
