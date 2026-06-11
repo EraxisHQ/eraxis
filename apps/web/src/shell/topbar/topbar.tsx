@@ -34,6 +34,9 @@ import NotificationBadge
 import AuditBadge
     from "../../features/audit/components/audit-badge";
 
+import SearchBar
+    from "../../features/search/components/search-bar";
+
 export default function Topbar() {
 
     const {
@@ -52,10 +55,12 @@ export default function Topbar() {
     return (
         <header className="topbar">
 
-            <input
+            {/* <input
                 className="search-box"
                 placeholder="Search modules..."
-            />
+            /> */}
+
+            <SearchBar />
 
             <div className="topbar-actions">
                 <NotificationBadge />

@@ -48,6 +48,10 @@ import {
   DashboardProvider,
 } from "./features/dashboard/providers/dashboard-provider";
 
+import {
+  SearchProvider,
+} from "./features/search/providers/search-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
@@ -60,13 +64,15 @@ createRoot(
               <NotificationProvider>
                 <AuditProvider>
                   <DashboardProvider>
-                    <TenantProvider>
-                      <UserProvider>
-                        <PermissionProvider>
-                          <App />
-                        </PermissionProvider>
-                      </UserProvider>
-                    </TenantProvider>
+                    <SearchProvider>
+                      <TenantProvider>
+                        <UserProvider>
+                          <PermissionProvider>
+                            <App />
+                          </PermissionProvider>
+                        </UserProvider>
+                      </TenantProvider>
+                    </SearchProvider>
                   </DashboardProvider>
                 </AuditProvider>
               </NotificationProvider>
