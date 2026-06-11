@@ -14,8 +14,21 @@
 
 import AppRouter from "./app/router";
 
-function App() {
+import CommandPalette
+  from "./features/command-palette/components/command-palette";
+
+  {/* function App() {
   return <AppRouter />;
+}*/}
+
+function App() {
+  return (
+    <>
+      <CommandPalette />
+
+      <AppRouter />
+    </>
+  );
 }
 
 export default App;

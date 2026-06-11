@@ -52,6 +52,10 @@ import {
   SearchProvider,
 } from "./features/search/providers/search-provider";
 
+import {
+  CommandProvider,
+} from "./features/command-palette/providers/command-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
@@ -65,6 +69,7 @@ createRoot(
                 <AuditProvider>
                   <DashboardProvider>
                     <SearchProvider>
+		    <CommandProvider>
                       <TenantProvider>
                         <UserProvider>
                           <PermissionProvider>
@@ -72,6 +77,7 @@ createRoot(
                           </PermissionProvider>
                         </UserProvider>
                       </TenantProvider>
+		      </CommandProvider>
                     </SearchProvider>
                   </DashboardProvider>
                 </AuditProvider>
