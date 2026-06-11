@@ -377,3 +377,23 @@ OPEN
 Priority:
 LOW
 ==================================
+TD-022
+
+Module:
+Audit
+
+Temporary Item:
+Hardcoded Audit Logs
+
+Reason:
+Backend audit service not implemented.
+
+Future Fix:
+Load audit logs from audit service.
+
+Status:
+OPEN
+
+Priority:
+LOW
+===========================================
