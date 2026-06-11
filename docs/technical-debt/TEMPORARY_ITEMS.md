@@ -1,4 +1,4 @@
-## TD-001
+TD-001
 
 Module:
 Authentication
@@ -22,8 +22,10 @@ OPEN
 
 Priority:
 MEDIUM
+
 =====================================================
-## TD-002
+
+TD-002
 
 Module:
 Infrastructure
@@ -42,8 +44,10 @@ DEFERRED
 
 Priority:
 LOW
-===================================================
-## TD-003
+
+=====================================================
+
+TD-003
 
 Module:
 Authentication
@@ -52,27 +56,28 @@ Temporary Item:
 Minimal Auth Context
 
 Reason:
-Auth context not yet integrated with
-User Provider, Tenant Provider and RBAC.
+Auth context not yet integrated with User Provider, Tenant Provider and RBAC.
 
 Future Fix:
 
 AuthUser should contain:
 
-- userId
-- tenantId
-- roleId
-- permissions
+* userId
+* tenantId
+* roleId
+* permissions
 
 Target:
-E020
+Authentication Integration Phase
 
 Status:
 OPEN
 
 Priority:
 HIGH
-=======================================================
+
+=====================================================
+
 TD-006
 
 Module:
@@ -85,11 +90,10 @@ Reason:
 Application state architecture not finalized
 
 Future Fix:
-Evaluate:
 
-- React Context
-- Zustand
-- Redux Toolkit
+* React Context
+* Zustand
+* Redux Toolkit
 
 and standardize on one approach
 
@@ -98,7 +102,9 @@ OPEN
 
 Priority:
 LOW
-=======================================
+
+=====================================================
+
 TD-009
 
 Module:
@@ -108,39 +114,21 @@ Temporary Item:
 Hardcoded sidebar menu
 
 Reason:
-Plugin registry not implemented
+Plugin registry not fully integrated into navigation generation
 
 Future Fix:
 Generate menu from plugin manifests
 
 Target:
-E019 Plugin Registry
+Plugin Navigation Phase
 
 Status:
 OPEN
 
 Priority:
 MEDIUM
-TD-010
 
-Module:
-Dashboard Shell
-
-Temporary Item:
-Placeholder topbar controls
-
-Reason:
-Theme, localization and profile modules not implemented
-
-Future Fix:
-Connect controls to actual services
-
-Status:
-OPEN
-
-Priority:
-LOW
-==================================
+=====================================================
 
 TD-011
 
@@ -157,14 +145,16 @@ Future Fix:
 Store theme in user profile settings
 
 Target:
-After User Module
+User Preferences Phase
 
 Status:
 OPEN
 
 Priority:
 LOW
-===================================================
+
+=====================================================
+
 TD-012
 
 Module:
@@ -180,14 +170,16 @@ Future Fix:
 Move translations to shared localization package
 
 Target:
-After Plugin Registry
+Localization Package Phase
 
 Status:
 OPEN
 
 Priority:
 LOW
-=====================================
+
+=====================================================
+
 TD-013
 
 Module:
@@ -200,22 +192,22 @@ Location:
 permission-provider.tsx
 
 Reason:
-Authentication and User
-Management not implemented.
+Authentication and User Management not implemented
 
 Future Fix:
-Populate role and permissions
-from authenticated user.
+Populate role and permissions from authenticated user
 
 Target:
-E020
+Authentication Integration Phase
 
 Status:
 OPEN
 
 Priority:
 MEDIUM
-=======================================
+
+=====================================================
+
 TD-014
 
 Module:
@@ -228,20 +220,22 @@ Location:
 default-user.ts
 
 Reason:
-Authentication integration not completed.
+Authentication integration not completed
 
 Future Fix:
-Load user from auth session.
+Load user from authenticated session
 
 Target:
-E020
+Authentication Integration Phase
 
 Status:
 OPEN
 
 Priority:
 MEDIUM
-=============================
+
+=====================================================
+
 TD-015
 
 Module:
@@ -254,22 +248,22 @@ Location:
 default-tenant.ts
 
 Reason:
-Tenant Management module
-not implemented yet.
+Tenant Management module not implemented yet
 
 Future Fix:
-Load tenant from
-authenticated session.
+Load tenant from authenticated session
 
 Target:
-E020
+Tenant Management Phase
 
 Status:
 OPEN
 
 Priority:
 MEDIUM
-=============================
+
+=====================================================
+
 TD-016
 
 Module:
@@ -281,8 +275,11 @@ Hardcoded Profile
 Location:
 default-profile.ts
 
+Reason:
+Authentication integration not completed
+
 Future Fix:
-Load profile from authenticated user.
+Load profile from authenticated user
 
 Target:
 User Management Phase
@@ -292,8 +289,11 @@ OPEN
 
 Priority:
 LOW
-=====================
+
+=====================================================
+
 TD-018
+
 Module:
 Settings
 
@@ -301,18 +301,20 @@ Temporary Item:
 Static Settings Sections
 
 Reason:
-Plugin-based settings registry not implemented.
+Plugin-based settings registry not implemented
 
 Future Fix:
-Generate settings sections from plugin manifests.
+Generate settings sections from plugin manifests
 
 Status:
 OPEN
 
 Priority:
 LOW
-===========================================
-TD-018
+
+=====================================================
+
+TD-019
 
 Module:
 Settings
@@ -321,10 +323,10 @@ Temporary Item:
 Static Settings Pages
 
 Reason:
-Plugin-based settings registry not implemented.
+Plugin-based settings registry not implemented
 
 Future Fix:
-Generate settings pages from plugin manifests.
+Generate settings pages from plugin manifests
 
 Status:
 OPEN
