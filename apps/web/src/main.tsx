@@ -60,6 +60,10 @@ import {
   FeatureFlagProvider,
 } from "./features/feature-flags/providers/feature-flag-provider";
 
+import {
+  UserPreferencesProvider,
+} from "./features/user-preferences/providers/user-preferences-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
@@ -73,6 +77,7 @@ createRoot(
                 <AuditProvider>
                   <DashboardProvider>
                     <SearchProvider>
+                      <UserPreferencesProvider>
                       <FeatureFlagProvider>
                         <CommandProvider>
                           <TenantProvider>
@@ -84,6 +89,7 @@ createRoot(
                           </TenantProvider>
                         </CommandProvider>
                       </FeatureFlagProvider>
+                      </UserPreferencesProvider>
                     </SearchProvider>
                   </DashboardProvider>
                 </AuditProvider>
