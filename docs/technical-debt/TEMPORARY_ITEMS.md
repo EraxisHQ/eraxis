@@ -620,4 +620,23 @@ OPEN
 
 Priority:
 MEDIUM
+==================================
+TD-030
 
+Module:
+Media Library
+
+Temporary Item:
+In-memory media library
+
+Reason:
+Media storage service not implemented.
+
+Future Fix:
+Load media from File Storage service.
+
+Status:
+OPEN
+
+Priority:
+LOW
