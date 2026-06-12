@@ -720,3 +720,23 @@ OPEN
 
 Priority:
 MEDIUM
+=========================
+TD-034
+
+Module:
+Role Management
+
+Temporary Item:
+Static roles
+
+Reason:
+Role service not implemented.
+
+Future Fix:
+Load roles from RBAC service.
+
+Status:
+OPEN
+
+Priority:
+MEDIUM
