@@ -64,6 +64,10 @@ import {
   UserPreferencesProvider,
 } from "./features/user-preferences/providers/user-preferences-provider";
 
+import {
+  ActivityProvider,
+} from "./features/activity-center/providers/activity-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
@@ -77,19 +81,21 @@ createRoot(
                 <AuditProvider>
                   <DashboardProvider>
                     <SearchProvider>
-                      <UserPreferencesProvider>
-                      <FeatureFlagProvider>
-                        <CommandProvider>
-                          <TenantProvider>
-                            <UserProvider>
-                              <PermissionProvider>
-                                <App />
-                              </PermissionProvider>
-                            </UserProvider>
-                          </TenantProvider>
-                        </CommandProvider>
-                      </FeatureFlagProvider>
-                      </UserPreferencesProvider>
+                      <ActivityProvider>
+                        <UserPreferencesProvider>
+                          <FeatureFlagProvider>
+                            <CommandProvider>
+                              <TenantProvider>
+                                <UserProvider>
+                                  <PermissionProvider>
+                                    <App />
+                                  </PermissionProvider>
+                                </UserProvider>
+                              </TenantProvider>
+                            </CommandProvider>
+                          </FeatureFlagProvider>
+                        </UserPreferencesProvider>
+                      </ActivityProvider>
                     </SearchProvider>
                   </DashboardProvider>
                 </AuditProvider>
