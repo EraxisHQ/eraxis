@@ -680,3 +680,23 @@ OPEN
 
 Priority:
 LOW
+===================================
+TD-033
+
+Module:
+User Management
+
+Temporary Item:
+Static user list
+
+Reason:
+User service not implemented.
+
+Future Fix:
+Load users from authentication and user management service.
+
+Status:
+OPEN
+
+Priority:
+MEDIUM
