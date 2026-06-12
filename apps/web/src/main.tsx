@@ -72,6 +72,10 @@ import {
   StorageProvider,
 } from "./features/file-storage/providers/storage-provider";
 
+import {
+  MediaProvider,
+} from "./features/media-library/providers/media-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
@@ -85,6 +89,7 @@ createRoot(
                 <AuditProvider>
                   <DashboardProvider>
                     <SearchProvider>
+                      <MediaProvider>
                       <StorageProvider>
                         <ActivityProvider>
                           <UserPreferencesProvider>
@@ -102,14 +107,15 @@ createRoot(
                           </UserPreferencesProvider>
                         </ActivityProvider>
                       </StorageProvider>
-                    </SearchProvider>
-                  </DashboardProvider>
-                </AuditProvider>
-              </NotificationProvider>
-            </ApplicationProvider>
-          </PluginProvider>
-        </ProfileProvider>
-      </LocalizationProvider>
-    </ThemeProvider>
-  </StrictMode>
+                    </MediaProvider>
+                  </SearchProvider>
+                </DashboardProvider>
+              </AuditProvider>
+            </NotificationProvider>
+          </ApplicationProvider>
+        </PluginProvider>
+      </ProfileProvider>
+    </LocalizationProvider>
+  </ThemeProvider>
+  </StrictMode >
 );
