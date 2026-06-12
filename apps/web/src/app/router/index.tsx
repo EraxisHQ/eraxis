@@ -50,6 +50,9 @@ import ActivityPage
 import StoragePage
   from "../../pages/storage";
 
+import MediaPage
+  from "../../pages/media";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -141,6 +144,12 @@ export default function AppRouter() {
           path="/storage"
           element={
             <StoragePage />
+          }
+        />
+        <Route
+          path="/media"
+          element={
+            <MediaPage />
           }
         />
       </Routes>
