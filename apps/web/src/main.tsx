@@ -68,6 +68,10 @@ import {
   ActivityProvider,
 } from "./features/activity-center/providers/activity-provider";
 
+import {
+  StorageProvider,
+} from "./features/file-storage/providers/storage-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
@@ -81,21 +85,23 @@ createRoot(
                 <AuditProvider>
                   <DashboardProvider>
                     <SearchProvider>
-                      <ActivityProvider>
-                        <UserPreferencesProvider>
-                          <FeatureFlagProvider>
-                            <CommandProvider>
-                              <TenantProvider>
-                                <UserProvider>
-                                  <PermissionProvider>
-                                    <App />
-                                  </PermissionProvider>
-                                </UserProvider>
-                              </TenantProvider>
-                            </CommandProvider>
-                          </FeatureFlagProvider>
-                        </UserPreferencesProvider>
-                      </ActivityProvider>
+                      <StorageProvider>
+                        <ActivityProvider>
+                          <UserPreferencesProvider>
+                            <FeatureFlagProvider>
+                              <CommandProvider>
+                                <TenantProvider>
+                                  <UserProvider>
+                                    <PermissionProvider>
+                                      <App />
+                                    </PermissionProvider>
+                                  </UserProvider>
+                                </TenantProvider>
+                              </CommandProvider>
+                            </FeatureFlagProvider>
+                          </UserPreferencesProvider>
+                        </ActivityProvider>
+                      </StorageProvider>
                     </SearchProvider>
                   </DashboardProvider>
                 </AuditProvider>
