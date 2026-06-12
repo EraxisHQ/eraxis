@@ -72,9 +72,6 @@ import {
   StorageProvider,
 } from "./features/file-storage/providers/storage-provider";
 
-import StoragePage
-  from "../../pages/storage";
-  
 createRoot(
   document.getElementById("root")!
 ).render(
