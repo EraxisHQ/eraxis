@@ -640,3 +640,23 @@ OPEN
 
 Priority:
 LOW
+==========================================================
+TD-031
+
+Module:
+Realtime Events
+
+Temporary Item:
+Static Realtime Events
+
+Reason:
+Realtime infrastructure not implemented.
+
+Future Fix:
+Integrate Supabase Realtime.
+
+Status:
+OPEN
+
+Priority:
+MEDIUM

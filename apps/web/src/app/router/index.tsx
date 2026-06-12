@@ -53,6 +53,9 @@ import StoragePage
 import MediaPage
   from "../../pages/media";
 
+import RealtimePage
+  from "../../pages/realtime";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -150,6 +153,12 @@ export default function AppRouter() {
           path="/media"
           element={
             <MediaPage />
+          }
+        />
+        <Route
+          path="/realtime"
+          element={
+            <RealtimePage />
           }
         />
       </Routes>
