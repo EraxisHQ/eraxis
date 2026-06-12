@@ -56,6 +56,9 @@ import MediaPage
 import RealtimePage
   from "../../pages/realtime";
 
+import HealthPage
+  from "../../pages/health";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -159,6 +162,12 @@ export default function AppRouter() {
           path="/realtime"
           element={
             <RealtimePage />
+          }
+        />
+        <Route
+          path="/health"
+          element={
+            <HealthPage />
           }
         />
       </Routes>

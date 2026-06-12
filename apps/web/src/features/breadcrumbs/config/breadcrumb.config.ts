@@ -36,4 +36,6 @@ export const BREADCRUMB_LABELS = {
   "/tenants": "Tenants",
 
   "/branches": "Branches",
+
+  "/health": "System Health",
 };
