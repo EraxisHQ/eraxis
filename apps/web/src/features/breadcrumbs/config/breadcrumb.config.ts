@@ -1,16 +1,3 @@
-// export const BREADCRUMB_LABELS = {
-//   "/dashboard": "Dashboard",
-//   "/applications": "Applications",
-//   "/administration": "Administration",
-//   "/settings": "Settings",
-//   "/profile": "Profile",
-//   "/settings/appearance": "Appearance Settings",
-//   "/settings/localization": "Localization Settings",
-//   "/settings/profile": "Profile Settings",
-//   "/settings/tenant": "Tenant Settings",
-//   "/settings/system": "System Settings",
-// };
-
 export const BREADCRUMB_LABELS = {
   "/dashboard": "Dashboard",
 
@@ -39,4 +26,14 @@ export const BREADCRUMB_LABELS = {
   "/settings/system": "System Settings",
 
   "/realtime": "Realtime Events",
+
+  "/users": "Users",
+
+  "/roles": "Roles",
+
+  "/permissions": "Permissions",
+
+  "/tenants": "Tenants",
+
+  "/branches": "Branches",
 };

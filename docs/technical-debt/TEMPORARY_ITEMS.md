@@ -660,3 +660,23 @@ OPEN
 
 Priority:
 MEDIUM
+=========================================
+TD-032
+
+Module:
+System Health
+
+Temporary Item:
+Static health checks
+
+Reason:
+Monitoring service not implemented.
+
+Future Fix:
+Integrate health monitoring service.
+
+Status:
+OPEN
+
+Priority:
+LOW
