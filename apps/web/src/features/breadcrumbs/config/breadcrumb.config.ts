@@ -31,7 +31,7 @@ export const BREADCRUMB_LABELS = {
 
   "/roles": "Role Management",
 
-  "/permissions": "Permissions",
+  "/permissions": "Permission Management",
 
   "/tenants": "Tenants",
 
