@@ -740,3 +740,23 @@ OPEN
 
 Priority:
 MEDIUM
+============================
+TD-035
+
+Module:
+Permission Management
+
+Temporary Item:
+Static permissions
+
+Reason:
+Permission service not implemented.
+
+Future Fix:
+Load permissions from RBAC service.
+
+Status:
+OPEN
+
+Priority:
+MEDIUM
