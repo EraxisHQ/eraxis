@@ -35,7 +35,7 @@ export const BREADCRUMB_LABELS = {
 
   "/tenants": "Tenant Management",
 
-  "/branches": "Branches",
+  "/branches": "Branch Management",
 
   "/health": "System Health",
 };

@@ -840,4 +840,23 @@ OPEN
 
 Priority:
 HIGH
+======================================
+TD-037
 
+Module:
+Branch Management
+
+Temporary Item:
+Static branches
+
+Reason:
+Branch service not implemented.
+
+Future Fix:
+Load branches from tenant service.
+
+Status:
+OPEN
+
+Priority:
+HIGH
