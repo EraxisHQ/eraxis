@@ -84,6 +84,10 @@ import {
   HealthProvider,
 } from "./features/system-health/providers/health-provider";
 
+import {
+  UserManagementProvider,
+} from "./features/user-management/providers/user-management-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
@@ -97,29 +101,31 @@ createRoot(
                 <AuditProvider>
                   <DashboardProvider>
                     <SearchProvider>
-                      <HealthProvider>
-                        <RealtimeProvider>
-                          <MediaProvider>
-                            <StorageProvider>
-                              <ActivityProvider>
-                                <UserPreferencesProvider>
-                                  <FeatureFlagProvider>
-                                    <CommandProvider>
-                                      <TenantProvider>
-                                        <UserProvider>
-                                          <PermissionProvider>
-                                            <App />
-                                          </PermissionProvider>
-                                        </UserProvider>
-                                      </TenantProvider>
-                                    </CommandProvider>
-                                  </FeatureFlagProvider>
-                                </UserPreferencesProvider>
-                              </ActivityProvider>
-                            </StorageProvider>
-                          </MediaProvider>
-                        </RealtimeProvider>
-                      </HealthProvider>
+                      <UserManagementProvider>
+                        <HealthProvider>
+                          <RealtimeProvider>
+                            <MediaProvider>
+                              <StorageProvider>
+                                <ActivityProvider>
+                                  <UserPreferencesProvider>
+                                    <FeatureFlagProvider>
+                                      <CommandProvider>
+                                        <TenantProvider>
+                                          <UserProvider>
+                                            <PermissionProvider>
+                                              <App />
+                                            </PermissionProvider>
+                                          </UserProvider>
+                                        </TenantProvider>
+                                      </CommandProvider>
+                                    </FeatureFlagProvider>
+                                  </UserPreferencesProvider>
+                                </ActivityProvider>
+                              </StorageProvider>
+                            </MediaProvider>
+                          </RealtimeProvider>
+                        </HealthProvider>
+                      </UserManagementProvider>
                     </SearchProvider>
                   </DashboardProvider>
                 </AuditProvider>
