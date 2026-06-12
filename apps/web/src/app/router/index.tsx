@@ -47,6 +47,9 @@ import PreferencesPage
 import ActivityPage
   from "../../pages/activity";
 
+import StoragePage
+  from "../../pages/storage";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -132,6 +135,12 @@ export default function AppRouter() {
           path="/activity"
           element={
             <ActivityPage />
+          }
+        />
+        <Route
+          path="/storage"
+          element={
+            <StoragePage />
           }
         />
       </Routes>

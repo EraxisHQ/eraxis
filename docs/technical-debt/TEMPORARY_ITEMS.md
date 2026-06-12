@@ -597,4 +597,27 @@ OPEN
 
 Priority:
 MEDIUM
+==============================
+TD-029
+
+Module:
+File Storage
+
+Temporary Item:
+In-memory file storage
+
+Location:
+default-storage-files.ts
+
+Reason:
+Storage backend not implemented.
+
+Future Fix:
+Integrate Supabase Storage.
+
+Status:
+OPEN
+
+Priority:
+MEDIUM
 
