@@ -100,6 +100,10 @@ import {
   TenantManagementProvider,
 } from "./features/tenant-management/providers/tenant-management-provider";
 
+import {
+  BranchProvider,
+} from "./features/branch-management/providers/branch-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
@@ -113,6 +117,7 @@ createRoot(
                 <AuditProvider>
                   <DashboardProvider>
                     <SearchProvider>
+                      <BranchProvider>
                       <TenantManagementProvider>
                       <PermissionManagementProvider>
                         <RoleProvider>
@@ -144,6 +149,7 @@ createRoot(
                         </RoleProvider>
                       </PermissionManagementProvider>
                       </TenantManagementProvider>
+                      </BranchProvider>
                     </SearchProvider>
                   </DashboardProvider>
                 </AuditProvider>
