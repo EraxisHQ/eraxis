@@ -27,7 +27,7 @@ export const BREADCRUMB_LABELS = {
 
   "/realtime": "Realtime Events",
 
-  "/users": "Users",
+  "/users": "User Management",
 
   "/roles": "Roles",
 

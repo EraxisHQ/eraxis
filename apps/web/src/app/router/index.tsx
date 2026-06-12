@@ -59,6 +59,9 @@ import RealtimePage
 import HealthPage
   from "../../pages/health";
 
+import UsersPage
+  from "../../pages/users";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -168,6 +171,12 @@ export default function AppRouter() {
           path="/health"
           element={
             <HealthPage />
+          }
+        />
+        <Route
+          path="/users"
+          element={
+            <UsersPage />
           }
         />
       </Routes>
