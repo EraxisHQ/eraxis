@@ -1,1 +1,14 @@
-apps/web/src/features/realtime-events/hooks/use-realtime.ts
+import {
+  useContext,
+} from "react";
+
+import {
+  RealtimeContext,
+} from "../context/realtime-context";
+
+export function useRealtime() {
+
+  return useContext(
+    RealtimeContext
+  );
+}
