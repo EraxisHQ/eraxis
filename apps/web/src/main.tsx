@@ -76,6 +76,10 @@ import {
   MediaProvider,
 } from "./features/media-library/providers/media-provider";
 
+import {
+  RealtimeProvider,
+} from "./features/realtime-events/providers/realtime-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
@@ -89,33 +93,35 @@ createRoot(
                 <AuditProvider>
                   <DashboardProvider>
                     <SearchProvider>
-                      <MediaProvider>
-                      <StorageProvider>
-                        <ActivityProvider>
-                          <UserPreferencesProvider>
-                            <FeatureFlagProvider>
-                              <CommandProvider>
-                                <TenantProvider>
-                                  <UserProvider>
-                                    <PermissionProvider>
-                                      <App />
-                                    </PermissionProvider>
-                                  </UserProvider>
-                                </TenantProvider>
-                              </CommandProvider>
-                            </FeatureFlagProvider>
-                          </UserPreferencesProvider>
-                        </ActivityProvider>
-                      </StorageProvider>
-                    </MediaProvider>
-                  </SearchProvider>
-                </DashboardProvider>
-              </AuditProvider>
-            </NotificationProvider>
-          </ApplicationProvider>
-        </PluginProvider>
-      </ProfileProvider>
-    </LocalizationProvider>
-  </ThemeProvider>
+                      <RealtimeProvider>
+                        <MediaProvider>
+                          <StorageProvider>
+                            <ActivityProvider>
+                              <UserPreferencesProvider>
+                                <FeatureFlagProvider>
+                                  <CommandProvider>
+                                    <TenantProvider>
+                                      <UserProvider>
+                                        <PermissionProvider>
+                                          <App />
+                                        </PermissionProvider>
+                                      </UserProvider>
+                                    </TenantProvider>
+                                  </CommandProvider>
+                                </FeatureFlagProvider>
+                              </UserPreferencesProvider>
+                            </ActivityProvider>
+                          </StorageProvider>
+                        </MediaProvider>
+                      </RealtimeProvider>
+                    </SearchProvider>
+                  </DashboardProvider>
+                </AuditProvider>
+              </NotificationProvider>
+            </ApplicationProvider>
+          </PluginProvider>
+        </ProfileProvider>
+      </LocalizationProvider>
+    </ThemeProvider>
   </StrictMode >
 );

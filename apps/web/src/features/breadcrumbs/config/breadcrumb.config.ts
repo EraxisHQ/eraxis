@@ -37,4 +37,6 @@ export const BREADCRUMB_LABELS = {
   "/settings/tenant": "Tenant Settings",
 
   "/settings/system": "System Settings",
+
+  "/realtime": "Realtime Events",
 };
