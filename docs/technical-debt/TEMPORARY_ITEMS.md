@@ -509,5 +509,26 @@ OPEN
 Priority:
 LOW
 =========================================
+TD-027
 
+Module:
+User Preferences
+
+Temporary Item:
+Preferences stored in memory
+
+Location:
+default-user-preferences.ts
+
+Reason:
+User profile persistence not implemented.
+
+Future Fix:
+Store preferences in user profile service.
+
+Status:
+OPEN
+
+Priority:
+LOW
 

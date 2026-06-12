@@ -40,7 +40,10 @@ import SystemSettingsPage
 
 import FeatureSettingsPage
   from "../../pages/settings/features";
-  
+
+import PreferencesPage
+  from "../../pages/settings/preferences";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -114,6 +117,12 @@ export default function AppRouter() {
           path="/settings/features"
           element={
             <FeatureSettingsPage />
+          }
+        />
+        <Route
+          path="/settings/preferences"
+          element={
+            <PreferencesPage />
           }
         />
       </Routes>
