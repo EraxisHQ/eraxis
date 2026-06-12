@@ -531,4 +531,27 @@ OPEN
 
 Priority:
 LOW
+============================================
+TD-028
+
+Module:
+Activity Center
+
+Temporary Item:
+Hardcoded Activities
+
+Location:
+default-activities.ts
+
+Reason:
+Activity aggregation service not implemented.
+
+Future Fix:
+Aggregate activities from notifications, audit logs and plugins.
+
+Status:
+OPEN
+
+Priority:
+LOW
 

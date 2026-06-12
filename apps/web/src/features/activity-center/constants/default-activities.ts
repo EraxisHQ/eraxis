@@ -1,0 +1,22 @@
+import type {
+  Activity,
+} from "../types/activity";
+
+export const DEFAULT_ACTIVITIES:
+  Activity[] = [
+    {
+      id: "1",
+      message:
+        "User logged in",
+      timestamp:
+        "2026-01-01 10:00",
+    },
+
+    {
+      id: "2",
+      message:
+        "Profile updated",
+      timestamp:
+        "2026-01-01 10:05",
+    },
+  ];
