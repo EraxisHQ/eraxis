@@ -68,6 +68,9 @@ import RolesPage
 import PermissionsPage
   from "../../pages/permissions";
 
+import TenantsPage
+  from "../../pages/tenants";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -195,6 +198,12 @@ export default function AppRouter() {
           path="/permissions"
           element={
             <PermissionsPage />
+          }
+        />
+        <Route
+          path="/tenants"
+          element={
+            <TenantsPage />
           }
         />
       </Routes>

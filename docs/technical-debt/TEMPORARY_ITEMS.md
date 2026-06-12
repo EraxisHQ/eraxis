@@ -800,3 +800,25 @@ OPEN
 
 Priority:
 HIGH
+=================================
+TD-036
+
+Module:
+Tenant Management
+
+Temporary Item:
+Static tenants
+
+Reason:
+Tenant service not implemented.
+
+Future Fix:
+Load tenants from multi-tenant service.
+
+Status:
+OPEN
+
+Priority:
+HIGH
+
+
