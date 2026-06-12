@@ -489,26 +489,7 @@ OPEN
 Priority:
 LOW
 =================================
-TD-027
 
-Module:
-User Preferences
-
-Temporary Item:
-Preferences stored in memory
-
-Reason:
-Backend persistence not implemented.
-
-Future Fix:
-Store preferences in user profile service.
-
-Status:
-OPEN
-
-Priority:
-LOW
-=========================================
 TD-027
 
 Module:
@@ -532,29 +513,7 @@ OPEN
 Priority:
 LOW
 ============================================
-TD-028
 
-Module:
-Activity Center
-
-Temporary Item:
-Hardcoded Activities
-
-Location:
-default-activities.ts
-
-Reason:
-Activity aggregation service not implemented.
-
-Future Fix:
-Aggregate activities from notifications, audit logs and plugins.
-
-Status:
-OPEN
-
-Priority:
-LOW
-==========================================
 TD-028
 
 Module:
@@ -578,26 +537,7 @@ OPEN
 Priority:
 LOW
 =====================================================
-TD-029
 
-Module:
-File Storage
-
-Temporary Item:
-In-memory file storage
-
-Reason:
-Storage backend not implemented.
-
-Future Fix:
-Integrate Supabase Storage.
-
-Status:
-OPEN
-
-Priority:
-MEDIUM
-==============================
 TD-029
 
 Module:
@@ -701,26 +641,7 @@ OPEN
 Priority:
 MEDIUM
 ==================================
-TD-034
 
-Module:
-Role Management
-
-Temporary Item:
-Static roles
-
-Reason:
-Role service not implemented.
-
-Future Fix:
-Load roles from RBAC service.
-
-Status:
-OPEN
-
-Priority:
-MEDIUM
-=========================
 TD-034
 
 Module:
@@ -761,46 +682,8 @@ OPEN
 Priority:
 MEDIUM
 ====================================
-TD-035
 
-Module:
-Permission Management
 
-Temporary Item:
-Static permissions
-
-Reason:
-Permission service not implemented.
-
-Future Fix:
-Load permissions from RBAC service.
-
-Status:
-OPEN
-
-Priority:
-MEDIUM
-===================================
-TD-036
-
-Module:
-Tenant Management
-
-Temporary Item:
-Static tenants
-
-Reason:
-Tenant service not implemented.
-
-Future Fix:
-Load tenants from multi-tenant service.
-
-Status:
-OPEN
-
-Priority:
-HIGH
-=================================
 TD-036
 
 Module:
@@ -821,6 +704,7 @@ OPEN
 Priority:
 HIGH
 =================================================
+
 TD-037
 
 Module:
@@ -840,23 +724,22 @@ OPEN
 
 Priority:
 HIGH
-======================================
-TD-037
+===================================================
+=================================================================================
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+=================================================================================
+Eraxis Core v1.0
+Status: COMPLETED
 
-Module:
-Branch Management
+Production Ready:
+NO
 
-Temporary Item:
-Static branches
+MVP Ready:
+YES
 
 Reason:
-Branch service not implemented.
-
-Future Fix:
-Load branches from tenant service.
-
-Status:
-OPEN
-
-Priority:
-HIGH
+Core architecture complete.
+Several modules still use static/mock data and require backend service integration.
+===================================================================================
+//////////////////////////////////////////////////////////////////////////////////
+===================================================================================

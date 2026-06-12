@@ -1,20 +1,63 @@
-Application
-    ↓
-Plugin
-        ↓
-Pages
+# Plugin Hierarchy
 
-Core Platform
-    ├── Dashboard
-    ├── Settings
-    └── Administration
+Core
 
-Fleet Management
-    ├── Vehicles
-    ├── Maintenance
-    ├── Charging
+├── Authentication
 
-HRMS
-    ├── Employees
-    ├── Attendance
-    ├── Payroll
+├── RBAC
+
+├── Tenant Management
+
+├── Branch Management
+
+├── Notifications
+
+├── Audit Logging
+
+├── Dashboard
+
+├── Search
+
+├── Storage
+
+├── Media
+
+├── Realtime
+
+└── Plugin Registry
+
+---
+
+Inventory Plugin
+
+└── Core
+
+---
+
+HRMS Plugin
+
+└── Core
+
+---
+
+Fleet Plugin
+
+└── Core
+
+---
+
+CRM Plugin
+
+└── Core
+
+---
+
+Billing Plugin
+
+└── Core
+
+---
+
+Eraxis Chat
+
+└── Core
