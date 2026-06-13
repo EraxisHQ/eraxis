@@ -74,20 +74,31 @@ import TenantsPage
 import BranchesPage
   from "../../pages/branches";
 
+import ProtectedRoute
+  from "../../guards/protected-route";
+
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
         <Route
           path="/"
-          element={<LoginPage />}
+          element=<LoginPage />
         />
 
-        <Route
+        {/* <Route
           path="/dashboard"
           element={<DashboardPage />}
+        /> */}
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <DashboardPage />
+            </ProtectedRoute>
+          }
         />
-
         <Route
           path="/applications"
           element={<ApplicationsPage />}
@@ -215,7 +226,7 @@ export default function AppRouter() {
             <BranchesPage />
           }
         />
-      </Routes>
+        </Routes>
     </BrowserRouter>
   );
 }

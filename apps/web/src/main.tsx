@@ -104,6 +104,10 @@ import {
   BranchProvider,
 } from "./features/branch-management/providers/branch-provider";
 
+import {
+  AuthProvider,
+} from "./providers/auth-provider";
+
 createRoot(
   document.getElementById("root")!
 ).render(
@@ -133,7 +137,9 @@ createRoot(
                                             <TenantProvider>
                                               <UserProvider>
                                                 <PermissionProvider>
+                                                  <AuthProvider>
                                                   <App />
+                                                  </AuthProvider>
                                                 </PermissionProvider>
                                               </UserProvider>
                                             </TenantProvider>

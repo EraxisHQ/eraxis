@@ -9,6 +9,10 @@ import { useState } from "react";
 import { authService }
   from "../../features/auth";
 
+import {
+  useNavigate,
+} from "react-router-dom";
+
 export function LoginForm() {
   const [email, setEmail] =
     useState("");
@@ -21,7 +25,8 @@ export function LoginForm() {
 
   const [error, setError] =
     useState("");
-
+  const navigate =
+    useNavigate();
   async function handleSubmit(
     event: React.FormEvent
   ) {
@@ -36,11 +41,24 @@ export function LoginForm() {
         password
       );
 
+
+
+    //     if (error) {
+    //   setError(error.message);
+    //   setLoading(false);
+    //   return;
+    // }
     if (error) {
       setError(error.message);
+      setLoading(false);
+      return;
     }
 
-    setLoading(false);
+    navigate(
+      "/dashboard"
+    );
+    // window.location.href =
+    //   "/dashboard";
   }
 
   return (

@@ -45,3 +45,29 @@ for select
 to anon
 using (true);
 
+-- =====================================
+-- Authenticated Users
+-- =====================================
+
+create policy
+"Allow authenticated read users"
+on public.users
+for select
+to authenticated
+using (true);
+
+-- =====================================
+-- RBAC Development Policies
+-- =====================================
+
+create policy "Allow authenticated read user_roles"
+on public.user_roles
+for select
+to authenticated
+using (true);
+
+create policy "Allow authenticated read role_permissions"
+on public.role_permissions
+for select
+to authenticated
+using (true);
