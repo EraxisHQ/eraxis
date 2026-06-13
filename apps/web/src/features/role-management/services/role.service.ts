@@ -15,16 +15,7 @@ Promise<Role[]> {
     .from("roles")
     .select("*");
 
-  console.log(
-    "Role Data:",
-    data
-  );
-
-  console.log(
-    "Role Error:",
-    error
-  );
-
+ 
   if (
     error ||
     !data

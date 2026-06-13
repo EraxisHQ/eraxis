@@ -51,4 +51,4 @@ These remain temporarily until all persistence modules are migrated and validate
 
 ## Progress
 
-2 / 5 Modules Completed
+3 / 6 Modules Completed

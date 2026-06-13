@@ -15,15 +15,6 @@ Promise<Branch[]> {
     .from("branches")
     .select("*");
 
-  console.log(
-    "Branch Data:",
-    data
-  );
-
-  console.log(
-    "Branch Error:",
-    error
-  );
 
   if (
     error ||
