@@ -20,15 +20,13 @@ Provider now loads branch data from Supabase.
 
 Status: Complete
 
-## Remaining
-
 ### Role Persistence
 
 Status: Complete
 
 ### User Persistence
 
-Status: Pending
+Status: Complete
 
 ### Permission Persistence
 
@@ -51,4 +49,32 @@ These remain temporarily until all persistence modules are migrated and validate
 
 ## Progress
 
-3 / 6 Modules Completed
+4 / 6 Modules Completed
+
+
+### User Seed Data
+
+Created initial platform user.
+
+Email:
+admin@eraxis.local
+
+Status:
+Completed
+
+
+### User RLS Policy
+
+Added development SELECT policy.
+
+File:
+
+supabase/migrations/20260613_003_dev_users_rls_policies.sql
+
+Purpose:
+
+Allow frontend to read users during Core Persistence development.
+
+Status:
+
+Temporary Development Policy

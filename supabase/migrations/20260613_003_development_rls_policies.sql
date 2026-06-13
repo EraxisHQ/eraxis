@@ -1,5 +1,16 @@
 -- =====================================
 -- Eraxis
+-- RLS Policies
+--
+-- Development Policies
+--
+-- NOTE:
+-- Temporary development policies.
+-- Production policies will be tenant-aware.
+-- =====================================
+
+-- =====================================
+-- Eraxis
 -- P000-02-04 Development RLS Policies
 -- =====================================
 
@@ -21,5 +32,16 @@ using (true);
 create policy "permission_read_dev"
 on permissions
 for select
+using (true);
+
+-- =====================================
+-- Users
+-- Read Policy
+-- =====================================
+
+create policy "Allow read users"
+on public.users
+for select
+to anon
 using (true);
 
