@@ -27,3 +27,28 @@ Maps users to roles.
 ## role_permissions
 
 Maps roles to permissions.
+
+# Core Seed Records
+
+## Tenant
+
+Code:
+ERAXIS
+
+Name:
+Eraxis Platform
+
+## Branch
+
+Code:
+HQ
+
+Name:
+Head Office
+
+## Roles
+
+super_admin
+
+tenant_admin
+
