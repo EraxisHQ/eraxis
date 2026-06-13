@@ -17,6 +17,11 @@ import {
   getCurrentUser,
 } from "../features/auth/services/current-user.service";
 
+import {
+  can,
+  hasRole,
+} from "../features/auth";
+
 type AuthContextValue = {
   user: AuthUser | null;
 
@@ -52,10 +57,9 @@ export function AuthProvider({
 
       const result =
         await getCurrentUser();
-console.log(
-  "Current User:",
-  result
-);
+
+
+
       setUser(result);
 
       setLoading(false);

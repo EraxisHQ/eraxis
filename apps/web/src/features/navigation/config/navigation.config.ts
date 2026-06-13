@@ -20,24 +20,27 @@ export const NAVIGATION_ITEMS:
     label: "Dashboard",
     path: ROUTES.DASHBOARD,
     group: "General",
+    permission: "dashboard:view",
   },
 
   {
     label: "Applications",
     path: ROUTES.APPLICATIONS,
     group: "Applications",
+    permission: "applications:view",
   },
 
   {
     label: "Administration",
     path: ROUTES.ADMINISTRATION,
     group: "Administration",
+    permission: "administration:view",
   },
 
   {
     label: "Settings",
     path: ROUTES.SETTINGS,
     group: "Administration",
+    permission: "settings:view",
   },
-
 ];

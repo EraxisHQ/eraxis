@@ -5,6 +5,10 @@ import {
   useProfile,
 } from "../../features/profile/hooks/use-profile";
 
+import {
+  PermissionGuard,
+} from "../../features/auth";
+
 export default function ProfilePage() {
   const profile =
     useProfile();
@@ -22,6 +26,12 @@ export default function ProfilePage() {
         Email:
         {profile.email}
       </p>
+      <p>
+        Email:
+        {profile.email}
+      </p>
+
+  
     </DashboardLayout>
   );
 }

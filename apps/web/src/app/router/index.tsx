@@ -94,7 +94,12 @@ export default function AppRouter() {
         <Route
           path="/dashboard"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
+            //   <DashboardPage />
+            // </ProtectedRoute>
+            <ProtectedRoute
+              permission="dashboard:view"
+            >
               <DashboardPage />
             </ProtectedRoute>
           }
@@ -226,7 +231,7 @@ export default function AppRouter() {
             <BranchesPage />
           }
         />
-        </Routes>
+      </Routes>
     </BrowserRouter>
   );
 }

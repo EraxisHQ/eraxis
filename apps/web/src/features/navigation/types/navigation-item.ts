@@ -12,4 +12,6 @@ export type NavigationItem = {
   label: string;
   path: string;
   group: string;
+
+  permission?: string;
 };
