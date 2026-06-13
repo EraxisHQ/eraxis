@@ -52,3 +52,15 @@ super_admin
 
 tenant_admin
 
+
+## Development Policies
+
+Temporary development read policies exist for:
+
+* tenants
+* branches
+* roles
+* permissions
+
+These policies must be replaced during P000-03 Authentication Foundation.
+
