@@ -1,3 +1,12 @@
+/**
+ * TD-039
+ *
+ * Temporary mock tenant.
+ *
+ * Replace after
+ * tenant persistence rollout.
+ */
+
 import type {
   Tenant,
 } from "../types/tenant";
