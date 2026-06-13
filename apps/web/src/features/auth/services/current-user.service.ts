@@ -128,6 +128,11 @@ const {
     roleIds
   );
 
+  console.log(
+  "Role Ids Used:",
+  roleIds
+);
+
 console.log(
   "Role Permissions:",
   rolePermissions
@@ -183,16 +188,7 @@ console.log(
   roles
 );
 
-  // const roles =
-  //   roleData?.map(
-  //     (item: any) =>
-  //       item.roles.code
-  //   ) ?? [];
 
-  // console.log(
-  //   "Roles:",
-  //   roles
-  // );
 
   return {
     id: data.id,

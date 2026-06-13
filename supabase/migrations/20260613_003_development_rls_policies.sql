@@ -71,3 +71,13 @@ on public.role_permissions
 for select
 to authenticated
 using (true);
+
+--- ===========================================
+--- P000-03-04 Permission Resolution
+--- =========================================
+create policy
+"Allow authenticated read role_permissions"
+on public.role_permissions
+for select
+to authenticated
+using (true);

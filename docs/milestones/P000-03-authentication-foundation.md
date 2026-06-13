@@ -134,15 +134,15 @@ Resolved Roles:
 
 ---
 
-## Remaining Work
+
 
 ### P000-03-04 Permission Resolution
 
 Status
 
-Not Started
+Completed
 
-Target
+Implementation
 
 Current User
 ↓
@@ -160,6 +160,24 @@ Result
 
 permissions: string[]
 
+Example
+
+[
+  "dashboard:view",
+  "applications:view",
+  "administration:view",
+  "settings:view"
+]
+
+Verification
+
+Resolved Permissions:
+[
+  "dashboard:view",
+  "applications:view",
+  "administration:view",
+  "settings:view"
+]
 ---
 
 ### P000-03-05 Logout Flow
