@@ -182,14 +182,23 @@ Resolved Permissions:
 
 ### P000-03-05 Logout Flow
 
-Status
+Status:
 
-Not Started
+Completed
 
-Target
+Implementation
 
 Logout
 ↓
-Destroy Session
+Supabase signOut()
 ↓
-Redirect To Login
+Session Destroyed
+↓
+Redirect Login
+
+Verification
+
+- Logout successful
+- Session removed
+- Protected routes blocked
+- Re-login successful
