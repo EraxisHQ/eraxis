@@ -24,10 +24,15 @@ import {
   LANGUAGE_STORAGE_KEY,
 } from "../constants/localization.constants";
 
+import {
+  SUPPORTED_LANGUAGES,
+} from "../constants/supported-languages";
+
+import {
+  TRANSLATIONS,
+} from "../constants/translations";
+
 import { en } from "../translations/en";
-import { hi } from "../translations/hi";
-import { od } from "../translations/od";
-import { ru } from "../translations/ru";
 
 type TranslationDictionary =
   typeof en;
@@ -64,14 +69,17 @@ export function LocalizationProvider({
         LANGUAGE_STORAGE_KEY
       );
 
-    if (
-      savedLanguage === "en" ||
-      savedLanguage === "hi" ||
-      savedLanguage === "od" ||
-      savedLanguage === "ru"
-    ) {
-      setLanguage(savedLanguage);
-    }
+if (
+  savedLanguage &&
+  SUPPORTED_LANGUAGES.some(
+    (item) =>
+      item.code === savedLanguage
+  )
+) {
+  setLanguage(
+    savedLanguage as Language
+  );
+}
   }, []);
 
   useEffect(() => {
@@ -82,13 +90,7 @@ export function LocalizationProvider({
   }, [language]);
 
   const translations =
-    language === "hi"
-      ? hi
-      : language === "od"
-      ? od
-      : language === "ru"
-      ? ru
-      : en;
+  TRANSLATIONS[language];
 
   return (
     <LocalizationContext.Provider

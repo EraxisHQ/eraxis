@@ -37,6 +37,11 @@ import AuditBadge
 import SearchBar
     from "../../features/search/components/search-bar";
 
+import {
+    SUPPORTED_LANGUAGES,
+} from "../../features/localization/constants/supported-languages";
+
+
 export default function Topbar() {
 
     const {
@@ -71,7 +76,7 @@ export default function Topbar() {
                         : "☀️ Light"}
                 </button>
 
-                <select
+                {/* <select
                     value={language}
                     onChange={(event) =>
                         setLanguage(
@@ -94,6 +99,26 @@ export default function Topbar() {
                     <option value="ru">
                         Russian
                     </option>
+                    
+                </select> */}
+                <select
+                    value={language}
+                    onChange={(event) =>
+                        setLanguage(
+                            event.target.value as any
+                        )
+                    }
+                >
+                    {SUPPORTED_LANGUAGES.map(
+                        (item) => (
+                            <option
+                                key={item.code}
+                                value={item.code}
+                            >
+                                {item.label}
+                            </option>
+                        )
+                    )}
                 </select>
 
                 <button>

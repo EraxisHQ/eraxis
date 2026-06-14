@@ -6,4 +6,5 @@ export type Language =
   | "en"
   | "hi"
   | "od"
-  | "ru";
+  | "ru"
+  
