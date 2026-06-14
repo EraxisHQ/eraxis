@@ -1,24 +1,33 @@
-import {
-  useContext,
-} from "react";
+// import {
+//   useContext,
+// } from "react";
+
+// import {
+//   UserPreferencesContext,
+// } from "../context/user-preferences-context";
+
+// export function useUserPreferences() {
+
+//   const context =
+//     useContext(
+//       UserPreferencesContext
+//     );
+
+//   if (!context) {
+
+//     throw new Error(
+//       "useUserPreferences must be used within UserPreferencesProvider"
+//     );
+//   }
+
+//   return context;
+// }
 
 import {
-  UserPreferencesContext,
-} from "../context/user-preferences-context";
+  userPreferencesService,
+} from "../services/user-preferences-service";
 
 export function useUserPreferences() {
 
-  const context =
-    useContext(
-      UserPreferencesContext
-    );
-
-  if (!context) {
-
-    throw new Error(
-      "useUserPreferences must be used within UserPreferencesProvider"
-    );
-  }
-
-  return context;
+  return userPreferencesService;
 }
