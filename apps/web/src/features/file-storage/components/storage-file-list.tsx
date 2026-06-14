@@ -4,8 +4,13 @@ import {
 
 export default function StorageFileList() {
 
-  const files =
-    useStorage();
+  // const files =
+  //   useStorage();
+  const storage =
+  useStorage();
+
+const files =
+  storage.getFiles();
 
   return (
     <div>
