@@ -2,6 +2,10 @@ import type {
   Command,
 } from "../types/command";
 
+import {
+  commandRegistry,
+} from "../services/command-registry";
+
 export const DEFAULT_COMMANDS:
   Command[] = [
     {
@@ -22,3 +26,10 @@ export const DEFAULT_COMMANDS:
       route: "/profile",
     },
   ];
+
+  DEFAULT_COMMANDS.forEach(
+  (item) => {
+    commandRegistry
+      .register(item);
+  }
+);

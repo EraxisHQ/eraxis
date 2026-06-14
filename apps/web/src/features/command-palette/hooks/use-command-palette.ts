@@ -1,13 +1,22 @@
-import {
-  useContext,
-} from "react";
+// import {
+//   useContext,
+// } from "react";
+
+// import {
+//   CommandContext,
+// } from "../context/command-context";
+
+// export function useCommandPalette() {
+//   return useContext(
+//     CommandContext
+//   );
+// }
 
 import {
-  CommandContext,
-} from "../context/command-context";
+  commandService,
+} from "../services/command-service";
 
 export function useCommandPalette() {
-  return useContext(
-    CommandContext
-  );
+
+  return commandService;
 }

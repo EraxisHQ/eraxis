@@ -1,3 +1,4 @@
+// 
 import "./command-palette.css";
 
 import {
@@ -11,8 +12,12 @@ import {
 
 export default function CommandPalette() {
 
-  const commands =
+  const commandService =
     useCommandPalette();
+
+  const commands =
+    commandService
+      .getCommands();
 
   const [
     isOpen,
