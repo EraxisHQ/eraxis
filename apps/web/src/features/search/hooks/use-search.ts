@@ -1,13 +1,8 @@
 import {
-  useContext,
-} from "react";
-
-import {
-  SearchContext,
-} from "../context/search-context";
+  searchService,
+} from "../services/search-service";
 
 export function useSearch() {
-  return useContext(
-    SearchContext
-  );
+
+  return searchService;
 }

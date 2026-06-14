@@ -13,18 +13,15 @@ export default function SearchBar() {
   const [query, setQuery] =
     useState("");
 
-  const items =
-    useSearch();
+const search =
+  useSearch();
 
-  const filteredItems =
-    items.filter(
-      (item) =>
-        item.label
-          .toLowerCase()
-          .includes(
-            query.toLowerCase()
-          )
-    );
+const filteredItems =
+  query
+    ? search.search(
+        query
+      )
+    : [];
 
   return (
     <div className="search-container">

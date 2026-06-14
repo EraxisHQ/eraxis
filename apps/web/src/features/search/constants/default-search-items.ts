@@ -2,6 +2,10 @@ import type {
   SearchItem,
 } from "../types/search-item";
 
+import {
+  searchRegistry,
+} from "../services/search-registry";
+
 export const DEFAULT_SEARCH_ITEMS:
   SearchItem[] = [
     {
@@ -22,3 +26,10 @@ export const DEFAULT_SEARCH_ITEMS:
       route: "/profile",
     },
   ];
+
+  DEFAULT_SEARCH_ITEMS.forEach(
+  (item) => {
+    searchRegistry
+      .register(item);
+  }
+);
