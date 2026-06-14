@@ -5,6 +5,8 @@ import type {
   NavigationItem,
 } from "../types/navigation-item";
 
+
+
 /**
  * =====================================
  * Eraxis Navigation Config
@@ -16,31 +18,86 @@ import type {
 
 export const NAVIGATION_ITEMS:
   NavigationItem[] = [
-  {
-    label: "Dashboard",
-    path: ROUTES.DASHBOARD,
-    group: "General",
-    permission: "dashboard:view",
-  },
+  // {
+  //   label: "Dashboard",
+  //   path: ROUTES.DASHBOARD,
+  //   group: "General",
+  //   permission: "dashboard:view",
+  // },
+
+  // {
+  //   label: "Applications",
+  //   path: ROUTES.APPLICATIONS,
+  //   group: "Applications",
+  //   permission: "applications:view",
+  // },
+
+  // {
+  //   label: "Administration",
+  //   path: ROUTES.ADMINISTRATION,
+  //   group: "Administration",
+  //   permission: "administration:view",
+  // },
+
+  // {
+  //   label: "Settings",
+  //   path: ROUTES.SETTINGS,
+  //   group: "Administration",
+  //   permission: "settings:view",
+  // },
 
   {
-    label: "Applications",
-    path: ROUTES.APPLICATIONS,
-    group: "Applications",
-    permission: "applications:view",
-  },
+  id: "dashboard",
 
-  {
-    label: "Administration",
-    path: ROUTES.ADMINISTRATION,
-    group: "Administration",
-    permission: "administration:view",
-  },
+  label: "Dashboard",
 
-  {
-    label: "Settings",
-    path: ROUTES.SETTINGS,
-    group: "Administration",
-    permission: "settings:view",
-  },
+  path: ROUTES.DASHBOARD,
+
+  group: "General",
+
+  permission: "dashboard:view",
+
+  order: 1,
+},
+{
+  id: "applications",
+
+  label: "Applications",
+
+  path: ROUTES.APPLICATIONS,
+
+  group: "Applications",
+
+  permission: "applications:view",
+
+  order: 2,
+},
+{
+  id: "administration",
+
+  label: "Administration",
+
+  path: ROUTES.ADMINISTRATION,
+
+  group: "Administration",
+
+  permission: "administration:view",
+
+  order: 3,
+},
+{
+  id: "settings",
+
+  label: "Settings",
+
+  path: ROUTES.SETTINGS,
+
+  group: "Administration",
+
+  permission: "settings:view",
+
+  order: 4,
+},
+
 ];
+
