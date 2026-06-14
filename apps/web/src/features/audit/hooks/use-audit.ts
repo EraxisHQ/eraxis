@@ -1,13 +1,22 @@
-import {
-  useContext,
-} from "react";
+// import {
+//   useContext,
+// } from "react";
+
+// import {
+//   AuditContext,
+// } from "../context/audit-context";
+
+// export function useAudit() {
+//   return useContext(
+//     AuditContext
+//   );
+// }
 
 import {
-  AuditContext,
-} from "../context/audit-context";
+  auditService,
+} from "../services/audit-service";
 
 export function useAudit() {
-  return useContext(
-    AuditContext
-  );
+
+  return auditService;
 }

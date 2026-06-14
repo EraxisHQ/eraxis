@@ -2,6 +2,10 @@ import type {
   AuditLog,
 } from "../types/audit-log";
 
+import {
+  auditRegistry,
+} from "../services/audit-registry";
+
 export const DEFAULT_AUDIT_LOGS:
   AuditLog[] = [
     {
@@ -18,3 +22,10 @@ export const DEFAULT_AUDIT_LOGS:
         "2026-01-01 10:05",
     },
   ];
+
+  DEFAULT_AUDIT_LOGS.forEach(
+  (item) => {
+    auditRegistry
+      .register(item);
+  }
+);
