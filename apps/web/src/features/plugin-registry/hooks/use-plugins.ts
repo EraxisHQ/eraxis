@@ -1,13 +1,9 @@
 import {
-  useContext,
-} from "react";
-
-import {
-  PluginContext,
-} from "../context/plugin-context";
+  pluginService,
+} from "../services/plugin-service";
 
 export function usePlugins() {
-  return useContext(
-    PluginContext
-  );
+
+  return pluginService
+    .getPlugins();
 }

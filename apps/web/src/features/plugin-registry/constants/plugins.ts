@@ -2,6 +2,10 @@ import type {
   Plugin,
 } from "../types/plugin";
 
+import {
+  pluginRegistry,
+} from "../services/plugin-registry";
+
 export const PLUGINS: Plugin[] = [
   {
     id: "dashboard",
@@ -45,3 +49,10 @@ export const PLUGINS: Plugin[] = [
     enabled: true,
   },
 ];
+
+PLUGINS.forEach(
+  (plugin) => {
+    pluginRegistry
+      .register(plugin);
+  }
+);
