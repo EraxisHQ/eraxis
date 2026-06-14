@@ -1,14 +1,9 @@
-import {
-  useContext,
-} from "react";
 
 import {
-  RealtimeContext,
-} from "../context/realtime-context";
+  realtimeService,
+} from "../services/realtime-service";
 
 export function useRealtime() {
 
-  return useContext(
-    RealtimeContext
-  );
+  return realtimeService;
 }

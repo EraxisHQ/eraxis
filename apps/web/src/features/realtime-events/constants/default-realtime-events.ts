@@ -2,6 +2,10 @@ import type {
   RealtimeEvent,
 } from "../types/realtime-event";
 
+import {
+  realtimeRegistry,
+} from "../services/realtime-registry";
+
 export const DEFAULT_REALTIME_EVENTS:
   RealtimeEvent[] = [
     {
@@ -10,3 +14,10 @@ export const DEFAULT_REALTIME_EVENTS:
       timestamp: "2026-01-01 09:00",
     },
   ];
+
+  DEFAULT_REALTIME_EVENTS.forEach(
+  (item) => {
+    realtimeRegistry
+      .register(item);
+  }
+);
