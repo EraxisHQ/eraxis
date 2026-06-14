@@ -1,13 +1,8 @@
 import {
-  useContext,
-} from "react";
-
-import {
-  NotificationContext,
-} from "../context/notification-context";
+  notificationService,
+} from "../services/notification-service";
 
 export function useNotifications() {
-  return useContext(
-    NotificationContext
-  );
+
+  return notificationService;
 }

@@ -2,6 +2,10 @@ import type {
   Notification,
 } from "../types/notification";
 
+import {
+  notificationRegistry,
+} from "../services/notification-registry";
+
 export const DEFAULT_NOTIFICATIONS:
   Notification[] = [
     {
@@ -16,3 +20,10 @@ export const DEFAULT_NOTIFICATIONS:
       read: false,
     },
   ];
+
+  DEFAULT_NOTIFICATIONS.forEach(
+  (item) => {
+    notificationRegistry
+      .register(item);
+  }
+);
