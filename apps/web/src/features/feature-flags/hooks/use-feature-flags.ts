@@ -1,13 +1,9 @@
 import {
-  useContext,
-} from "react";
-
-import {
-  FeatureFlagContext,
-} from "../context/feature-flag-context";
+  featureFlagService,
+} from "../services/feature-flag-service";
 
 export function useFeatureFlags() {
-  return useContext(
-    FeatureFlagContext
-  );
+
+  return featureFlagService
+    .getFlags();
 }
