@@ -7,10 +7,14 @@ export default function ActivityFeed() {
   const activities =
     useActivities();
 
+  const items =
+    activities
+     .getRecentActivities();
+
   return (
     <div>
 
-      {activities.map(
+      {items.map(
         (activity) => (
           <div
             key={activity.id}

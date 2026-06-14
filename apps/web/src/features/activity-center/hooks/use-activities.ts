@@ -1,14 +1,8 @@
 import {
-  useContext,
-} from "react";
-
-import {
-  ActivityContext,
-} from "../context/activity-context";
+  activityService,
+} from "../services/activity-service";
 
 export function useActivities() {
 
-  return useContext(
-    ActivityContext
-  );
+  return activityService;
 }

@@ -22,6 +22,9 @@ import {
 import DashboardGrid
   from "../../features/dashboard/components/dashboard-grid";
 
+import ActivityFeed
+  from "../../features/activity-center/components/activity-feed";
+  
 export default function DashboardPage() {
   const {
     translations,
@@ -69,7 +72,8 @@ export default function DashboardPage() {
           <div className="panel">
             <h2>Recent Activity</h2>
 
-            <p>No activity available.</p>
+            {/* <p>No activity available.</p> */}
+            <ActivityFeed />
           </div>
 
         </section>
