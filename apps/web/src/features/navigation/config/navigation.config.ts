@@ -172,5 +172,19 @@ export const NAVIGATION_ITEMS:
       order: 15,
     },
 
+    {
+      id: "pricing",
+
+      label: "Pricing",
+
+      path: "/pricing",
+
+      group: "Applications",
+
+      applicationId: "COMMERCE",
+
+      order: 16,
+    },
+
   ];
 

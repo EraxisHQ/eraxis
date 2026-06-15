@@ -95,6 +95,9 @@ import CustomersPage
 import OrdersPage
   from "../../pages/orders";
 
+import PricingPage
+  from "../../pages/pricing";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -275,6 +278,13 @@ export default function AppRouter() {
           path="/orders"
           element={
             <OrdersPage />
+          }
+        />
+
+        <Route
+          path="/pricing"
+          element={
+            <PricingPage />
           }
         />
 
