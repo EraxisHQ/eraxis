@@ -9,6 +9,10 @@ import {
   calculateOrderTotal,
 } from "../../features/orders/services/order-calculation-service";
 
+import {
+  hasAvailableStock,
+} from "../../features/inventory/services/inventory-validation-service";
+
 export default function OrdersPage() {
 
   const items =
@@ -17,6 +21,12 @@ export default function OrdersPage() {
   const total =
     calculateOrderTotal(
       items
+    );
+
+  const inStock =
+    hasAvailableStock(
+      "product-001",
+      2
     );
   return (
     <DashboardLayout>
@@ -31,6 +41,12 @@ export default function OrdersPage() {
       <p>
         Order Total:
         ₹{total}
+      </p>
+      <p>
+        Stock Available:
+        {inStock
+          ? " Yes"
+          : " No"}
       </p>
 
     </DashboardLayout>

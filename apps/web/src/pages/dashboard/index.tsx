@@ -24,13 +24,25 @@ import DashboardGrid
 
 import ActivityFeed
   from "../../features/activity-center/components/activity-feed";
-  
+
+import {
+  getCommerceMetrics,
+} from "../../features/dashboard/services/commerce-dashboard-service";
+
+import {
+  getRevenue,
+} from "../../features/orders/services/revenue-service";
+
 export default function DashboardPage() {
   const {
     translations,
   } = useLocalization();
 
+  const metrics =
+    getCommerceMetrics();
 
+  const revenue =
+    getRevenue();
 
   return (
     <DashboardLayout>
@@ -78,7 +90,34 @@ export default function DashboardPage() {
 
         </section>
 
+        <h2>
+          Commerce Metrics
+        </h2>
 
+        <p>
+          Products:
+          {metrics.products}
+        </p>
+
+        <p>
+          Categories:
+          {metrics.categories}
+        </p>
+
+        <p>
+          Customers:
+          {metrics.customers}
+        </p>
+
+        <p>
+          Orders:
+          {metrics.orders}
+        </p>
+
+        <p>
+          Revenue:
+          ₹{revenue}
+        </p>
 
       </div>
     </DashboardLayout>
