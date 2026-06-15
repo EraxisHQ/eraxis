@@ -8,4 +8,6 @@ export type Application = {
   route: string;
 
   enabled: boolean;
+
+  featureFlag?: string;
 };

@@ -37,5 +37,7 @@ export const APPLICATION_REGISTRY:
       route: "/dashboard",
 
       enabled: true,
+
+      featureFlag: "core",
     },
   ];

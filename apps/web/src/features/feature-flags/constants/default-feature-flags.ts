@@ -22,9 +22,14 @@ export const DEFAULT_FEATURE_FLAGS:
       key: "fleet",
       enabled: false,
     },
+
+    {
+      key: "core",
+      enabled: true,
+    },
   ];
 
-  DEFAULT_FEATURE_FLAGS.forEach(
+DEFAULT_FEATURE_FLAGS.forEach(
   (flag) => {
     featureFlagRegistry.register(
       flag
