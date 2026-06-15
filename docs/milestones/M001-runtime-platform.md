@@ -119,3 +119,24 @@ Deliverables:
 - Application Registration Service
 - Runtime Registry Expansion
 - Plugin Registration Foundation
+
+
+M001-03-01 Application-Aware Navigation
+
+Status:
+COMPLETE
+
+Deliverables:
+- Application Navigation Ownership
+- CORE Navigation Registration
+- Runtime Navigation Preparation
+
+M001-03-02 Navigation Filtering Runtime
+
+Status:
+COMPLETE
+
+Deliverables:
+- Navigation Filter Service
+- Application Registry Integration
+- Runtime Navigation Filtering
