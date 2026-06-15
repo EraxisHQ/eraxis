@@ -9,13 +9,16 @@
  *
  * Milestone:
  * M001-01-02
- *
- * Technical Debt:
- * - None
  * =====================================
  */
 
 import "./dashboard-layout.css";
+
+import Sidebar
+  from "../sidebar/sidebar";
+
+import Topbar
+  from "../topbar/topbar";
 
 import Breadcrumbs
   from "../../features/breadcrumbs/components/breadcrumbs";
@@ -29,14 +32,24 @@ export default function DashboardLayout({
 }: Props) {
 
   return (
-    <main
-      className="layout-content"
-    >
+    <div className="layout">
 
-      <Breadcrumbs />
+      <Sidebar />
 
-      {children}
+      <div className="layout-main">
 
-    </main>
+        <Topbar />
+
+        <main
+          className="layout-content"
+        >
+          <Breadcrumbs />
+
+          {children}
+        </main>
+
+      </div>
+
+    </div>
   );
 }

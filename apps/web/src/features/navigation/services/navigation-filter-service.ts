@@ -31,7 +31,7 @@ export function filterNavigation(
   const enabledIds =
     applications.map(
       (application) =>
-        application.id
+        application.code
     );
 
   return items.filter(

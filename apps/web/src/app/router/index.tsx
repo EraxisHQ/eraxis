@@ -77,6 +77,8 @@ import BranchesPage
 import ProtectedRoute
   from "../../guards/protected-route";
 
+import CommercePage
+  from "../../pages/commerce";
 
 export default function AppRouter() {
   return (
@@ -229,6 +231,12 @@ export default function AppRouter() {
           path="/branches"
           element={
             <BranchesPage />
+          }
+        />
+        <Route
+          path="/commerce"
+          element={
+            <CommercePage />
           }
         />
       </Routes>
