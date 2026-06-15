@@ -303,3 +303,13 @@ Deliverables:
 - Workflow Registration Service
 - Runtime Workflow Registration
 - Workflow Expansion Foundation
+
+M001-08-03 Workflow Processing Runtime
+
+Status:
+COMPLETE
+
+Deliverables:
+- Workflow Processor Service
+- Workflow Approval Lifecycle
+- Workflow Rejection Lifecycle
