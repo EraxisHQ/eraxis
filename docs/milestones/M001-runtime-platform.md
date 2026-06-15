@@ -333,3 +333,13 @@ Deliverables:
 - Application Plugin Resolution
 - Plugin Ownership Model
 - Runtime Application Integration
+
+M001-10-02 Plugin Navigation Integration
+
+Status:
+COMPLETE
+
+Deliverables:
+- Plugin Navigation Resolution
+- Application Navigation Ownership
+- Runtime Sidebar Integration

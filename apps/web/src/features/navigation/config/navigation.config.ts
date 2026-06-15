@@ -39,7 +39,7 @@ export const NAVIGATION_ITEMS:
 
   permission: "dashboard:view",
 
-  applicationId: "core",
+  applicationId: "CORE",
 
   order: 1,
 },
@@ -54,7 +54,7 @@ export const NAVIGATION_ITEMS:
 
   permission: "applications:view",
 
-  applicationId: "core",
+  applicationId: "CORE",
 
   order: 2,
 },
@@ -69,7 +69,7 @@ export const NAVIGATION_ITEMS:
 
   permission: "administration:view",
 
-  applicationId: "core",
+  applicationId: "CORE",
 
   order: 3,
 },
@@ -84,7 +84,7 @@ export const NAVIGATION_ITEMS:
 
   permission: "settings:view",
 
-  applicationId: "core",
+  applicationId: "CORE",
 
   order: 4,
 },
