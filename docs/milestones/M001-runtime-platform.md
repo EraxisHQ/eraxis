@@ -273,3 +273,13 @@ Deliverables:
 - Job Queue Service
 - Runtime Job Registration
 - Platform Queue Foundation
+
+M001-07-03 Job Processing Runtime
+
+Status:
+COMPLETE
+
+Deliverables:
+- Job Processor Service
+- Job Status Lifecycle
+- Runtime Job Execution Foundation
