@@ -9,6 +9,7 @@
  *
  * Milestone:
  * M001-01-01
+ * M001-01-02
  *
  * Technical Debt:
  * - None
@@ -18,10 +19,10 @@
 import "./application-shell.css";
 
 import Sidebar
-  from "../sidebar";
+  from "../sidebar/sidebar";
 
 import Topbar
-  from "../topbar";
+  from "../topbar/topbar";
 
 type Props = {
   children: React.ReactNode;
@@ -42,11 +43,7 @@ export default function ApplicationShell({
 
         <Topbar />
 
-        <main
-          className="application-main"
-        >
-          {children}
-        </main>
+        {children}
 
       </div>
 

@@ -89,3 +89,13 @@ Notes:
 Application Shell becomes the
 master container for all future
 Eraxis applications.
+
+M001-01-02 Dashboard Layout Refactor
+
+Status:
+COMPLETE
+
+Deliverables:
+- Shell Responsibilities Moved
+- Dashboard Layout Simplified
+- Runtime Shell Established

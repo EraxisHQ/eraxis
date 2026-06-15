@@ -1,22 +1,24 @@
 /**
  * =====================================
  * Eraxis
- * Module: Dashboard Shell
+ * Module: Dashboard Layout
  *
  * Purpose:
- * Main application layout.
+ * Dashboard content layout rendered
+ * inside Application Shell.
+ *
+ * Milestone:
+ * M001-01-02
  *
  * Technical Debt:
- * - TD-009
- * - TD-010
+ * - None
  * =====================================
  */
 
 import "./dashboard-layout.css";
 
-import Sidebar from "../sidebar/sidebar";
-import Topbar from "../topbar/topbar";
-import Breadcrumbs from "../../features/breadcrumbs/components/breadcrumbs";
+import Breadcrumbs
+  from "../../features/breadcrumbs/components/breadcrumbs";
 
 type Props = {
   children: React.ReactNode;
@@ -25,19 +27,16 @@ type Props = {
 export default function DashboardLayout({
   children,
 }: Props) {
+
   return (
-    <div className="layout">
-      <Sidebar />
+    <main
+      className="layout-content"
+    >
 
-      <div className="layout-main">
-        <Topbar />
+      <Breadcrumbs />
 
-        <main className="layout-content">
-          <Breadcrumbs />
+      {children}
 
-          {children}
-        </main>
-      </div>
-    </div>
+    </main>
   );
 }
