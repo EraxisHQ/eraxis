@@ -243,3 +243,13 @@ Deliverables:
 - Event Publisher Service
 - Runtime Event Registration
 - Platform Event Publishing
+
+M001-06-03 Event Subscription Runtime
+
+Status:
+COMPLETE
+
+Deliverables:
+- Event Subscription Service
+- Runtime Subscribers
+- Event Handler Dispatching
