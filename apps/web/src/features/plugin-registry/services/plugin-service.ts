@@ -5,8 +5,13 @@ import {
 export class PluginService {
 
   getPlugins() {
+
     return pluginRegistry
-      .getAll();
+      .getAll()
+      .filter(
+        (plugin) =>
+          plugin.enabled
+      );
   }
 }
 

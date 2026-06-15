@@ -343,3 +343,23 @@ Deliverables:
 - Plugin Navigation Resolution
 - Application Navigation Ownership
 - Runtime Sidebar Integration
+
+M001-10-03 Plugin Activation Enforcement
+
+Status:
+COMPLETE
+
+Deliverables:
+- Enabled Plugin Filtering
+- Runtime Plugin Activation
+- Plugin Visibility Enforcement
+
+M001-10-03 Plugin Activation Enforcement
+
+Status:
+COMPLETE
+
+Deliverables:
+- Enabled Plugin Filtering
+- Runtime Plugin Activation
+- Plugin Visibility Enforcement
