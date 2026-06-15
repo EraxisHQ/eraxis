@@ -253,3 +253,13 @@ Deliverables:
 - Event Subscription Service
 - Runtime Subscribers
 - Event Handler Dispatching
+
+M001-07-01 Job Contract Foundation
+
+Status:
+COMPLETE
+
+Deliverables:
+- Platform Job Type
+- Job Registry
+- Job Loader Service
