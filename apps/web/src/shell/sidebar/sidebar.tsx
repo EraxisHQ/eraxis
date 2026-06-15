@@ -11,39 +11,6 @@
  * =====================================
  */
 
-// import "./sidebar.css";
-
-// export default function Sidebar() {
-//   return (
-//     <aside className="sidebar">
-//       <div className="sidebar-logo">
-//         Eraxis
-//       </div>
-
-//       <nav className="sidebar-nav">
-//         <h4>General</h4>
-
-//         <ul>
-//           <li>Dashboard</li>
-//         </ul>
-
-//         <h4>Applications</h4>
-
-//         <ul>
-//           <li>Applications</li>
-//         </ul>
-
-//         <h4>Administration</h4>
-
-//         <ul>
-//           <li>Administration</li>
-//           <li>Settings</li>
-//         </ul>
-//       </nav>
-//     </aside>
-//   );
-// }
-
 import "./sidebar.css";
 
 import { NavLink }
@@ -57,11 +24,14 @@ export default function Sidebar() {
   const items =
     useNavigation();
 
-  const groups = [
-    "General",
-    "Applications",
-    "Administration",
-  ];
+const groups = [
+  ...new Set(
+    items.map(
+      (item) =>
+        item.group
+    )
+  ),
+];
 
   return (
     <aside className="sidebar">
