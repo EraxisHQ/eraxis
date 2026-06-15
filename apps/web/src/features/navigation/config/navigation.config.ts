@@ -102,5 +102,19 @@ export const NAVIGATION_ITEMS:
       order: 10,
     },
 
+    {
+      id: "products",
+
+      label: "Products",
+
+      path: "/products",
+
+      group: "Applications",
+
+      applicationId: "COMMERCE",
+
+      order: 11,
+    },
+
   ];
 

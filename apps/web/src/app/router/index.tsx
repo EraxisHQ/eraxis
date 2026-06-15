@@ -80,6 +80,9 @@ import ProtectedRoute
 import CommercePage
   from "../../pages/commerce";
 
+import ProductsPage
+  from "../../pages/products";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -88,17 +91,9 @@ export default function AppRouter() {
           path="/"
           element=<LoginPage />
         />
-
-        {/* <Route
-          path="/dashboard"
-          element={<DashboardPage />}
-        /> */}
         <Route
           path="/dashboard"
           element={
-            // <ProtectedRoute>
-            //   <DashboardPage />
-            // </ProtectedRoute>
             <ProtectedRoute
               permission="dashboard:view"
             >
@@ -237,6 +232,12 @@ export default function AppRouter() {
           path="/commerce"
           element={
             <CommercePage />
+          }
+        />
+        <Route
+          path="/products"
+          element={
+            <ProductsPage />
           }
         />
       </Routes>
