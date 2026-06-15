@@ -212,3 +212,14 @@ Deliverables:
 - Module Configuration Registry
 - Module Configuration Loader
 - Module Configuration Registration
+
+M001-05-05 Feature Configuration Runtime
+
+Status:
+COMPLETE
+
+Deliverables:
+- Feature Configuration Type
+- Feature Configuration Registry
+- Feature Configuration Loader
+- Feature Configuration Registration
