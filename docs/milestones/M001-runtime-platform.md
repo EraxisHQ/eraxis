@@ -233,3 +233,13 @@ Deliverables:
 - Platform Event Type
 - Event Registry
 - Event Loader Service
+
+M001-06-02 Event Publishing Runtime
+
+Status:
+COMPLETE
+
+Deliverables:
+- Event Publisher Service
+- Runtime Event Registration
+- Platform Event Publishing
