@@ -170,3 +170,13 @@ Deliverables:
 - Widget Registration Service
 - Runtime Widget Expansion
 - Plugin Widget Foundation
+
+M001-05-01 Configuration Registry Foundation
+
+Status:
+COMPLETE
+
+Deliverables:
+- Configuration Registry
+- Configuration Loader
+- Runtime Configuration Foundation
