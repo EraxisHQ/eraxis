@@ -17,10 +17,10 @@ import {
   getCurrentUser,
 } from "../features/auth/services/current-user.service";
 
-import {
-  can,
-  hasRole,
-} from "../features/auth";
+// import {
+//   can,
+//   hasRole,
+// } from "../features/auth";
 
 type AuthContextValue = {
   user: AuthUser | null;

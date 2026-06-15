@@ -5,9 +5,9 @@ import {
   useProfile,
 } from "../../features/profile/hooks/use-profile";
 
-import {
-  PermissionGuard,
-} from "../../features/auth";
+// import {
+//   PermissionGuard,
+// } from "../../features/auth";
 
 export default function ProfilePage() {
   const profile =
