@@ -130,5 +130,19 @@ export const NAVIGATION_ITEMS:
       order: 12,
     },
 
+    {
+      id: "inventory",
+
+      label: "Inventory",
+
+      path: "/inventory",
+
+      group: "Applications",
+
+      applicationId: "COMMERCE",
+
+      order: 13,
+    },
+
   ];
 

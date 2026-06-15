@@ -86,6 +86,9 @@ import ProductsPage
 import CategoriesPage
   from "../../pages/categories";
 
+import InventoryPage
+  from "../../pages/inventory";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -249,6 +252,12 @@ export default function AppRouter() {
             <CategoriesPage />
           }
         />
+        <Route
+          path="/inventory"
+          element={
+            <InventoryPage />
+          }
+        />]
       </Routes>
     </BrowserRouter>
   );
