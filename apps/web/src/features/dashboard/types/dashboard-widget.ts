@@ -4,4 +4,6 @@ export type DashboardWidget = {
   title: string;
 
   value: string;
+
+  applicationId?: string;
 };

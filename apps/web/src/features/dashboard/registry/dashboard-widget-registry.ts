@@ -21,17 +21,20 @@ export const DASHBOARD_WIDGET_REGISTRY:
       id: "applications",
       title: "Applications",
       value: "1",
+      applicationId: "CORE",
     },
 
     {
       id: "users",
       title: "Users",
       value: "1",
+      applicationId: "CORE",
     },
 
     {
       id: "tenants",
       title: "Tenants",
       value: "1",
+      applicationId: "CORE",
     },
   ];
