@@ -283,3 +283,23 @@ Deliverables:
 - Job Processor Service
 - Job Status Lifecycle
 - Runtime Job Execution Foundation
+
+M001-08-01 Workflow Contract Foundation
+
+Status:
+COMPLETE
+
+Deliverables:
+- Platform Workflow Type
+- Workflow Registry
+- Workflow Loader Service
+
+M001-08-02 Workflow Registration Runtime
+
+Status:
+COMPLETE
+
+Deliverables:
+- Workflow Registration Service
+- Runtime Workflow Registration
+- Workflow Expansion Foundation
