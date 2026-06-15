@@ -19,6 +19,8 @@ export const PLUGINS: Plugin[] = [
     route: "/dashboard",
 
     enabled: true,
+
+    dependencies: [],
   },
 
   {
@@ -33,6 +35,10 @@ export const PLUGINS: Plugin[] = [
     route: "/settings",
 
     enabled: true,
+
+    dependencies: [
+      "DASHBOARD",
+    ],
   },
 
   {
@@ -47,6 +53,11 @@ export const PLUGINS: Plugin[] = [
     route: "/administration",
 
     enabled: true,
+
+    dependencies: [
+      "DASHBOARD",
+      "SETTINGS",
+    ],
   },
 ];
 

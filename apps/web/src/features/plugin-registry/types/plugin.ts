@@ -10,4 +10,6 @@ export type Plugin = {
   route: string;
 
   enabled: boolean;
+
+  dependencies?: string[];
 };
