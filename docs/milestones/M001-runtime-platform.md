@@ -140,3 +140,23 @@ Deliverables:
 - Navigation Filter Service
 - Application Registry Integration
 - Runtime Navigation Filtering
+
+M001-03-03 Dynamic Sidebar Runtime
+
+Status:
+COMPLETE
+
+Deliverables:
+- Runtime Navigation Rendering
+- Dynamic Navigation Groups
+- Application-Aware Sidebar
+
+M001-04-01 Dashboard Widget Foundation
+
+Status:
+COMPLETE
+
+Deliverables:
+- Widget Registry
+- Widget Service
+- Dashboard Runtime Foundation
