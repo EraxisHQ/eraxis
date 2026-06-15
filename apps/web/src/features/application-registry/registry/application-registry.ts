@@ -15,6 +15,16 @@ import type {
   Application,
 } from "../types/application";
 
+/**
+ * Runtime registry.
+ *
+ * Future plugins:
+ * Commerce
+ * HRMS
+ * Fleet
+ * Inventory
+ */
+
 export const APPLICATION_REGISTRY:
   Application[] = [
     {

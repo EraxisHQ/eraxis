@@ -109,3 +109,13 @@ Deliverables:
 - Registry Layer
 - Loader Service
 - Dynamic Provider Loading
+
+M001-02-03 Dynamic Application Discovery
+
+Status:
+COMPLETE
+
+Deliverables:
+- Application Registration Service
+- Runtime Registry Expansion
+- Plugin Registration Foundation
