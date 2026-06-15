@@ -3,8 +3,8 @@ import {
 } from "../context/application-context";
 
 import {
-  APPLICATIONS,
-} from "../constants/applications";
+  loadApplications,
+} from "../services/application-loader-service";
 
 type Props = {
   children:
@@ -14,9 +14,13 @@ type Props = {
 export function ApplicationProvider({
   children,
 }: Props) {
+
+  const applications =
+    loadApplications();
+
   return (
     <ApplicationContext.Provider
-      value={APPLICATIONS}
+      value={applications}
     >
       {children}
     </ApplicationContext.Provider>

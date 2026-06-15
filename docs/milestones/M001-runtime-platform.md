@@ -99,3 +99,13 @@ Deliverables:
 - Shell Responsibilities Moved
 - Dashboard Layout Simplified
 - Runtime Shell Established
+
+M001-02-02 Application Registry Runtime
+
+Status:
+COMPLETE
+
+Deliverables:
+- Registry Layer
+- Loader Service
+- Dynamic Provider Loading
