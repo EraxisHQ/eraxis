@@ -160,3 +160,13 @@ Deliverables:
 - Widget Registry
 - Widget Service
 - Dashboard Runtime Foundation
+
+M001-04-02 Dashboard Widget Registration Runtime
+
+Status:
+COMPLETE
+
+Deliverables:
+- Widget Registration Service
+- Runtime Widget Expansion
+- Plugin Widget Foundation
