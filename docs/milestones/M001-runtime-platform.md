@@ -190,3 +190,14 @@ Deliverables:
 - Configuration Registration Service
 - Runtime Configuration Expansion
 - Plugin Configuration Foundation
+
+M001-05-03 Tenant Configuration Runtime
+
+Status:
+COMPLETE
+
+Deliverables:
+- Tenant Configuration Type
+- Tenant Configuration Registry
+- Tenant Configuration Loader
+- Tenant Configuration Registration
