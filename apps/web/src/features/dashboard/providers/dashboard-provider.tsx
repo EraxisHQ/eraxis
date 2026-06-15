@@ -3,8 +3,8 @@ import {
 } from "../context/dashboard-context";
 
 import {
-  DEFAULT_WIDGETS,
-} from "../constants/default-widgets";
+  loadDashboardWidgets,
+} from "../services/dashboard-widget-loader-service";
 
 type Props = {
   children: React.ReactNode;
@@ -13,9 +13,13 @@ type Props = {
 export function DashboardProvider({
   children,
 }: Props) {
+
+  const widgets =
+    loadDashboardWidgets();
+
   return (
     <DashboardContext.Provider
-      value={DEFAULT_WIDGETS}
+      value={widgets}
     >
       {children}
     </DashboardContext.Provider>
