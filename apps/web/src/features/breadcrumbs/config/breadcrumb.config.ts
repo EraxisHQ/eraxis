@@ -38,4 +38,10 @@ export const BREADCRUMB_LABELS = {
   "/branches": "Branch Management",
 
   "/health": "System Health",
+
+  "/commerce": "Commerce",
+
+  "/products": "Products",
+
+  "/categories": "Categories",
 };
