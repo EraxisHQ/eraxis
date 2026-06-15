@@ -223,3 +223,13 @@ Deliverables:
 - Feature Configuration Registry
 - Feature Configuration Loader
 - Feature Configuration Registration
+
+M001-06-01 Event Contract Foundation
+
+Status:
+COMPLETE
+
+Deliverables:
+- Platform Event Type
+- Event Registry
+- Event Loader Service
