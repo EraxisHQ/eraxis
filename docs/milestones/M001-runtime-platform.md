@@ -180,3 +180,13 @@ Deliverables:
 - Configuration Registry
 - Configuration Loader
 - Runtime Configuration Foundation
+
+M001-05-02 Configuration Registration Runtime
+
+Status:
+COMPLETE
+
+Deliverables:
+- Configuration Registration Service
+- Runtime Configuration Expansion
+- Plugin Configuration Foundation
