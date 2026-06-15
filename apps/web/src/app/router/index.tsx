@@ -83,6 +83,9 @@ import CommercePage
 import ProductsPage
   from "../../pages/products";
 
+import CategoriesPage
+  from "../../pages/categories";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -238,6 +241,12 @@ export default function AppRouter() {
           path="/products"
           element={
             <ProductsPage />
+          }
+        />
+        <Route
+          path="/categories"
+          element={
+            <CategoriesPage />
           }
         />
       </Routes>

@@ -116,5 +116,19 @@ export const NAVIGATION_ITEMS:
       order: 11,
     },
 
+    {
+      id: "categories",
+
+      label: "Categories",
+
+      path: "/categories",
+
+      group: "Applications",
+
+      applicationId: "COMMERCE",
+
+      order: 12,
+    },
+
   ];
 
