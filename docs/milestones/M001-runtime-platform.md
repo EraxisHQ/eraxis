@@ -201,3 +201,14 @@ Deliverables:
 - Tenant Configuration Registry
 - Tenant Configuration Loader
 - Tenant Configuration Registration
+
+M001-05-04 Module Configuration Runtime
+
+Status:
+COMPLETE
+
+Deliverables:
+- Module Configuration Type
+- Module Configuration Registry
+- Module Configuration Loader
+- Module Configuration Registration
