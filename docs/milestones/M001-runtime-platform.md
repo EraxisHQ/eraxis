@@ -313,3 +313,13 @@ Deliverables:
 - Workflow Processor Service
 - Workflow Approval Lifecycle
 - Workflow Rejection Lifecycle
+
+M001-09-03 Permission Resolution Runtime
+
+Status:
+COMPLETE
+
+Deliverables:
+- Permission Resolution Service
+- Runtime Permission Validation
+- RBAC Runtime Foundation
