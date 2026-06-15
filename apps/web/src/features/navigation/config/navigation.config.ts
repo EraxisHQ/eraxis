@@ -144,5 +144,19 @@ export const NAVIGATION_ITEMS:
       order: 13,
     },
 
+    {
+      id: "customers",
+
+      label: "Customers",
+
+      path: "/customers",
+
+      group: "Applications",
+
+      applicationId: "COMMERCE",
+
+      order: 14,
+    },
+
   ];
 
