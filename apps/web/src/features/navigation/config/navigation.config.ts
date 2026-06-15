@@ -186,5 +186,19 @@ export const NAVIGATION_ITEMS:
       order: 16,
     },
 
+    {
+  id: "brands",
+
+  label: "Brands",
+
+  path: "/brands",
+
+  group: "Applications",
+
+  applicationId: "COMMERCE",
+
+  order: 17,
+},
+
   ];
 

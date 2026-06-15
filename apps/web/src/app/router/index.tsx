@@ -98,6 +98,9 @@ import OrdersPage
 import PricingPage
   from "../../pages/pricing";
 
+import BrandsPage
+  from "../../pages/brands";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -287,6 +290,13 @@ export default function AppRouter() {
             <PricingPage />
           }
         />
+
+<Route
+  path="/brands"
+  element={
+    <BrandsPage />
+  }
+/>
 
       </Routes>
     </BrowserRouter>
