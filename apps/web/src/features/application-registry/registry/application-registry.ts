@@ -40,4 +40,18 @@ export const APPLICATION_REGISTRY:
 
       featureFlag: "core",
     },
+
+    {
+      id: "commerce",
+
+      code: "COMMERCE",
+
+      name: "Commerce",
+
+      route: "/commerce",
+
+      enabled: true,
+
+      featureFlag: "commerce",
+    },
   ];

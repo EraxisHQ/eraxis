@@ -27,6 +27,12 @@ export const DEFAULT_FEATURE_FLAGS:
       key: "core",
       enabled: true,
     },
+    
+    {
+      key: "commerce",
+
+      enabled: true,
+    },
   ];
 
 DEFAULT_FEATURE_FLAGS.forEach(

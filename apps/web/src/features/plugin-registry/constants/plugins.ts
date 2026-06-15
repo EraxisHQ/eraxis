@@ -59,6 +59,24 @@ export const PLUGINS: Plugin[] = [
       "SETTINGS",
     ],
   },
+
+  {
+    id: "commerce",
+
+    applicationCode: "COMMERCE",
+
+    code: "COMMERCE",
+
+    name: "Commerce",
+
+    route: "/commerce",
+
+    enabled: true,
+
+    dependencies: [
+      "DASHBOARD",
+    ],
+  },
 ];
 
 PLUGINS.forEach(

@@ -28,66 +28,79 @@ import type {
 
 export const NAVIGATION_ITEMS:
   NavigationItem[] = [
-  {
-  id: "dashboard",
+    {
+      id: "dashboard",
 
-  label: "Dashboard",
+      label: "Dashboard",
 
-  path: ROUTES.DASHBOARD,
+      path: ROUTES.DASHBOARD,
 
-  group: "General",
+      group: "General",
 
-  permission: "dashboard:view",
+      permission: "dashboard:view",
 
-  applicationId: "CORE",
+      applicationId: "CORE",
 
-  order: 1,
-},
-{
-  id: "applications",
+      order: 1,
+    },
+    {
+      id: "applications",
 
-  label: "Applications",
+      label: "Applications",
 
-  path: ROUTES.APPLICATIONS,
+      path: ROUTES.APPLICATIONS,
 
-  group: "Applications",
+      group: "Applications",
 
-  permission: "applications:view",
+      permission: "applications:view",
 
-  applicationId: "CORE",
+      applicationId: "CORE",
 
-  order: 2,
-},
-{
-  id: "administration",
+      order: 2,
+    },
+    {
+      id: "administration",
 
-  label: "Administration",
+      label: "Administration",
 
-  path: ROUTES.ADMINISTRATION,
+      path: ROUTES.ADMINISTRATION,
 
-  group: "Administration",
+      group: "Administration",
 
-  permission: "administration:view",
+      permission: "administration:view",
 
-  applicationId: "CORE",
+      applicationId: "CORE",
 
-  order: 3,
-},
-{
-  id: "settings",
+      order: 3,
+    },
+    {
+      id: "settings",
 
-  label: "Settings",
+      label: "Settings",
 
-  path: ROUTES.SETTINGS,
+      path: ROUTES.SETTINGS,
 
-  group: "Administration",
+      group: "Administration",
 
-  permission: "settings:view",
+      permission: "settings:view",
 
-  applicationId: "CORE",
+      applicationId: "CORE",
 
-  order: 4,
-},
+      order: 4,
+    },
+    {
+      id: "commerce",
 
-];
+      label: "Commerce",
+
+      path: "/commerce",
+
+      group: "Applications",
+
+      applicationId: "COMMERCE",
+
+      order: 10,
+    },
+
+  ];
 
