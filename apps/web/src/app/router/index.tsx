@@ -92,6 +92,9 @@ import InventoryPage
 import CustomersPage
   from "../../pages/customers";
 
+import OrdersPage
+  from "../../pages/orders";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -267,6 +270,14 @@ export default function AppRouter() {
             <CustomersPage />
           }
         />
+
+        <Route
+          path="/orders"
+          element={
+            <OrdersPage />
+          }
+        />
+
       </Routes>
     </BrowserRouter>
   );
