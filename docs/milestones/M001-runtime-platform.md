@@ -263,3 +263,13 @@ Deliverables:
 - Platform Job Type
 - Job Registry
 - Job Loader Service
+
+M001-07-02 Job Queue Runtime
+
+Status:
+COMPLETE
+
+Deliverables:
+- Job Queue Service
+- Runtime Job Registration
+- Platform Queue Foundation
