@@ -22,4 +22,6 @@ export type Customer = {
   phone?: string;
 
   active: boolean;
+
+  addressIds?: string[];
 };

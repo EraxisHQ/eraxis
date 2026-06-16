@@ -7,7 +7,7 @@
  * Product variant contract.
  *
  * Milestone:
- * M002-02-01
+ * M002-11-01
  * =====================================
  */
 
@@ -21,4 +21,8 @@ export type ProductVariant = {
   name: string;
 
   active: boolean;
+
+  price?: number;
+
+  inventoryQuantity?: number;
 };

@@ -11,4 +11,30 @@ export const en = {
 
   systemStatus: "System Status",
   recentActivity: "Recent Activity",
+
+  brands: "Brands",
+
+  productVariants:
+    "Product Variants",
+
+  productVariantFoundation:
+    "Product Variant Foundation",
+
+  customerAddresses:
+    "Customer Addresses",
+
+  customerAddressFoundation:
+    "Customer Address Foundation",
+
+  orderLifecycle:
+    "Order Lifecycle",
+
+  orderLifecycleFoundation:
+    "Order Lifecycle Foundation",
+
+  orderItems:
+    "Order Items",
+
+  orderItemFoundation:
+    "Order Item Foundation",
 };

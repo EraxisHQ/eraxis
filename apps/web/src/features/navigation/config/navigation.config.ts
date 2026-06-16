@@ -1,6 +1,3 @@
-
-
-
 /**
  * =====================================
  * Eraxis Navigation Registry
@@ -187,18 +184,68 @@ export const NAVIGATION_ITEMS:
     },
 
     {
-  id: "brands",
+      id: "brands",
 
-  label: "Brands",
+      label: "Brands",
 
-  path: "/brands",
+      path: "/brands",
 
-  group: "Applications",
+      group: "Applications",
 
-  applicationId: "COMMERCE",
+      applicationId: "COMMERCE",
 
-  order: 17,
-},
+      order: 17,
+    },
+
+    {
+      id: "product-variants",
+
+      label: "Product Variants",
+
+      path: "/product-variants",
+
+      group: "Applications",
+
+      applicationId: "COMMERCE",
+
+      order: 18,
+    },
+
+    {
+      id: "customer-addresses",
+
+      label:
+        "Customer Addresses",
+
+      path:
+        "/customer-addresses",
+
+      group:
+        "Applications",
+
+      applicationId:
+        "COMMERCE",
+
+      order: 19,
+    },
+
+    {
+      id: "order-lifecycle",
+
+      label:
+        "Order Lifecycle",
+
+      path:
+        "/order-lifecycle",
+
+      group:
+        "Applications",
+
+      applicationId:
+        "COMMERCE",
+
+      order: 20,
+    },
 
   ];
 

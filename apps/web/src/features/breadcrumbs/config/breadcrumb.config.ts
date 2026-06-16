@@ -54,4 +54,10 @@ export const BREADCRUMB_LABELS = {
   "/pricing": "Pricing",
 
   "/brands": "Brands",
+
+  "/product-variants": "Product Variants",
+
+  "/customer-addresses": "Customer Addresses",
+
+  "/order-lifecycle": "Order Lifecycle",
 };

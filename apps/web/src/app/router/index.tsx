@@ -101,6 +101,15 @@ import PricingPage
 import BrandsPage
   from "../../pages/brands";
 
+import ProductVariantsPage
+  from "../../pages/product-variants";
+
+import CustomerAddressesPage
+  from "../../pages/customer-addresses";
+
+import OrderLifecyclePage
+  from "../../pages/order-lifecycle";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -291,13 +300,33 @@ export default function AppRouter() {
           }
         />
 
-<Route
-  path="/brands"
-  element={
-    <BrandsPage />
-  }
-/>
+        <Route
+          path="/brands"
+          element={
+            <BrandsPage />
+          }
+        />
 
+        <Route
+          path="/product-variants"
+          element={
+            <ProductVariantsPage />
+          }
+        />
+
+        <Route
+          path="/customer-addresses"
+          element={
+            <CustomerAddressesPage />
+          }
+        />
+
+        <Route
+          path="/order-lifecycle"
+          element={
+            <OrderLifecyclePage />
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

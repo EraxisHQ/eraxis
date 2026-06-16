@@ -11,4 +11,30 @@ export const od = {
 
   systemStatus: "ସିଷ୍ଟମ ସ୍ଥିତି",
   recentActivity: "ସମ୍ପ୍ରତି କାର୍ଯ୍ୟକଳାପ",
+
+  brands: "ବ୍ରାଣ୍ଡ",
+
+  productVariants:
+    "ପ୍ରୋଡକ୍ଟ ଭେରିଏଣ୍ଟ",
+
+  productVariantFoundation:
+    "ପ୍ରୋଡକ୍ଟ ଭେରିଏଣ୍ଟ ମଡ୍ୟୁଲ",
+
+  customerAddresses:
+    "ଗ୍ରାହକ ଠିକଣା",
+
+  customerAddressFoundation:
+    "ଗ୍ରାହକ ଠିକଣା ମଡ୍ୟୁଲ",
+
+  orderLifecycle:
+    "ଅର୍ଡର ଜୀବନଚକ୍ର",
+
+  orderLifecycleFoundation:
+    "ଅର୍ଡର ଜୀବନଚକ୍ର ମଡ୍ୟୁଲ",
+
+  orderItems:
+    "ଅର୍ଡର ଆଇଟମ",
+
+  orderItemFoundation:
+    "ଅର୍ଡର ଆଇଟମ ମଡ୍ୟୁଲ",
 };

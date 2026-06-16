@@ -25,4 +25,6 @@ export type Product = {
   brandId?: string;
 
   active: boolean;
+
+  variantIds?: string[];
 };
