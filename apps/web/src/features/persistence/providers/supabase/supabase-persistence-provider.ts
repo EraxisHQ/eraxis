@@ -22,55 +22,55 @@ export class
   SupabasePersistenceProvider
   implements PersistenceProvider {
 
-async find<T>(
-  collection: string,
-): Promise<T[]> {
+  async find<T>(
+    collection: string,
+  ): Promise<T[]> {
 
-  const {
-    data,
-    error,
-  } = await supabaseClient
-    .from(
-      collection,
-    )
-    .select("*");
+    const {
+      data,
+      error,
+    } = await supabaseClient
+      .from(
+        collection,
+      )
+      .select("*");
 
-  if (error) {
+    if (error) {
 
-    throw error;
+      throw error;
+    }
+
+    return (
+      data ?? []
+    ) as T[];
   }
 
-  return (
-    data ?? []
-  ) as T[];
-}
+  async findById<T>(
+    collection: string,
+    id: string,
+  ): Promise<T | null> {
 
- async findById<T>(
-  collection: string,
-  id: string,
-): Promise<T | null> {
+    const {
+      data,
+      error,
+    } = await supabaseClient
+      .from(
+        collection,
+      )
+      .select("*")
+      .eq(
+        "id",
+        id,
+      )
+      .single();
 
-  const {
-    data,
-    error,
-  } = await supabaseClient
-    .from(
-      collection,
-    )
-    .select("*")
-    .eq(
-      "id",
-      id,
-    )
-    .single();
+    if (error) {
 
-  if (error) {
+      return null;
+    }
 
-    return null;
+    return data as T;
   }
-
-  return data as T;
-}
 
   async create<T>(
     collection: string,
@@ -96,23 +96,54 @@ async find<T>(
   }
 
   async update<T>(
-    _collection: string,
-    _id: string,
-    _entity: T,
+    collection: string,
+    id: string,
+    entity: T,
   ): Promise<void> {
 
-    throw new Error(
-      "Not implemented",
-    );
+    const {
+      error,
+    } = await supabaseClient
+      .from(
+        collection,
+      )
+      .update(
+        entity as Record<
+          string,
+          unknown
+        >,
+      )
+      .eq(
+        "id",
+        id,
+      );
+
+    if (error) {
+
+      throw error;
+    }
   }
 
   async delete(
-    _collection: string,
-    _id: string,
+    collection: string,
+    id: string,
   ): Promise<void> {
 
-    throw new Error(
-      "Not implemented",
-    );
+    const {
+      error,
+    } = await supabaseClient
+      .from(
+        collection,
+      )
+      .delete()
+      .eq(
+        "id",
+        id,
+      );
+
+    if (error) {
+
+      throw error;
+    }
   }
-}
+};
