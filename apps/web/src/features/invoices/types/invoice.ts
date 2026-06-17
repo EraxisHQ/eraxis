@@ -31,4 +31,6 @@ export type Invoice = {
   paymentIds?: string[];
 
   taxIds?: string[];
+
+  discountIds?: string[];
 };

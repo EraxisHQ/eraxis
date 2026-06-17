@@ -55,5 +55,11 @@ export const en = {
 
   taxFoundation:
     "Tax Foundation",
+    
+    discounts:
+  "Discounts",
+
+discountFoundation:
+  "Discount Foundation",
 
 };

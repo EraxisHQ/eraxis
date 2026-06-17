@@ -55,4 +55,10 @@ paymentFoundation:
 
 taxFoundation:
     "Модуль налогов",
+
+    discounts:
+  "Скидки",
+
+discountFoundation:
+  "Модуль скидок",
 };

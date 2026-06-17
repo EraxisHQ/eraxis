@@ -303,5 +303,19 @@ export const NAVIGATION_ITEMS:
       order: 24,
     },
 
+    {
+  id: "discounts",
+
+  label: "Discounts",
+
+  path: "/discounts",
+
+  group: "Applications",
+
+  applicationId: "COMMERCE",
+
+  order: 25,
+},
+
   ];
 

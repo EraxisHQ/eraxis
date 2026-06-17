@@ -122,6 +122,9 @@ import PaymentsPage
 import TaxesPage
   from "../../pages/taxes";
 
+import DiscountsPage
+  from "../../pages/discounts";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -367,6 +370,13 @@ export default function AppRouter() {
             <TaxesPage />
           }
         />
+        <Route
+          path="/discounts"
+          element={
+            <DiscountsPage />
+          }
+        />
+
       </Routes>
     </BrowserRouter>
   );
