@@ -7,7 +7,7 @@
  * access point.
  *
  * Milestone:
- * M003-01-03
+ * M003-10-04
  * =====================================
  */
 
@@ -16,7 +16,8 @@ import type {
 } from "../types/persistence-provider";
 
 let provider:
-  PersistenceProvider;
+  PersistenceProvider
+  | null = null;
 
 export function
 setPersistenceProvider(
@@ -30,6 +31,13 @@ setPersistenceProvider(
 
 export function
 getPersistenceProvider() {
+
+  if (!provider) {
+
+    throw new Error(
+      "Persistence provider not initialized",
+    );
+  }
 
   return provider;
 }
