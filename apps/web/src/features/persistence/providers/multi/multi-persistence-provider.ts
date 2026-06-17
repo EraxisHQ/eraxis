@@ -15,20 +15,20 @@ import type {
 } from "../../types/persistence-provider";
 
 export class
-MultiPersistenceProvider
-implements PersistenceProvider {
+  MultiPersistenceProvider
+  implements PersistenceProvider {
 
   private readonly providers:
-  PersistenceProvider[];
+    PersistenceProvider[];
 
-constructor(
-  providers:
-    PersistenceProvider[],
-) {
+  constructor(
+    providers:
+      PersistenceProvider[],
+  ) {
 
-  this.providers =
-    providers;
-}
+    this.providers =
+      providers;
+  }
   async find<T>(
     collection: string,
   ): Promise<T[]> {
@@ -56,14 +56,30 @@ constructor(
     entity: T,
   ): Promise<void> {
 
-    await Promise.all(
-      this.providers.map(
-        provider =>
-          provider.create(
-            collection,
-            entity,
-          ),
-      ),
+    const results =
+      await Promise.allSettled(
+        this.providers.map(
+          provider =>
+            provider.create(
+              collection,
+              entity,
+            ),
+        ),
+      );
+
+    results.forEach(
+      result => {
+
+        if (
+          result.status ===
+          "rejected"
+        ) {
+
+          console.error(
+            result.reason,
+          );
+        }
+      },
     );
   }
 
@@ -73,15 +89,31 @@ constructor(
     entity: T,
   ): Promise<void> {
 
-    await Promise.all(
-      this.providers.map(
-        provider =>
-          provider.update(
-            collection,
-            id,
-            entity,
-          ),
-      ),
+    const results =
+      await Promise.allSettled(
+        this.providers.map(
+          provider =>
+            provider.update(
+              collection,
+              id,
+              entity,
+            ),
+        ),
+      );
+
+    results.forEach(
+      result => {
+
+        if (
+          result.status ===
+          "rejected"
+        ) {
+
+          console.error(
+            result.reason,
+          );
+        }
+      },
     );
   }
 
@@ -90,14 +122,30 @@ constructor(
     id: string,
   ): Promise<void> {
 
-    await Promise.all(
-      this.providers.map(
-        provider =>
-          provider.delete(
-            collection,
-            id,
-          ),
-      ),
+    const results =
+      await Promise.allSettled(
+        this.providers.map(
+          provider =>
+            provider.delete(
+              collection,
+              id,
+            ),
+        ),
+      );
+
+    results.forEach(
+      result => {
+
+        if (
+          result.status ===
+          "rejected"
+        ) {
+
+          console.error(
+            result.reason,
+          );
+        }
+      },
     );
   }
 }

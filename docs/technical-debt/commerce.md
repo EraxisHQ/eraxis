@@ -52,3 +52,23 @@ Medium
 
 Status:
 OPEN
+
+----------------------------
+TD-M003-002
+
+MultiPersistenceProvider
+should use:
+
+Promise.allSettled()
+
+instead of:
+
+Promise.all()
+
+Reason:
+Partial provider failure handling.
+
+Status:
+OPEN
+Priority:
+LOW
