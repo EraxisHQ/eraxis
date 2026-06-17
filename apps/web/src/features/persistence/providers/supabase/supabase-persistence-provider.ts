@@ -22,24 +22,55 @@ export class
   SupabasePersistenceProvider
   implements PersistenceProvider {
 
-  async find<T>(
-    _collection: string,
-  ): Promise<T[]> {
+async find<T>(
+  collection: string,
+): Promise<T[]> {
 
-    throw new Error(
-      "Not implemented",
-    );
+  const {
+    data,
+    error,
+  } = await supabaseClient
+    .from(
+      collection,
+    )
+    .select("*");
+
+  if (error) {
+
+    throw error;
   }
 
-  async findById<T>(
-    _collection: string,
-    _id: string,
-  ): Promise<T | null> {
+  return (
+    data ?? []
+  ) as T[];
+}
 
-    throw new Error(
-      "Not implemented",
-    );
+ async findById<T>(
+  collection: string,
+  id: string,
+): Promise<T | null> {
+
+  const {
+    data,
+    error,
+  } = await supabaseClient
+    .from(
+      collection,
+    )
+    .select("*")
+    .eq(
+      "id",
+      id,
+    )
+    .single();
+
+  if (error) {
+
+    return null;
   }
+
+  return data as T;
+}
 
   async create<T>(
     collection: string,
