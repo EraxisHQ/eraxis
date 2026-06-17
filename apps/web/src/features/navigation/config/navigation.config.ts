@@ -248,18 +248,31 @@ export const NAVIGATION_ITEMS:
     },
 
     {
-  id: "order-items",
+      id: "order-items",
 
-  label: "Order Items",
+      label: "Order Items",
 
-  path: "/order-items",
+      path: "/order-items",
 
-  group: "Applications",
+      group: "Applications",
 
-  applicationId: "COMMERCE",
+      applicationId: "COMMERCE",
 
-  order: 21,
-},
+      order: 21,
+    },
 
+    {
+      id: "invoices",
+
+      label: "Invoices",
+
+      path: "/invoices",
+
+      group: "Applications",
+
+      applicationId: "COMMERCE",
+
+      order: 22,
+    },
   ];
 

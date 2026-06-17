@@ -26,4 +26,6 @@ export type Order = {
   totalAmount: number;
 
   itemIds?: string[];
+
+  invoiceIds?: string[];
 };
