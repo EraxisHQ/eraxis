@@ -70,4 +70,6 @@ export const BREADCRUMB_LABELS = {
   "/taxes": "Taxes",
 
   "/discounts": "Discounts",
+
+  "/shipping": "Shipping",
 };

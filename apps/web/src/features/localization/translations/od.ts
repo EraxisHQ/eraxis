@@ -56,9 +56,15 @@ export const od = {
   taxFoundation:
     "କର ମଡ୍ୟୁଲ",
 
-    discounts:
-  "ରିହାତି",
+  discounts:
+    "ରିହାତି",
 
-discountFoundation:
-  "ରିହାତି ମଡ୍ୟୁଲ",
+  discountFoundation:
+    "ରିହାତି ମଡ୍ୟୁଲ",
+
+  shipping:
+    "ପଠାଣ",
+
+  shippingFoundation:
+    "ପଠାଣ ମଡ୍ୟୁଲ",
 };

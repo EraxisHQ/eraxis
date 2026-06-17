@@ -18,11 +18,11 @@ export type Invoice = {
   orderId: string;
 
   status:
-    | "draft"
-    | "issued"
-    | "paid"
-    | "overdue"
-    | "cancelled";
+  | "draft"
+  | "issued"
+  | "paid"
+  | "overdue"
+  | "cancelled";
 
   amount: number;
 
@@ -33,4 +33,6 @@ export type Invoice = {
   taxIds?: string[];
 
   discountIds?: string[];
+
+  shipmentIds?: string[];
 };

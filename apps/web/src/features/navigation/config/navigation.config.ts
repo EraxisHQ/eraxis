@@ -304,18 +304,32 @@ export const NAVIGATION_ITEMS:
     },
 
     {
-  id: "discounts",
+      id: "discounts",
 
-  label: "Discounts",
+      label: "Discounts",
 
-  path: "/discounts",
+      path: "/discounts",
 
-  group: "Applications",
+      group: "Applications",
 
-  applicationId: "COMMERCE",
+      applicationId: "COMMERCE",
 
-  order: 25,
-},
+      order: 25,
+    },
+
+    {
+      id: "shipping",
+
+      label: "Shipping",
+
+      path: "/shipping",
+
+      group: "Applications",
+
+      applicationId: "COMMERCE",
+
+      order: 26,
+    },
 
   ];
 

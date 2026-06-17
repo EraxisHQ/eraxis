@@ -125,6 +125,9 @@ import TaxesPage
 import DiscountsPage
   from "../../pages/discounts";
 
+import ShippingPage
+  from "../../pages/shipping";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -374,6 +377,13 @@ export default function AppRouter() {
           path="/discounts"
           element={
             <DiscountsPage />
+          }
+        />
+
+        <Route
+          path="/shipping"
+          element={
+            <ShippingPage />
           }
         />
 

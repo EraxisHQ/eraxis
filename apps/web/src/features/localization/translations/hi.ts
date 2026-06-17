@@ -56,9 +56,15 @@ export const hi = {
   taxFoundation:
     "कर मॉड्यूल",
 
-    discounts:
-  "छूट",
+  discounts:
+    "छूट",
 
-discountFoundation:
-  "छूट मॉड्यूल",
+  discountFoundation:
+    "छूट मॉड्यूल",
+
+  shipping:
+    "शिपिंग",
+
+  shippingFoundation:
+    "शिपिंग मॉड्यूल",
 };

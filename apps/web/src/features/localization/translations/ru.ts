@@ -44,21 +44,27 @@ export const ru = {
   invoiceFoundation:
     "Модуль счетов",
 
-    payments:
-  "Платежи",
+  payments:
+    "Платежи",
 
-paymentFoundation:
-  "Модуль платежей",
+  paymentFoundation:
+    "Модуль платежей",
 
   taxes:
-  "Налоги",
+    "Налоги",
 
-taxFoundation:
+  taxFoundation:
     "Модуль налогов",
 
-    discounts:
-  "Скидки",
+  discounts:
+    "Скидки",
 
-discountFoundation:
-  "Модуль скидок",
+  discountFoundation:
+    "Модуль скидок",
+
+  shipping:
+    "Доставка",
+
+  shippingFoundation:
+    "Модуль доставки",
 };
