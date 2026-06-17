@@ -24,4 +24,7 @@ export const COLLECTIONS = {
   INVOICES:
     "invoices",
 
+  PAYMENTS:
+    "payments",
+
 } as const;

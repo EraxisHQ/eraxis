@@ -26,30 +26,41 @@ import {
   InvoiceRepository,
 } from "../repositories/invoice-repository";
 
+import {
+  PaymentRepository,
+} from "../repositories/payment-repository";
+
 export function
-createProductRepository() {
+  createProductRepository() {
 
   return new
     ProductRepository();
 }
 
 export function
-createCustomerRepository() {
+  createCustomerRepository() {
 
   return new
     CustomerRepository();
 }
 
 export function
-createOrderRepository() {
+  createOrderRepository() {
 
   return new
     OrderRepository();
 }
 
 export function
-createInvoiceRepository() {
+  createInvoiceRepository() {
 
   return new
     InvoiceRepository();
+}
+
+export function
+  createPaymentRepository() {
+
+  return new
+    PaymentRepository();
 }
