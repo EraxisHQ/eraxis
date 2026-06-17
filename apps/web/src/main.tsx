@@ -113,8 +113,12 @@ import {
   initializePersistence,
 } from "./features/persistence/services/persistence-bootstrap";
 
-initializePersistence();
+import {
+  initializeStorage,
+} from "./features/persistence/services/storage-bootstrap";
 
+initializePersistence();
+initializeStorage();
 
 createRoot(
   document.getElementById("root")!
