@@ -190,3 +190,49 @@ Supported Languages:
 * Russian
 
 
+RULE-ARCH-012
+
+Single Point Of Persistence Access
+
+Business modules must never directly access:
+
+- Supabase
+- Postgres
+- MySQL
+- MongoDB
+- AWS
+- Local Storage
+
+All persistence operations must flow through:
+
+Feature
+  ↓
+Repository
+  ↓
+Persistence Provider
+
+This ensures:
+
+- Backend portability
+- Storage portability
+- Multi-provider support
+- Enterprise deployments
+- Dedicated customer storage
+
+RULE-ARCH-013
+
+No Vendor Lock-In
+
+Supabase-specific code must exist only inside:
+
+features/persistence/providers/supabase
+
+AWS-specific code must exist only inside:
+
+features/persistence/providers/aws
+
+Local-specific code must exist only inside:
+
+features/persistence/providers/local
+
+
