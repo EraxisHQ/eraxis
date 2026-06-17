@@ -18,13 +18,17 @@ import type {
   Product,
 } from "../../products/types/product";
 
+import {
+  COLLECTIONS,
+} from "../constants/collections";
+
 export class ProductRepository {
 
   async findAll() {
 
     return getPersistenceProvider()
       .find<Product>(
-        "products"
+        COLLECTIONS.PRODUCTS,
       );
   }
 
@@ -34,7 +38,7 @@ export class ProductRepository {
 
     return getPersistenceProvider()
       .findById<Product>(
-        "products",
+        COLLECTIONS.PRODUCTS,
         id
       );
   }
@@ -45,7 +49,7 @@ export class ProductRepository {
 
     return getPersistenceProvider()
       .create(
-        "products",
+        COLLECTIONS.PRODUCTS,
         product
       );
   }
@@ -57,7 +61,7 @@ export class ProductRepository {
 
     return getPersistenceProvider()
       .update(
-        "products",
+        COLLECTIONS.PRODUCTS,
         id,
         product
       );
@@ -69,7 +73,7 @@ export class ProductRepository {
 
     return getPersistenceProvider()
       .delete(
-        "products",
+        COLLECTIONS.PRODUCTS,
         id
       );
   }
