@@ -10,3 +10,5 @@ All documents must support localization
 RULE-L10N-004
 All new modules must include localization keys
 before release
+
+

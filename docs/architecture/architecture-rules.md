@@ -247,3 +247,19 @@ Business modules must never know:
 
 Only Persistence Layer may know these details.
 
+## RULE-ARCH-015
+All database access must go through
+Persistence Provider.
+
+## RULE-ARCH-016
+Repositories must not directly use
+Supabase Client.
+
+## RULE-ARCH-017
+Business modules must only communicate
+with repositories.
+
+## RULE-ARCH-018
+All Supabase RLS policies must be
+managed inside database migrations.
+
