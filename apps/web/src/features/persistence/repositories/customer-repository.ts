@@ -1,64 +1,22 @@
 import {
-  getPersistenceProvider,
-} from "../services/persistence-service";
+  BaseRepository,
+} from "./base-repository";
 
 import type {
   Customer,
 } from "../../customers/types/customer";
 
-export class CustomerRepository {
+import {
+  COLLECTIONS,
+} from "../constants/collections";
 
-  async findAll() {
+export class CustomerRepository
+extends BaseRepository<Customer> {
 
-    return getPersistenceProvider()
-      .find<Customer>(
-        "customers"
-      );
-  }
+  constructor() {
 
-  async findById(
-    id: string,
-  ) {
-
-    return getPersistenceProvider()
-      .findById<Customer>(
-        "customers",
-        id,
-      );
-  }
-
-  async create(
-    customer: Customer,
-  ) {
-
-    return getPersistenceProvider()
-      .create(
-        "customers",
-        customer,
-      );
-  }
-
-  async update(
-    id: string,
-    customer: Customer,
-  ) {
-
-    return getPersistenceProvider()
-      .update(
-        "customers",
-        id,
-        customer,
-      );
-  }
-
-  async delete(
-    id: string,
-  ) {
-
-    return getPersistenceProvider()
-      .delete(
-        "customers",
-        id,
-      );
+    super(
+      COLLECTIONS.CUSTOMERS,
+    );
   }
 }

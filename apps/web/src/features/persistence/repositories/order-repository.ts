@@ -1,64 +1,22 @@
 import {
-  getPersistenceProvider,
-} from "../services/persistence-service";
+  BaseRepository,
+} from "./base-repository";
 
 import type {
   Order,
 } from "../../orders/types/order";
 
-export class OrderRepository {
+import {
+  COLLECTIONS,
+} from "../constants/collections";
 
-  async findAll() {
+export class OrderRepository
+extends BaseRepository<Order> {
 
-    return getPersistenceProvider()
-      .find<Order>(
-        "orders"
-      );
-  }
+  constructor() {
 
-  async findById(
-    id: string,
-  ) {
-
-    return getPersistenceProvider()
-      .findById<Order>(
-        "orders",
-        id,
-      );
-  }
-
-  async create(
-    order: Order,
-  ) {
-
-    return getPersistenceProvider()
-      .create(
-        "orders",
-        order,
-      );
-  }
-
-  async update(
-    id: string,
-    order: Order,
-  ) {
-
-    return getPersistenceProvider()
-      .update(
-        "orders",
-        id,
-        order,
-      );
-  }
-
-  async delete(
-    id: string,
-  ) {
-
-    return getPersistenceProvider()
-      .delete(
-        "orders",
-        id,
-      );
+    super(
+      COLLECTIONS.ORDERS,
+    );
   }
 }

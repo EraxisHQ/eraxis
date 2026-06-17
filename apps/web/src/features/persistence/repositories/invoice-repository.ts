@@ -1,64 +1,22 @@
 import {
-  getPersistenceProvider,
-} from "../services/persistence-service";
+  BaseRepository,
+} from "./base-repository";
 
 import type {
   Invoice,
 } from "../../invoices/types/invoice";
 
-export class InvoiceRepository {
+import {
+  COLLECTIONS,
+} from "../constants/collections";
 
-  async findAll() {
+export class InvoiceRepository
+extends BaseRepository<Invoice> {
 
-    return getPersistenceProvider()
-      .find<Invoice>(
-        "invoices"
-      );
-  }
+  constructor() {
 
-  async findById(
-    id: string,
-  ) {
-
-    return getPersistenceProvider()
-      .findById<Invoice>(
-        "invoices",
-        id,
-      );
-  }
-
-  async create(
-    invoice: Invoice,
-  ) {
-
-    return getPersistenceProvider()
-      .create(
-        "invoices",
-        invoice,
-      );
-  }
-
-  async update(
-    id: string,
-    invoice: Invoice,
-  ) {
-
-    return getPersistenceProvider()
-      .update(
-        "invoices",
-        id,
-        invoice,
-      );
-  }
-
-  async delete(
-    id: string,
-  ) {
-
-    return getPersistenceProvider()
-      .delete(
-        "invoices",
-        id,
-      );
+    super(
+      COLLECTIONS.INVOICES,
+    );
   }
 }
