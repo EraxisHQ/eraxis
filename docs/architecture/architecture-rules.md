@@ -219,7 +219,7 @@ This ensures:
 - Enterprise deployments
 - Dedicated customer storage
 
-RULE-ARCH-013
+## RULE-ARCH-013
 
 No Vendor Lock-In
 
@@ -235,4 +235,15 @@ Local-specific code must exist only inside:
 
 features/persistence/providers/local
 
+
+## RULE-ARCH-014
+
+Business modules must never know:
+
+- Provider Type
+- Provider Mode
+- Storage Type
+- Database Type
+
+Only Persistence Layer may know these details.
 

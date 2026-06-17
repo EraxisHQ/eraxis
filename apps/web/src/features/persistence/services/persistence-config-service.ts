@@ -7,8 +7,10 @@ const CONFIG:
 
   provider:
     "local",
-};
 
+  mode:
+    "single",
+};
 export function
 getPersistenceConfig() {
 
