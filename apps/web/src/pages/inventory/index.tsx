@@ -1,17 +1,28 @@
 import DashboardLayout
   from "../../shell/dashboard-layout/dashboard-layout";
 
+import {
+  useLocalization,
+} from "../../features/localization/hooks/use-localization";
+
 export default function InventoryPage() {
+
+  const {
+    translations,
+  } = useLocalization();
 
   return (
     <DashboardLayout>
 
       <h1>
-        Inventory
+        {translations.inventory}
       </h1>
 
       <p>
-        Inventory Foundation
+        {
+          translations
+            .inventoryFoundation
+        }
       </p>
 
     </DashboardLayout>

@@ -170,3 +170,23 @@ Support future:
 
 without rewriting Commerce modules.
 
+
+## RULE-ARCH-011
+
+Localization Required
+
+All new pages must use:
+
+* useLocalization()
+* Translation Keys
+
+Hardcoded UI text is not permitted in new modules.
+
+Supported Languages:
+
+* English
+* Hindi
+* Odia
+* Russian
+
+

@@ -14,6 +14,45 @@ export const ru = {
 
   brands: "Бренды",
 
+  brandFoundation:
+  "Модуль брендов",
+  
+  products:
+    "Товары",
+
+  productFoundation:
+    "Модуль товаров",
+
+  categories:
+    "Категории",
+
+  categoryFoundation:
+    "Модуль категорий",
+
+  inventory:
+    "Инвентарь",
+
+  inventoryFoundation:
+    "Модуль инвентаря",
+
+  customers:
+    "Клиенты",
+
+  customerFoundation:
+    "Модуль клиентов",
+
+  orders:
+    "Заказы",
+
+  orderFoundation:
+    "Модуль заказов",
+
+  pricing:
+    "Ценообразование",
+
+  pricingFoundation:
+    "Модуль ценообразования",
+
   productVariants:
     "Варианты товаров",
 

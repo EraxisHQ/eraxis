@@ -1,17 +1,28 @@
 import DashboardLayout
   from "../../shell/dashboard-layout/dashboard-layout";
 
+import {
+  useLocalization,
+} from "../../features/localization/hooks/use-localization";
+
 export default function PricingPage() {
+
+  const {
+    translations,
+  } = useLocalization();
 
   return (
     <DashboardLayout>
 
       <h1>
-        Pricing
+        {translations.pricing}
       </h1>
 
       <p>
-        Pricing Foundation
+        {
+          translations
+            .pricingFoundation
+        }
       </p>
 
     </DashboardLayout>

@@ -227,3 +227,180 @@ Metrics:
 * Orders
 * Revenue
 
+M002-10 Brands Foundation
+
+Status:
+COMPLETE
+
+Deliverables:
+
+* Brand Type
+* Brand Registry
+* Brand Loader Service
+* Brand Page
+* Brand Navigation
+* Brand Routing
+* Brand Localization
+
+---
+
+M002-11 Product Variants Foundation
+
+Status:
+COMPLETE
+
+Deliverables:
+
+* Product Variant Type
+* Product Variant Registry
+* Product Variant Loader Service
+* Product Variant Page
+* Product Variant Navigation
+* Product Variant Routing
+* Product Variant Localization
+
+---
+
+M002-12 Customer Addresses Foundation
+
+Status:
+COMPLETE
+
+Deliverables:
+
+* Customer Address Type
+* Customer Address Registry
+* Customer Address Loader Service
+* Customer Address Page
+* Customer Address Navigation
+* Customer Address Routing
+* Customer Address Localization
+
+---
+
+M002-13 Order Lifecycle Foundation
+
+Status:
+COMPLETE
+
+Deliverables:
+
+* Order Lifecycle Contract
+* Status Transition Rules
+* Lifecycle Service
+* Lifecycle Page
+* Localization
+
+---
+
+M002-14 Order Status Runtime
+
+Status:
+COMPLETE
+
+Deliverables:
+
+* Status Validation
+* Transition Validation
+* Runtime Integration
+
+---
+
+M002-15 Order Items Foundation
+
+Status:
+COMPLETE
+
+Deliverables:
+
+* Order Item Type
+* Order Item Registry
+* Order Item Loader Service
+* Order Item Page
+* Order Integration
+
+---
+
+M002-16 Invoice Foundation
+
+Status:
+COMPLETE
+
+Deliverables:
+
+* Invoice Type
+* Invoice Registry
+* Invoice Loader Service
+* Invoice Page
+* Invoice Navigation
+* Invoice Localization
+* Order → Invoice Integration
+
+---
+
+M002-17 Payment Foundation
+
+Status:
+COMPLETE
+
+Deliverables:
+
+* Payment Type
+* Payment Registry
+* Payment Loader Service
+* Payment Page
+* Payment Navigation
+* Payment Localization
+* Invoice → Payment Integration
+
+---
+
+M002-18 Tax Foundation
+
+Status:
+COMPLETE
+
+Deliverables:
+
+* Tax Type
+* Tax Registry
+* Tax Loader Service
+* Tax Page
+* Tax Navigation
+* Tax Localization
+* Invoice → Tax Integration
+
+---
+
+M002-19 Discount Foundation
+
+Status:
+COMPLETE
+
+Deliverables:
+
+* Discount Type
+* Discount Registry
+* Discount Loader Service
+* Discount Page
+* Discount Navigation
+* Discount Localization
+* Invoice → Discount Integration
+
+---
+
+M002-20 Shipping Foundation
+
+Status:
+COMPLETE
+
+Deliverables:
+
+* Shipment Type
+* Shipment Registry
+* Shipment Loader Service
+* Shipping Page
+* Shipping Navigation
+* Shipping Localization
+* Invoice → Shipment Integration
+

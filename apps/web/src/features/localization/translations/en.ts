@@ -14,6 +14,45 @@ export const en = {
 
   brands: "Brands",
 
+  brandFoundation:
+  "Brand Foundation",
+    
+products:
+  "Products",
+
+productFoundation:
+  "Product Foundation",
+
+categories:
+  "Categories",
+
+categoryFoundation:
+  "Category Foundation",
+
+inventory:
+  "Inventory",
+
+inventoryFoundation:
+  "Inventory Foundation",
+
+customers:
+  "Customers",
+
+customerFoundation:
+  "Customer Foundation",
+
+orders:
+  "Orders",
+
+orderFoundation:
+  "Order Foundation",
+
+pricing:
+  "Pricing",
+
+pricingFoundation:
+  "Pricing Foundation",
+
   productVariants:
     "Product Variants",
 

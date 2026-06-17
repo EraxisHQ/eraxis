@@ -1,17 +1,28 @@
 import DashboardLayout
   from "../../shell/dashboard-layout/dashboard-layout";
 
+import {
+  useLocalization,
+} from "../../features/localization/hooks/use-localization";
+
 export default function CategoriesPage() {
+
+  const {
+    translations,
+  } = useLocalization();
 
   return (
     <DashboardLayout>
 
       <h1>
-        Categories
+        {translations.categories}
       </h1>
 
       <p>
-        Category Foundation
+        {
+          translations
+            .categoryFoundation
+        }
       </p>
 
     </DashboardLayout>

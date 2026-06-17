@@ -14,6 +14,45 @@ export const od = {
 
   brands: "ବ୍ରାଣ୍ଡ",
 
+  brandFoundation:
+  "ବ୍ରାଣ୍ଡ ମଡ୍ୟୁଲ",
+  
+  products:
+    "ଉତ୍ପାଦ",
+
+  productFoundation:
+    "ଉତ୍ପାଦ ମଡ୍ୟୁଲ",
+
+  categories:
+    "ଶ୍ରେଣୀଗୁଡ଼ିକ",
+
+  categoryFoundation:
+    "ଶ୍ରେଣୀ ମଡ୍ୟୁଲ",
+
+  inventory:
+    "ଭଣ୍ଡାର",
+
+  inventoryFoundation:
+    "ଭଣ୍ଡାର ମଡ୍ୟୁଲ",
+
+  customers:
+    "ଗ୍ରାହକ",
+
+  customerFoundation:
+    "ଗ୍ରାହକ ମଡ୍ୟୁଲ",
+
+  orders:
+    "ଅର୍ଡର",
+
+  orderFoundation:
+    "ଅର୍ଡର ମଡ୍ୟୁଲ",
+
+  pricing:
+    "ମୂଲ୍ୟ ନିର୍ଦ୍ଧାରଣ",
+
+  pricingFoundation:
+    "ମୂଲ୍ୟ ନିର୍ଦ୍ଧାରଣ ମଡ୍ୟୁଲ",
+
   productVariants:
     "ପ୍ରୋଡକ୍ଟ ଭେରିଏଣ୍ଟ",
 

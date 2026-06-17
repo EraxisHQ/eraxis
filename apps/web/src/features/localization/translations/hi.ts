@@ -14,6 +14,45 @@ export const hi = {
 
   brands: "ब्रांड",
 
+  brandFoundation:
+  "ब्रांड मॉड्यूल",
+  
+  products:
+  "उत्पाद",
+
+productFoundation:
+  "उत्पाद मॉड्यूल",
+
+categories:
+  "श्रेणियाँ",
+
+categoryFoundation:
+  "श्रेणी मॉड्यूल",
+
+inventory:
+  "इन्वेंटरी",
+
+inventoryFoundation:
+  "इन्वेंटरी मॉड्यूल",
+
+customers:
+  "ग्राहक",
+
+customerFoundation:
+  "ग्राहक मॉड्यूल",
+
+orders:
+  "ऑर्डर",
+
+orderFoundation:
+  "ऑर्डर मॉड्यूल",
+
+pricing:
+  "मूल्य निर्धारण",
+
+pricingFoundation:
+  "मूल्य निर्धारण मॉड्यूल",
+
   productVariants:
     "उत्पाद प्रकार",
 
