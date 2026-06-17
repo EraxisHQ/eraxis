@@ -44,4 +44,10 @@ export const en = {
   invoiceFoundation:
     "Invoice Foundation",
 
+    payments:
+  "Payments",
+
+paymentFoundation:
+  "Payment Foundation",
+
 };

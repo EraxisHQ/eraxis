@@ -43,4 +43,10 @@ export const od = {
 
   invoiceFoundation:
     "ଚାଲାନ ମଡ୍ୟୁଲ",
+
+    payments:
+  "ଦେୟ",
+
+paymentFoundation:
+  "ଦେୟ ମଡ୍ୟୁଲ",
 };

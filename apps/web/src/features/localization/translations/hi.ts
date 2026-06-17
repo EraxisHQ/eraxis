@@ -43,4 +43,10 @@ export const hi = {
 
   invoiceFoundation:
     "चालान मॉड्यूल",
+
+    payments:
+  "भुगतान",
+
+paymentFoundation:
+  "भुगतान मॉड्यूल",
 };

@@ -43,4 +43,10 @@ export const ru = {
 
   invoiceFoundation:
     "Модуль счетов",
+
+    payments:
+  "Платежи",
+
+paymentFoundation:
+  "Модуль платежей",
 };
