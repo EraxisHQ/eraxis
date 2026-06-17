@@ -14,9 +14,13 @@ import type {
   PersistenceProvider,
 } from "../../types/persistence-provider";
 
+import {
+  supabaseClient,
+} from "../../clients/supabase-client";
+
 export class
-SupabasePersistenceProvider
-implements PersistenceProvider {
+  SupabasePersistenceProvider
+  implements PersistenceProvider {
 
   async find<T>(
     _collection: string,
@@ -38,13 +42,26 @@ implements PersistenceProvider {
   }
 
   async create<T>(
-    _collection: string,
-    _entity: T,
+    collection: string,
+    entity: T,
   ): Promise<void> {
 
-    throw new Error(
-      "Not implemented",
-    );
+    const {
+      error,
+    } = await supabaseClient
+      .from(
+        collection,
+      )
+      .insert(
+        entity as Record<
+          string,
+          unknown
+        >
+      );
+    if (error) {
+
+      throw error;
+    }
   }
 
   async update<T>(
