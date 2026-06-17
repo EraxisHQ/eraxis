@@ -27,4 +27,6 @@ export type Invoice = {
   amount: number;
 
   dueDate: string;
+
+  paymentIds?: string[];
 };

@@ -116,6 +116,9 @@ import OrderItemsPage
 import InvoicesPage
   from "../../pages/invoices";
 
+import PaymentsPage
+  from "../../pages/payments";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -347,6 +350,14 @@ export default function AppRouter() {
             <InvoicesPage />
           }
         />
+
+        <Route
+          path="/payments"
+          element={
+            <PaymentsPage />
+          }
+        />
+
 
       </Routes>
     </BrowserRouter>

@@ -274,5 +274,20 @@ export const NAVIGATION_ITEMS:
 
       order: 22,
     },
+
+    {
+  id: "payments",
+
+  label: "Payments",
+
+  path: "/payments",
+
+  group: "Applications",
+
+  applicationId: "COMMERCE",
+
+  order: 23,
+},
+
   ];
 
