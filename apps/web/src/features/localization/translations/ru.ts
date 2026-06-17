@@ -49,4 +49,10 @@ export const ru = {
 
 paymentFoundation:
   "Модуль платежей",
+
+  taxes:
+  "Налоги",
+
+taxFoundation:
+    "Модуль налогов",
 };

@@ -276,18 +276,32 @@ export const NAVIGATION_ITEMS:
     },
 
     {
-  id: "payments",
+      id: "payments",
 
-  label: "Payments",
+      label: "Payments",
 
-  path: "/payments",
+      path: "/payments",
 
-  group: "Applications",
+      group: "Applications",
 
-  applicationId: "COMMERCE",
+      applicationId: "COMMERCE",
 
-  order: 23,
-},
+      order: 23,
+    },
+
+    {
+      id: "taxes",
+
+      label: "Taxes",
+
+      path: "/taxes",
+
+      group: "Applications",
+
+      applicationId: "COMMERCE",
+
+      order: 24,
+    },
 
   ];
 

@@ -44,9 +44,15 @@ export const od = {
   invoiceFoundation:
     "ଚାଲାନ ମଡ୍ୟୁଲ",
 
-    payments:
-  "ଦେୟ",
+  payments:
+    "ଦେୟ",
 
-paymentFoundation:
-  "ଦେୟ ମଡ୍ୟୁଲ",
+  paymentFoundation:
+    "ଦେୟ ମଡ୍ୟୁଲ",
+
+  taxes:
+    "କର",
+
+  taxFoundation:
+    "କର ମଡ୍ୟୁଲ",
 };
