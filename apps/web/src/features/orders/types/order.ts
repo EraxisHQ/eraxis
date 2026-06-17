@@ -16,11 +16,14 @@ export type Order = {
   customerId: string;
 
   status:
-    | "draft"
-    | "confirmed"
-    | "shipped"
-    | "completed"
-    | "cancelled";
+  | "draft"
+  | "confirmed"
+  | "processing"
+  | "shipped"
+  | "completed"
+  | "cancelled";
 
   totalAmount: number;
+
+  itemIds?: string[];
 };

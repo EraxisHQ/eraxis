@@ -60,4 +60,6 @@ export const BREADCRUMB_LABELS = {
   "/customer-addresses": "Customer Addresses",
 
   "/order-lifecycle": "Order Lifecycle",
+
+  "/order-items": "Order Items",
 };

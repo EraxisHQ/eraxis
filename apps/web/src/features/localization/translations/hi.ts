@@ -37,4 +37,10 @@ export const hi = {
 
   orderItemFoundation:
     "ऑर्डर आइटम मॉड्यूल",
+
+  invoices:
+    "चालान",
+
+  invoiceFoundation:
+    "चालान मॉड्यूल",
 };

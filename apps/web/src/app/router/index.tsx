@@ -110,6 +110,9 @@ import CustomerAddressesPage
 import OrderLifecyclePage
   from "../../pages/order-lifecycle";
 
+import OrderItemsPage
+  from "../../pages/order-items";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -325,6 +328,13 @@ export default function AppRouter() {
           path="/order-lifecycle"
           element={
             <OrderLifecyclePage />
+          }
+        />
+
+        <Route
+          path="/order-items"
+          element={
+            <OrderItemsPage />
           }
         />
       </Routes>

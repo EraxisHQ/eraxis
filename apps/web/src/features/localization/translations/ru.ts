@@ -37,4 +37,10 @@ export const ru = {
 
   orderItemFoundation:
     "Модуль позиций заказа",
+
+  invoices:
+    "Счета",
+
+  invoiceFoundation:
+    "Модуль счетов",
 };

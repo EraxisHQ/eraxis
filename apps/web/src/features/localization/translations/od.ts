@@ -37,4 +37,10 @@ export const od = {
 
   orderItemFoundation:
     "ଅର୍ଡର ଆଇଟମ ମଡ୍ୟୁଲ",
+
+  invoices:
+    "ଚାଲାନ",
+
+  invoiceFoundation:
+    "ଚାଲାନ ମଡ୍ୟୁଲ",
 };

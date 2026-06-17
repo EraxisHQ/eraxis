@@ -37,4 +37,11 @@ export const en = {
 
   orderItemFoundation:
     "Order Item Foundation",
+
+  invoices:
+    "Invoices",
+
+  invoiceFoundation:
+    "Invoice Foundation",
+
 };
