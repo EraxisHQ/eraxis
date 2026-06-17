@@ -5,8 +5,11 @@ import type {
 const CONFIG:
   PersistenceConfig = {
 
-  provider:
-    "local",
+  // provider:
+  //   "local",
+
+    provider:
+  "supabase",
 
   mode:
     "single",

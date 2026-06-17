@@ -11,7 +11,7 @@ testProductPersistence() {
   await repository.create({
 
     id:
-      "product-001",
+      crypto.randomUUID(),
 
     sku:
       "SKU-001",
@@ -22,6 +22,8 @@ testProductPersistence() {
     active:
       true,
 
+    description:
+      "Persistence Test",
   });
 
   const products =
@@ -31,4 +33,6 @@ testProductPersistence() {
     "Products:",
     products,
   );
+
+  return products;
 }

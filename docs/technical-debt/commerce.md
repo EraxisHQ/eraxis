@@ -38,3 +38,17 @@ OPEN
 Target Milestone:
 M003 Persistence Layer
 
+------------------------
+TD-M003-001
+Excessive console logging
+
+Files:
+- current-user-service.ts
+- permission-service.ts
+- navigation-registry.ts
+
+Priority:
+Medium
+
+Status:
+OPEN

@@ -108,6 +108,14 @@ import {
   AuthProvider,
 } from "./providers/auth-provider";
 
+
+import {
+  initializePersistence,
+} from "./features/persistence/services/persistence-bootstrap";
+
+initializePersistence();
+
+
 createRoot(
   document.getElementById("root")!
 ).render(
