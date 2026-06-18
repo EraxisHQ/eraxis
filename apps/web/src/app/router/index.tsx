@@ -128,6 +128,9 @@ import DiscountsPage
 import ShippingPage
   from "../../pages/shipping";
 
+import FormTestPage
+  from "../../pages/form-test";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -384,6 +387,13 @@ export default function AppRouter() {
           path="/shipping"
           element={
             <ShippingPage />
+          }
+        />
+
+        <Route
+          path="/form-test"
+          element={
+            <FormTestPage />
           }
         />
 
