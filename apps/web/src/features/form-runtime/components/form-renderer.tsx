@@ -102,8 +102,43 @@ export function
 
               </div>
             ),
+
+            <button
+              type="button"
+              onClick={
+                async () => {
+
+                  await schema
+                    .onSubmit?.(
+                      values,
+                    );
+                }
+              }
+            >
+
+              Submit
+
+            </button>
           )
         }
+
+        <button
+          type="button"
+          onClick={
+            async () => {
+
+              await schema
+                .onSubmit?.(
+                  values,
+                );
+            }
+          }
+        >
+
+          Submit
+
+        </button>
+
 
       </form>
 

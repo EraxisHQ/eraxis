@@ -39,4 +39,14 @@ export const
         required: true,
       },
     ],
+
+    onSubmit:
+      async values => {
+
+        console.log(
+          "SUBMIT",
+          values,
+        );
+      },
+
   };

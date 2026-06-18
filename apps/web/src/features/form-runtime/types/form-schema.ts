@@ -14,6 +14,10 @@ import type {
   FormField,
 } from "./form-field";
 
+import type {
+  FormSubmitHandler,
+} from "./form-submit-handler";
+
 export interface FormSchema {
 
   id: string;
@@ -21,4 +25,7 @@ export interface FormSchema {
   title: string;
 
   fields: FormField[];
+
+  onSubmit?:
+  FormSubmitHandler;
 }
