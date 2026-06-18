@@ -10,6 +10,10 @@
  * =====================================
  */
 
+import type {
+  FormValidation,
+} from "./form-validation";
+
 export interface FormField {
 
   id: string;
@@ -25,4 +29,7 @@ export interface FormField {
     | "select";
 
   required: boolean;
+
+  validation?:
+  FormValidation;
 }

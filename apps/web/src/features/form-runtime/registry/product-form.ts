@@ -3,34 +3,39 @@ import type {
 } from "../types/form-schema";
 
 export const
-PRODUCT_FORM:
-FormSchema = {
+  PRODUCT_FORM:
+    FormSchema = {
 
-  id: "product",
+    id: "product",
 
-  title:
-    "Product",
+    title:
+      "Product",
 
-  fields: [
+    fields: [
 
-    {
-      id: "name",
+      {
+        id: "name",
 
-      label: "Name",
+        label: "Name",
 
-      type: "text",
+        type: "text",
 
-      required: true,
-    },
+        required: true,
+        
+        validation: {
 
-    {
-      id: "sku",
+          minLength: 3,
+        },
+      },
 
-      label: "SKU",
+      {
+        id: "sku",
 
-      type: "text",
+        label: "SKU",
 
-      required: true,
-    },
-  ],
-};
+        type: "text",
+
+        required: true,
+      },
+    ],
+  };
