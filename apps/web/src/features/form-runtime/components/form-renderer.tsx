@@ -10,157 +10,86 @@
  * =====================================
  */
 
-import type {
-  FormSchema,
-} from "../types/form-schema";
+import type { FormSchema } from "../types/form-schema";
 
-import {
-  useForm,
-} from "../hooks/use-form";
+import { useForm } from "../hooks/use-form";
+
+import { validateForm } from "../lib/validate-form";
 
 interface Props {
-
-  schema:
-  FormSchema;
+  schema: FormSchema;
 }
 
-export function
-  FormRenderer({
-    schema,
-  }: Props) {
-
-
-  const {
-    values,
-    errors,
-    updateValue,
-  } = useForm();
+export function FormRenderer({ schema }: Props) {
+  const { values, errors, setErrors, updateValue } = useForm();
 
   return (
-
     <>
-
       <form>
+        <h2>{schema.title}</h2>
 
-        <h2>
-          {schema.title}
-        </h2>
+        {schema.fields.map((field) => (
+          <div key={field.id}>
+            <label>{field.label}</label>
 
-        {
-          schema.fields.map(
-            field => (
-
-              <div
-                key={field.id}
+            {field.type === "select" ? (
+              <select
+                value={String(values[field.id] ?? "")}
+                onChange={(event) => updateValue(field.id, event.target.value)}
               >
+                <option value="">Select...</option>
 
-                <label>
-
-                  {field.label}
-
-                </label>
-
-                <input
-                  type={
-                    field.type
-                  }
-
-                  value={
-                    String(
-                      values[
-                      field.id
-                      ] ?? ""
-                    )
-                  }
-
-                  onChange={
-                    event =>
-                      updateValue(
-                        field.id,
-                        event.target.value,
-                      )
-                  }
-
-                />
-
-                {
-                  errors[
-                  field.id
-                  ] && (
-
-                    <div>
-
-                      {
-                        errors[
-                        field.id
-                        ]
-                      }
-
-                    </div>
-                  )
+                {field.options?.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            ) : field.type === "checkbox" ? (
+              <input
+                type="checkbox"
+                checked={Boolean(values[field.id])}
+                onChange={(event) =>
+                  updateValue(field.id, event.target.checked)
                 }
+              />
+            ) : (
+              <input
+                type={field.type}
+                value={String(values[field.id] ?? "")}
+                onChange={(event) => updateValue(field.id, event.target.value)}
+              />
+            )}
 
-              </div>
-            ),
+            {errors[field.id] && <div>{errors[field.id]}</div>}
+          </div>
+        ))}
 
-            <button
-              type="button"
-              onClick={
-                async () => {
+        {schema.onSubmit && (
+          <button
+            type="button"
+            onClick={async () => {
+              const validationErrors = validateForm(schema.fields, values);
 
-                  await schema
-                    .onSubmit?.(
-                      values,
-                    );
-                }
+              setErrors(validationErrors);
+
+              if (Object.keys(validationErrors).length > 0) {
+                return;
               }
-            >
 
-              Submit
-
-            </button>
-          )
-        }
-
-        <button
-          type="button"
-          onClick={
-            async () => {
-
-              await schema
-                .onSubmit?.(
-                  values,
-                );
-            }
-          }
-        >
-
-          Submit
-
-        </button>
-
-
+              await schema.onSubmit?.(values);
+            }}
+          >
+            Submit
+          </button>
+        )}
       </form>
 
       <div>
+        <h3>Form State</h3>
 
-        <h3>
-          Form State
-        </h3>
-
-        <pre>
-          {
-            JSON.stringify(
-              values,
-              null,
-              2,
-            )
-          }
-        </pre>
-
+        <pre>{JSON.stringify(values, null, 2)}</pre>
       </div>
-
     </>
-
   );
 }

@@ -10,12 +10,9 @@
  * =====================================
  */
 
-import type {
-  FormValidation,
-} from "./form-validation";
+import type { FormValidation } from "./form-validation";
 
 export interface FormField {
-
   id: string;
 
   label: string;
@@ -26,10 +23,15 @@ export interface FormField {
     | "email"
     | "password"
     | "date"
+    | "checkbox"
     | "select";
 
   required: boolean;
 
-  validation?:
-  FormValidation;
+  validation?: FormValidation;
+
+  options?: {
+    label: string;
+    value: string;
+  }[];
 }

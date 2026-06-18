@@ -1,50 +1,23 @@
-import {
-  useState,
-} from "react";
+import { useState } from "react";
 
-export function
-  useForm() {
+export function useForm() {
+  const [values, setValues] = useState<Record<string, unknown>>({});
 
-  const [
-    values,
-    setValues,
-  ] = useState<
-    Record<
-      string,
-      unknown
-    >
-  >({});
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
-  const [
-  errors,
-  _setErrors,
-] = useState<
-  Record<
-    string,
-    string
-  >
->({});
-
-
-  function updateValue(
-    fieldId: string,
-    value: unknown,
-  ) {
-
-    setValues(
-      current => ({
-        ...current,
-        [fieldId]:
-          value,
-      }),
-    );
+  function updateValue(fieldId: string, value: unknown) {
+    setValues((current) => ({
+      ...current,
+      [fieldId]: value,
+    }));
   }
 
   return {
-
     values,
 
-      errors,
+    errors,
+
+    setErrors,
 
     updateValue,
   };

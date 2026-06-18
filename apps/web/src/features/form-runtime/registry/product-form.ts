@@ -1,52 +1,72 @@
-import type {
-  FormSchema,
-} from "../types/form-schema";
+import type { FormSchema } from "../types/form-schema";
 
-export const
-  PRODUCT_FORM:
-    FormSchema = {
+export const PRODUCT_FORM: FormSchema = {
+  id: "product",
 
-    id: "product",
+  title: "Product",
 
-    title:
-      "Product",
+  fields: [
+    {
+      id: "name",
 
-    fields: [
+      label: "Name",
 
-      {
-        id: "name",
+      type: "text",
 
-        label: "Name",
+      required: true,
 
-        type: "text",
+      validation: {
+        minLength: 3,
+        maxLength: 50,
+      },
+    },
 
+    {
+      id: "sku",
+
+      label: "SKU",
+
+      type: "text",
+
+      required: true,
+    },
+
+    {
+      id: "active",
+      label: "Active",
+      type: "checkbox",
+      required: false,
+    },
+
+    {
+      id: "price",
+      label: "Price",
+      type: "number",
+      required: false,
+    },
+
+    {
+      id: "category",
+      label: "Category",
+      type: "select",
+      required: true,
+      validation: {
         required: true,
-
-        validation: {
-
-          minLength: 3,
-          maxLength: 50,
+      },
+      options: [
+        {
+          label: "Electronics",
+          value: "electronics",
         },
-      },
+        {
+          label: "Food",
+          value: "food",
+        },
+      ],
+    },
+  ],
 
-      {
-        id: "sku",
-
-        label: "SKU",
-
-        type: "text",
-
-        required: true,
-      },
-    ],
-
-    onSubmit:
-      async values => {
-
-        console.log(
-          "SUBMIT",
-          values,
-        );
-      },
-
-  };
+  onSubmit: async (values) => {
+    console.log("SUBMIT", values);
+  },
+};

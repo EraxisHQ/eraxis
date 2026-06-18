@@ -66,6 +66,8 @@ importers:
 
   packages/contracts: {}
 
+  packages/infrastructure: {}
+
   packages/shared-types: {}
 
   packages/shared-utils: {}
