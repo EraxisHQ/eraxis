@@ -21,10 +21,11 @@ export const
         type: "text",
 
         required: true,
-        
+
         validation: {
 
           minLength: 3,
+          maxLength: 50,
         },
       },
 

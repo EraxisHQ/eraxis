@@ -29,12 +29,12 @@ export function
     schema,
   }: Props) {
 
+
   const {
     values,
+    errors,
     updateValue,
   } = useForm();
-
- 
 
   return (
 
@@ -80,8 +80,25 @@ export function
                         event.target.value,
                       )
                   }
-                 
+
                 />
+
+                {
+                  errors[
+                  field.id
+                  ] && (
+
+                    <div>
+
+                      {
+                        errors[
+                        field.id
+                        ]
+                      }
+
+                    </div>
+                  )
+                }
 
               </div>
             ),

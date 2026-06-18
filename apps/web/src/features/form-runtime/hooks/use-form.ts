@@ -15,6 +15,17 @@ export function
     >
   >({});
 
+  const [
+  errors,
+  _setErrors,
+] = useState<
+  Record<
+    string,
+    string
+  >
+>({});
+
+
   function updateValue(
     fieldId: string,
     value: unknown,
@@ -32,6 +43,8 @@ export function
   return {
 
     values,
+
+      errors,
 
     updateValue,
   };
