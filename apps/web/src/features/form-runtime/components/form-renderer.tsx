@@ -6,7 +6,7 @@
  * Dynamic form renderer.
  *
  * Milestone:
- * M004-02-01
+ * M004-03-01
  * =====================================
  */
 
@@ -14,50 +14,101 @@ import type {
   FormSchema,
 } from "../types/form-schema";
 
+import {
+  useForm,
+} from "../hooks/use-form";
+
 interface Props {
 
   schema:
-    FormSchema;
+  FormSchema;
 }
 
 export function
-FormRenderer({
-  schema,
-}: Props) {
+  FormRenderer({
+    schema,
+  }: Props) {
+
+  const {
+    values,
+    updateValue,
+  } = useForm();
+
+ 
 
   return (
 
-    <form>
+    <>
 
-      <h2>
-        {schema.title}
-      </h2>
+      <form>
 
-      {
-        schema.fields.map(
-          field => (
+        <h2>
+          {schema.title}
+        </h2>
 
-            <div
-              key={field.id}
-            >
+        {
+          schema.fields.map(
+            field => (
 
-              <label>
+              <div
+                key={field.id}
+              >
 
-                {field.label}
+                <label>
 
-              </label>
+                  {field.label}
 
-              <input
-                type={
-                  field.type
-                }
-              />
+                </label>
 
-            </div>
-          ),
-        )
-      }
+                <input
+                  type={
+                    field.type
+                  }
 
-    </form>
+                  value={
+                    String(
+                      values[
+                      field.id
+                      ] ?? ""
+                    )
+                  }
+
+                  onChange={
+                    event =>
+                      updateValue(
+                        field.id,
+                        event.target.value,
+                      )
+                  }
+                 
+                />
+
+              </div>
+            ),
+          )
+        }
+
+      </form>
+
+      <div>
+
+        <h3>
+          Form State
+        </h3>
+
+        <pre>
+          {
+            JSON.stringify(
+              values,
+              null,
+              2,
+            )
+          }
+        </pre>
+
+      </div>
+
+    </>
+
   );
 }
