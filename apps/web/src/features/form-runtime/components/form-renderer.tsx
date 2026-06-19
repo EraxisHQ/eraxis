@@ -14,7 +14,9 @@ import type { FormSchema } from "../types/form-schema";
 
 import { useForm } from "../hooks/use-form";
 
-import { validateForm } from "../lib/validate-form";
+// import { validateForm } from "../lib/validate-form";
+
+import { validateForm } from "../services/form-validation-service";
 
 import { FieldRenderer } from "./fields/field-renderer";
 

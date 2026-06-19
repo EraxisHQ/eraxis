@@ -16,8 +16,8 @@ export const PRODUCT_FORM: FormSchema = {
       required: true,
 
       validation: {
-        minLength: 3,
-        maxLength: 50,
+        minLength: 10,
+        maxLength: 500,
       },
     },
 
