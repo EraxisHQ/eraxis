@@ -69,6 +69,11 @@ export const PRODUCT_FORM: FormSchema = {
         field: "isGstRegistered",
         equals: true,
       },
+
+      requiredWhen: {
+        field: "isGstRegistered",
+        equals: true,
+      },
     },
 
     {

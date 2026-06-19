@@ -31,6 +31,11 @@ export interface FormField {
 
   validation?: FormValidation;
 
+  requiredWhen?: {
+    field: string;
+    equals: unknown;
+  };
+
   options?: {
     label: string;
     value: string;
