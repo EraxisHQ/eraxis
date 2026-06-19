@@ -22,6 +22,7 @@ import { FieldRenderer } from "./fields/field-renderer";
 
 import { getSubmitHandler } from "../services/form-submit-registry";
 
+import { isFieldVisible } from "../services/form-visibility-service";
 interface Props {
   schema: FormSchema;
 }
@@ -35,19 +36,21 @@ export function FormRenderer({ schema }: Props) {
       <form>
         <h2>{schema.title}</h2>
 
-        {schema.fields.map((field) => (
-          <div key={field.id}>
-            <label>{field.label}</label>
+        {schema.fields
+          .filter((field) => isFieldVisible(field, values))
+          .map((field) => (
+            <div key={field.id}>
+              <label>{field.label}</label>
 
-            <FieldRenderer
-              field={field}
-              value={values[field.id]}
-              onChange={updateValue}
-            />
+              <FieldRenderer
+                field={field}
+                value={values[field.id]}
+                onChange={updateValue}
+              />
 
-            {errors[field.id] && <div>{errors[field.id]}</div>}
-          </div>
-        ))}
+              {errors[field.id] && <div>{errors[field.id]}</div>}
+            </div>
+          ))}
 
         {schema.onSubmit && (
           <button

@@ -53,6 +53,23 @@ export const PRODUCT_FORM: FormSchema = {
 
       required: false,
     },
+    {
+      id: "isGstRegistered",
+      label: "GST Registered",
+      type: "checkbox",
+      required: false,
+    },
+    {
+      id: "gstNumber",
+      label: "GST Number",
+      type: "text",
+      required: false,
+
+      visibleWhen: {
+        field: "isGstRegistered",
+        equals: true,
+      },
+    },
 
     {
       id: "category",

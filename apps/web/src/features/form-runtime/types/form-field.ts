@@ -35,4 +35,9 @@ export interface FormField {
     label: string;
     value: string;
   }[];
+
+  visibleWhen?: {
+    field: string;
+    equals: unknown;
+  };
 }
