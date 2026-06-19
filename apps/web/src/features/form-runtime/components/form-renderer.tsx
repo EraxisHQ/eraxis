@@ -16,6 +16,8 @@ import { useForm } from "../hooks/use-form";
 
 import { validateForm } from "../lib/validate-form";
 
+import { FieldRenderer } from "./fields/field-renderer";
+
 interface Props {
   schema: FormSchema;
 }
@@ -32,7 +34,7 @@ export function FormRenderer({ schema }: Props) {
           <div key={field.id}>
             <label>{field.label}</label>
 
-            {field.type === "select" ? (
+            {/* {field.type === "select" ? (
               <select
                 value={String(values[field.id] ?? "")}
                 onChange={(event) => updateValue(field.id, event.target.value)}
@@ -59,7 +61,13 @@ export function FormRenderer({ schema }: Props) {
                 value={String(values[field.id] ?? "")}
                 onChange={(event) => updateValue(field.id, event.target.value)}
               />
-            )}
+            )} */}
+
+            <FieldRenderer
+              field={field}
+              value={values[field.id]}
+              onChange={updateValue}
+            />
 
             {errors[field.id] && <div>{errors[field.id]}</div>}
           </div>
