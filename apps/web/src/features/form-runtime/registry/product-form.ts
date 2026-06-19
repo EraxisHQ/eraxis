@@ -44,6 +44,15 @@ export const PRODUCT_FORM: FormSchema = {
       type: "number",
       required: false,
     },
+    {
+      id: "description",
+
+      label: "Description",
+
+      type: "textarea",
+
+      required: false,
+    },
 
     {
       id: "category",

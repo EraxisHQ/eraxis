@@ -1,6 +1,7 @@
 import { TextField } from "./text-field";
 import { SelectField } from "./select-field";
 import { CheckboxField } from "./checkbox-field";
+import { TextareaField } from "./textarea-field";
 
 interface Props {
   field: any;
@@ -15,6 +16,9 @@ export function FieldRenderer({ field, value, onChange }: Props) {
 
     case "checkbox":
       return <CheckboxField field={field} value={value} onChange={onChange} />;
+
+    case "textarea":
+      return <TextareaField field={field} value={value} onChange={onChange} />;
 
     default:
       return <TextField field={field} value={value} onChange={onChange} />;

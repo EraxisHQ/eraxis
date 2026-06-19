@@ -24,7 +24,8 @@ export interface FormField {
     | "password"
     | "date"
     | "checkbox"
-    | "select";
+    | "select"
+    | "textarea";
 
   required: boolean;
 

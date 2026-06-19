@@ -24,6 +24,7 @@ interface Props {
 
 export function FormRenderer({ schema }: Props) {
   const { values, errors, setErrors, updateValue } = useForm();
+  console.log(schema.fields);
 
   return (
     <>
