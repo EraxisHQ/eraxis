@@ -20,6 +20,8 @@ import { validateForm } from "../services/form-validation-service";
 
 import { FieldRenderer } from "./fields/field-renderer";
 
+import { getSubmitHandler } from "../services/form-submit-registry";
+
 interface Props {
   schema: FormSchema;
 }
@@ -36,35 +38,6 @@ export function FormRenderer({ schema }: Props) {
         {schema.fields.map((field) => (
           <div key={field.id}>
             <label>{field.label}</label>
-
-            {/* {field.type === "select" ? (
-              <select
-                value={String(values[field.id] ?? "")}
-                onChange={(event) => updateValue(field.id, event.target.value)}
-              >
-                <option value="">Select...</option>
-
-                {field.options?.map((option) => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
-            ) : field.type === "checkbox" ? (
-              <input
-                type="checkbox"
-                checked={Boolean(values[field.id])}
-                onChange={(event) =>
-                  updateValue(field.id, event.target.checked)
-                }
-              />
-            ) : (
-              <input
-                type={field.type}
-                value={String(values[field.id] ?? "")}
-                onChange={(event) => updateValue(field.id, event.target.value)}
-              />
-            )} */}
 
             <FieldRenderer
               field={field}
@@ -88,7 +61,12 @@ export function FormRenderer({ schema }: Props) {
                 return;
               }
 
-              await schema.onSubmit?.(values);
+              // await schema.onSubmit?.(values);
+              const submitHandler = getSubmitHandler(schema.id);
+
+              if (submitHandler) {
+                await submitHandler(values);
+              }
             }}
           >
             Submit
