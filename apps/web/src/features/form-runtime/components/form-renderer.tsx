@@ -48,7 +48,8 @@ export function FormRenderer({ schema }: Props) {
 
   return (
     <>
-      {/* <form> */}
+      <h2>{schema.title}</h2>
+
       <form
         style={{
           display: "grid",
@@ -56,30 +57,6 @@ export function FormRenderer({ schema }: Props) {
           gap: "16px",
         }}
       >
-        <h2>{schema.title}</h2>
-
-        {/* {schema.fields
-          .filter((field) => isFieldVisible(field, values))
-          .map((field) => (
-            // <div key={field.id}>
-            <div
-              key={field.id}
-              style={{
-                gridColumn: `span ${field.layout?.colSpan ?? 1}`,
-              }}
-            >
-              <label>{field.label}</label>
-
-              <FieldRenderer
-                field={field}
-                value={values[field.id]}
-                onChange={updateValue}
-              />
-
-              {errors[field.id] && <div>{errors[field.id]}</div>}
-            </div>
-          ))} */}
-
         {Object.entries(sections).map(([sectionName, fields]) => (
           <div
             key={sectionName}

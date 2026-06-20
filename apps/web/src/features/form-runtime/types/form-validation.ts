@@ -10,4 +10,9 @@ export interface FormValidation {
   max?: number;
 
   pattern?: string;
+
+  email?: boolean;
+  phone?: boolean;
+  gst?: boolean;
+  pan?: boolean;
 }

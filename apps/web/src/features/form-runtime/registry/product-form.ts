@@ -46,6 +46,11 @@ export const PRODUCT_FORM: FormSchema = {
       id: "price",
       label: "Price",
       type: "number",
+      validation: {
+        min: 1,
+        max: 1000000,
+      },
+
       section: "Pricing",
       required: false,
     },
@@ -70,6 +75,9 @@ export const PRODUCT_FORM: FormSchema = {
       id: "gstNumber",
       label: "GST Number",
       type: "text",
+      validation: {
+        gst: true,
+      },
       required: false,
       section: "Tax Information",
 
