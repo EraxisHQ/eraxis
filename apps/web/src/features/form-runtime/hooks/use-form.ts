@@ -12,6 +12,16 @@ export function useForm() {
     }));
   }
 
+  function removeValue(fieldId: string) {
+    setValues((current) => {
+      const next = { ...current };
+
+      delete next[fieldId];
+
+      return next;
+    });
+  }
+
   return {
     values,
 
@@ -20,5 +30,7 @@ export function useForm() {
     setErrors,
 
     updateValue,
+
+    removeValue,
   };
 }

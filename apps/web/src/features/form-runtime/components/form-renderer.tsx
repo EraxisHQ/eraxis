@@ -35,7 +35,7 @@ interface Props {
 }
 
 export function FormRenderer({ schema }: Props) {
-  const { values, errors, setErrors, updateValue } = useForm();
+  const { values, errors, setErrors, updateValue, removeValue } = useForm();
 
   const activeRules = evaluateRules(schema.rules ?? [], values);
 
@@ -51,6 +51,16 @@ export function FormRenderer({ schema }: Props) {
       }
     });
   }, [JSON.stringify(setValueActions)]);
+
+  useEffect(() => {
+    schema.fields.forEach((field) => {
+      const visible = isFieldVisible(field, values) && isRuleVisible(field.id);
+
+      if (!visible && values[field.id] !== undefined) {
+        removeValue(field.id);
+      }
+    });
+  }, [values, activeRules]);
 
   const sections = schema.fields.reduce(
     (acc, field) => {
