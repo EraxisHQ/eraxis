@@ -69,7 +69,14 @@ export const PRODUCT_REPORT: ReportDefinition = {
       id: "export-excel",
       label: "Export Excel",
     },
-
+    {
+      id: "export-txt",
+      label: "Export TXT",
+    },
+    {
+      id: "export-pdf",
+      label: "Export PDF",
+    },
     {
       id: "print",
       label: "Print",

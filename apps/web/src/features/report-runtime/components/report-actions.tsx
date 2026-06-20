@@ -3,6 +3,10 @@ import type { ReportDefinition } from "../types/report-definition";
 
 import { exportCsv } from "../services/report-export-service";
 import { exportExcel } from "../services/report-excel-service";
+
+import { exportTxt } from "../services/report-txt-service";
+import { exportPdf } from "../services/report-pdf-service";
+
 interface Props {
   report: ReportDefinition;
   rows: Record<string, unknown>[];
@@ -19,6 +23,14 @@ export function ReportActions({ report, rows }: Props) {
     }
     if (actionId === "export-excel") {
       exportExcel(report.id, rows);
+    }
+
+    if (actionId === "export-txt") {
+      exportTxt(report.id, rows);
+    }
+
+    if (actionId === "export-pdf") {
+      exportPdf(report.id, rows);
     }
 
     if (actionId === "print") {
