@@ -8,6 +8,8 @@ import { ReportTable } from "./report-table";
 
 import { ReportFilters } from "./report-filters";
 
+import { ReportActions } from "./report-actions";
+
 interface Props {
   reportId: string;
 }
@@ -34,6 +36,7 @@ export function ReportPage({ reportId }: Props) {
   return (
     <>
       <h2>{report.title}</h2>
+      <ReportActions report={report} />
       <ReportFilters report={report} />
       <ReportTable report={report} data={data} />
     </>

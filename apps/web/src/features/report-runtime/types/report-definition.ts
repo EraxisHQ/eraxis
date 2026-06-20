@@ -1,6 +1,6 @@
 import type { ReportColumn } from "./report-column";
 import type { ReportFilter } from "./report-filter";
-
+import type { ReportAction } from "./report-action";
 export interface ReportDefinition {
   id: string;
 
@@ -11,4 +11,6 @@ export interface ReportDefinition {
   filters?: ReportFilter[];
 
   dataSource: string;
+
+  actions?: ReportAction[];
 }

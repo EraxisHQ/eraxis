@@ -54,5 +54,22 @@ export const PRODUCT_REPORT: ReportDefinition = {
       ],
     },
   ],
+
+  actions: [
+    {
+      id: "refresh",
+      label: "Refresh",
+    },
+
+    {
+      id: "export-csv",
+      label: "Export CSV",
+    },
+
+    {
+      id: "print",
+      label: "Print",
+    },
+  ],
   dataSource: "products",
 };
