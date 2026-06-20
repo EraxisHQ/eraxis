@@ -31,6 +31,21 @@ export function FormRenderer({ schema }: Props) {
   const { values, errors, setErrors, updateValue } = useForm();
   console.log(schema.fields);
 
+  // const sections = schema.fields.reduce(
+  //   (acc, field) => {
+  //     const section = field.section ?? "General";
+
+  //     if (!acc[section]) {
+  //       acc[section] = [];
+  //     }
+
+  //     acc[section].push(field);
+
+  //     return acc;
+  //   },
+  //   {} as Record<string, typeof schema.fields>,
+  // );
+
   return (
     <>
       {/* <form> */}

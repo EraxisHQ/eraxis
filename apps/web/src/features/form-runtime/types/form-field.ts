@@ -29,6 +29,8 @@ export interface FormField {
 
   required: boolean;
 
+  section?: string;
+
   layout?: {
     colSpan?: 1 | 2 | 3 | 4;
   };

@@ -11,7 +11,7 @@ export const PRODUCT_FORM: FormSchema = {
       label: "Name",
       type: "text",
       required: true,
-
+      section: "Basic Information",
       layout: {
         colSpan: 1,
       },
@@ -27,6 +27,7 @@ export const PRODUCT_FORM: FormSchema = {
       label: "SKU",
       type: "text",
       required: true,
+      section: "Basic Information",
       layout: {
         colSpan: 1,
       },
@@ -37,18 +38,22 @@ export const PRODUCT_FORM: FormSchema = {
       label: "Active",
       type: "checkbox",
       required: false,
+
+      section: "Basic Information",
     },
 
     {
       id: "price",
       label: "Price",
       type: "number",
+      section: "Pricing",
       required: false,
     },
     {
       id: "description",
       label: "Description",
       type: "textarea",
+      section: "Basic Information",
       required: false,
       layout: {
         colSpan: 2,
@@ -59,12 +64,14 @@ export const PRODUCT_FORM: FormSchema = {
       label: "GST Registered",
       type: "checkbox",
       required: false,
+      section: "Tax Information",
     },
     {
       id: "gstNumber",
       label: "GST Number",
       type: "text",
       required: false,
+      section: "Tax Information",
 
       visibleWhen: {
         field: "isGstRegistered",
@@ -82,6 +89,7 @@ export const PRODUCT_FORM: FormSchema = {
       label: "Category",
       type: "select",
       required: true,
+      section: "Pricing",
       validation: {
         required: true,
       },
