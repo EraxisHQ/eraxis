@@ -8,12 +8,13 @@ export const PRODUCT_FORM: FormSchema = {
   fields: [
     {
       id: "name",
-
       label: "Name",
-
       type: "text",
-
       required: true,
+
+      layout: {
+        colSpan: 1,
+      },
 
       validation: {
         minLength: 10,
@@ -23,12 +24,12 @@ export const PRODUCT_FORM: FormSchema = {
 
     {
       id: "sku",
-
       label: "SKU",
-
       type: "text",
-
       required: true,
+      layout: {
+        colSpan: 1,
+      },
     },
 
     {
@@ -46,12 +47,12 @@ export const PRODUCT_FORM: FormSchema = {
     },
     {
       id: "description",
-
       label: "Description",
-
       type: "textarea",
-
       required: false,
+      layout: {
+        colSpan: 2,
+      },
     },
     {
       id: "isGstRegistered",

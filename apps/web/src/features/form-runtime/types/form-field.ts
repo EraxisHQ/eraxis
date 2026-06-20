@@ -29,6 +29,10 @@ export interface FormField {
 
   required: boolean;
 
+  layout?: {
+    colSpan?: 1 | 2 | 3 | 4;
+  };
+
   validation?: FormValidation;
 
   requiredWhen?: {

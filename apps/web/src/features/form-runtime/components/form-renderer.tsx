@@ -33,13 +33,26 @@ export function FormRenderer({ schema }: Props) {
 
   return (
     <>
-      <form>
+      {/* <form> */}
+      <form
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "16px",
+        }}
+      >
         <h2>{schema.title}</h2>
 
         {schema.fields
           .filter((field) => isFieldVisible(field, values))
           .map((field) => (
-            <div key={field.id}>
+            // <div key={field.id}>
+            <div
+              key={field.id}
+              style={{
+                gridColumn: `span ${field.layout?.colSpan ?? 1}`,
+              }}
+            >
               <label>{field.label}</label>
 
               <FieldRenderer
