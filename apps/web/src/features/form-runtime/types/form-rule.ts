@@ -5,8 +5,10 @@ export interface FormRule {
   };
 
   then: {
-    action: "show" | "hide" | "enable" | "disable";
+    action: "show" | "hide" | "enable" | "disable" | "setValue";
 
     target: string;
+
+    value?: unknown;
   };
 }

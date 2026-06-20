@@ -119,10 +119,21 @@ export const PRODUCT_FORM: FormSchema = {
         field: "category",
         equals: "electronics",
       },
-
       then: {
         action: "show",
         target: "warrantyMonths",
+      },
+    },
+    {
+      when: {
+        field: "category",
+        equals: "electronics",
+      },
+
+      then: {
+        action: "setValue",
+        target: "warrantyMonths",
+        value: 12,
       },
     },
   ],
