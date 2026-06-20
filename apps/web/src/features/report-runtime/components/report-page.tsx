@@ -6,6 +6,8 @@ import { getReportData } from "../services/report-data-source";
 
 import { ReportTable } from "./report-table";
 
+import { ReportFilters } from "./report-filters";
+
 interface Props {
   reportId: string;
 }
@@ -32,7 +34,7 @@ export function ReportPage({ reportId }: Props) {
   return (
     <>
       <h2>{report.title}</h2>
-
+      <ReportFilters report={report} />
       <ReportTable report={report} data={data} />
     </>
   );

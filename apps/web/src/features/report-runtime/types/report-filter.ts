@@ -3,5 +3,12 @@ export interface ReportFilter {
 
   label: string;
 
-  type: "text" | "select" | "date";
+  type: "text" | "number" | "date" | "select" | "checkbox";
+
+  required?: boolean;
+
+  options?: {
+    label: string;
+    value: string;
+  }[];
 }

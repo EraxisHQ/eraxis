@@ -24,4 +24,35 @@ export const PRODUCT_REPORT: ReportDefinition = {
       accessor: "price",
     },
   ],
+
+  filters: [
+    {
+      id: "active",
+
+      label: "Active",
+
+      type: "checkbox",
+    },
+
+    {
+      id: "category",
+
+      label: "Category",
+
+      type: "select",
+
+      options: [
+        {
+          label: "Electronics",
+          value: "electronics",
+        },
+
+        {
+          label: "Accessories",
+          value: "accessories",
+        },
+      ],
+    },
+  ],
+  dataSource: "products",
 };

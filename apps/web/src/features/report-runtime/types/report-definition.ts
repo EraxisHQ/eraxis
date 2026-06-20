@@ -9,4 +9,6 @@ export interface ReportDefinition {
   columns: ReportColumn[];
 
   filters?: ReportFilter[];
+
+  dataSource: string;
 }
