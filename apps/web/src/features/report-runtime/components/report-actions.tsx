@@ -1,23 +1,4 @@
-// import type { ReportDefinition } from "../types/report-definition";
-
-// interface Props {
-//   report: ReportDefinition;
-// }
-
-// export function ReportActions({ report }: Props) {
-//   if (!report.actions?.length) {
-//     return null;
-//   }
-
-//   return (
-//     <div>
-//       {report.actions.map((action) => (
-//         <button key={action.id}>{action.label}</button>
-//       ))}
-//     </div>
-//   );
-// }
-
+import { printReport } from "../services/report-print-service";
 import type { ReportDefinition } from "../types/report-definition";
 
 import { exportCsv } from "../services/report-export-service";
@@ -35,6 +16,10 @@ export function ReportActions({ report, rows }: Props) {
   function execute(actionId: string) {
     if (actionId === "export-csv") {
       exportCsv(report.id, rows);
+    }
+
+    if (actionId === "print") {
+      printReport();
     }
   }
 
