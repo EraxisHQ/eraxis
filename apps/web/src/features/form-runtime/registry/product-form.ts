@@ -103,6 +103,27 @@ export const PRODUCT_FORM: FormSchema = {
       },
       optionsProvider: "product-categories",
     },
+
+    {
+      id: "warrantyMonths",
+      label: "Warranty Months",
+      type: "number",
+      required: false,
+    },
+  ],
+
+  rules: [
+    {
+      when: {
+        field: "category",
+        equals: "electronics",
+      },
+
+      then: {
+        action: "show",
+        target: "warrantyMonths",
+      },
+    },
   ],
 
   onSubmit: async (values) => {

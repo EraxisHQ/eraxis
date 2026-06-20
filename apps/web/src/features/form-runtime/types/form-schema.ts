@@ -9,23 +9,20 @@
  * M004-01-02
  * =====================================
  */
+import type { FormRule } from "./form-rule";
 
-import type {
-  FormField,
-} from "./form-field";
+import type { FormField } from "./form-field";
 
-import type {
-  FormSubmitHandler,
-} from "./form-submit-handler";
+import type { FormSubmitHandler } from "./form-submit-handler";
 
 export interface FormSchema {
-
   id: string;
 
   title: string;
 
   fields: FormField[];
 
-  onSubmit?:
-  FormSubmitHandler;
+  onSubmit?: FormSubmitHandler;
+
+  rules?: FormRule[];
 }
