@@ -6,9 +6,10 @@ interface Props {
   field: any;
   value: unknown;
   onChange: (fieldId: string, value: unknown) => void;
+  disabled?: boolean;
 }
 
-export function SelectField({ field, value, onChange }: Props) {
+export function SelectField({ field, value, onChange, disabled }: Props) {
   const [options, setOptions] = useState(field.options ?? []);
 
   useEffect(() => {
@@ -34,6 +35,7 @@ export function SelectField({ field, value, onChange }: Props) {
   return (
     <select
       value={String(value ?? "")}
+      disabled={disabled}
       onChange={(event) => onChange(field.id, event.target.value)}
     >
       <option value="">Select...</option>

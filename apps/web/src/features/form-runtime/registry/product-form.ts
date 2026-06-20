@@ -136,6 +136,16 @@ export const PRODUCT_FORM: FormSchema = {
         value: 12,
       },
     },
+    {
+      when: {
+        field: "active",
+        equals: "false",
+      },
+      then: {
+        action: "disable",
+        target: "price",
+      },
+    },
   ],
 
   onSubmit: async (values) => {
