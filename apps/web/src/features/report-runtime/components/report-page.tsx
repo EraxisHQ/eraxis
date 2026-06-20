@@ -36,7 +36,7 @@ export function ReportPage({ reportId }: Props) {
   return (
     <>
       <h2>{report.title}</h2>
-      <ReportActions report={report} />
+      <ReportActions report={report} rows={data} />
       <ReportFilters report={report} />
       <ReportTable report={report} data={data} />
     </>
