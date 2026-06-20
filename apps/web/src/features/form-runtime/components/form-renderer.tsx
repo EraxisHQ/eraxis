@@ -23,12 +23,16 @@ import { FieldRenderer } from "./fields/field-renderer";
 import { getSubmitHandler } from "../services/form-submit-registry";
 
 import { isFieldVisible } from "../services/form-visibility-service";
+
+import { evaluateRules } from "../services/form-rules-service";
+
 interface Props {
   schema: FormSchema;
 }
 
 export function FormRenderer({ schema }: Props) {
   const { values, errors, setErrors, updateValue } = useForm();
+  const activeRules = evaluateRules(schema.rules ?? [], values);
   console.log(schema.fields);
 
   const sections = schema.fields.reduce(
@@ -45,6 +49,22 @@ export function FormRenderer({ schema }: Props) {
     },
     {} as Record<string, typeof schema.fields>,
   );
+
+  function isRuleVisible(fieldId: string) {
+    const showRule = activeRules.find(
+      (rule) => rule.then.action === "show" && rule.then.target === fieldId,
+    );
+
+    if (showRule) {
+      return true;
+    }
+
+    const hasShowRule = (schema.rules ?? []).some(
+      (rule) => rule.then.action === "show" && rule.then.target === fieldId,
+    );
+
+    return !hasShowRule;
+  }
 
   return (
     <>
@@ -77,7 +97,10 @@ export function FormRenderer({ schema }: Props) {
               }}
             >
               {fields
-                .filter((field) => isFieldVisible(field, values))
+                .filter(
+                  (field) =>
+                    isFieldVisible(field, values) && isRuleVisible(field.id),
+                )
                 .map((field) => (
                   <div
                     key={field.id}
