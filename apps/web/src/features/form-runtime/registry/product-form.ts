@@ -109,6 +109,7 @@ export const PRODUCT_FORM: FormSchema = {
       label: "Warranty Months",
       type: "number",
       required: false,
+      section: "Pricing",
     },
   ],
 
