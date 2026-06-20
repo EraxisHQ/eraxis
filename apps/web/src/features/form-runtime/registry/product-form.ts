@@ -101,16 +101,7 @@ export const PRODUCT_FORM: FormSchema = {
       validation: {
         required: true,
       },
-      options: [
-        {
-          label: "Electronics",
-          value: "electronics",
-        },
-        {
-          label: "Food",
-          value: "food",
-        },
-      ],
+      optionsProvider: "product-categories",
     },
   ],
 

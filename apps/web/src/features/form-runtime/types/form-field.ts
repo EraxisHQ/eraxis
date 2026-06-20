@@ -47,6 +47,8 @@ export interface FormField {
     value: string;
   }[];
 
+  optionsProvider?: string;
+
   visibleWhen?: {
     field: string;
     equals: unknown;

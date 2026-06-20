@@ -2,6 +2,8 @@ import "../../features/form-runtime/registry/register-forms";
 
 import "../../features/form-runtime/registry/register-submit-handlers";
 
+import "../../features/form-runtime/registry/register-options-providers";
+
 import DashboardLayout from "../../shell/dashboard-layout/dashboard-layout";
 
 import { FormRenderer } from "../../features/form-runtime/components/form-renderer";
