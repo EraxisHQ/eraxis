@@ -31,20 +31,20 @@ export function FormRenderer({ schema }: Props) {
   const { values, errors, setErrors, updateValue } = useForm();
   console.log(schema.fields);
 
-  // const sections = schema.fields.reduce(
-  //   (acc, field) => {
-  //     const section = field.section ?? "General";
+  const sections = schema.fields.reduce(
+    (acc, field) => {
+      const section = field.section ?? "General";
 
-  //     if (!acc[section]) {
-  //       acc[section] = [];
-  //     }
+      if (!acc[section]) {
+        acc[section] = [];
+      }
 
-  //     acc[section].push(field);
+      acc[section].push(field);
 
-  //     return acc;
-  //   },
-  //   {} as Record<string, typeof schema.fields>,
-  // );
+      return acc;
+    },
+    {} as Record<string, typeof schema.fields>,
+  );
 
   return (
     <>
@@ -58,7 +58,7 @@ export function FormRenderer({ schema }: Props) {
       >
         <h2>{schema.title}</h2>
 
-        {schema.fields
+        {/* {schema.fields
           .filter((field) => isFieldVisible(field, values))
           .map((field) => (
             // <div key={field.id}>
@@ -78,7 +78,50 @@ export function FormRenderer({ schema }: Props) {
 
               {errors[field.id] && <div>{errors[field.id]}</div>}
             </div>
-          ))}
+          ))} */}
+
+        {Object.entries(sections).map(([sectionName, fields]) => (
+          <div
+            key={sectionName}
+            style={{
+              gridColumn: "span 2",
+              border: "1px solid #ddd",
+              padding: "16px",
+              borderRadius: "8px",
+            }}
+          >
+            <h3>{sectionName}</h3>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: "16px",
+              }}
+            >
+              {fields
+                .filter((field) => isFieldVisible(field, values))
+                .map((field) => (
+                  <div
+                    key={field.id}
+                    style={{
+                      gridColumn: `span ${field.layout?.colSpan ?? 1}`,
+                    }}
+                  >
+                    <label>{field.label}</label>
+
+                    <FieldRenderer
+                      field={field}
+                      value={values[field.id]}
+                      onChange={updateValue}
+                    />
+
+                    {errors[field.id] && <div>{errors[field.id]}</div>}
+                  </div>
+                ))}
+            </div>
+          </div>
+        ))}
 
         {schema.onSubmit && (
           <button
