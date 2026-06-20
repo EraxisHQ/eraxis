@@ -65,6 +65,10 @@ export const PRODUCT_REPORT: ReportDefinition = {
       id: "export-csv",
       label: "Export CSV",
     },
+    {
+      id: "export-excel",
+      label: "Export Excel",
+    },
 
     {
       id: "print",
