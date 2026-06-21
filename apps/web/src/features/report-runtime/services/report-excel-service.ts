@@ -1,18 +1,11 @@
+import * as XLSX from "xlsx";
+
 export function exportExcel(reportId: string, rows: Record<string, unknown>[]) {
-  const headers = Object.keys(rows[0] ?? {});
+  const worksheet = XLSX.utils.json_to_sheet(rows);
 
-  const csv = [
-    headers.join(","),
-    ...rows.map((row) => headers.map((h) => row[h]).join(",")),
-  ].join("\n");
+  const workbook = XLSX.utils.book_new();
 
-  const blob = new Blob([csv], {
-    type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-  });
+  XLSX.utils.book_append_sheet(workbook, worksheet, "Report");
 
-  const link = document.createElement("a");
-
-  link.href = URL.createObjectURL(blob);
-  link.download = `${reportId}.xlsx`;
-  link.click();
+  XLSX.writeFile(workbook, `${reportId}.xlsx`);
 }
