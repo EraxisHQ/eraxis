@@ -93,6 +93,8 @@ import FormTestPage from "../../pages/form-test";
 
 import ReportTestPage from "../../pages/report-test";
 
+import LocationsPage from "../../pages/locations";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -172,6 +174,8 @@ export default function AppRouter() {
 
         <Route path="/form-test" element={<FormTestPage />} />
         <Route path="/report-test" element={<ReportTestPage />} />
+
+        <Route path="/locations" element={<LocationsPage />} />
       </Routes>
     </BrowserRouter>
   );
