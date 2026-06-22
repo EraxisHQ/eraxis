@@ -1,16 +1,27 @@
-import type {
-  Brand,
-} from "../types/brand";
+import type { Brand } from "../types/brand";
 
-export const BRAND_REGISTRY:
-  Brand[] = [
-    {
-      id: "brand-001",
+export const BRAND_REGISTRY: Brand[] = [
+  {
+    id: "brand-001",
 
-      code: "ERAXIS",
+    tenantId: "tenant-1",
 
-      name: "Eraxis",
+    code: "ERAXIS",
 
-      active: true,
-    },
-  ];
+    name: "Eraxis",
+
+    companyName: "Eraxis Platform",
+
+    logoUrl: "/branding/logo.svg",
+
+    faviconUrl: "/favicon.svg",
+
+    primaryColor: "#2563EB",
+
+    secondaryColor: "#0F172A",
+
+    website: "https://eraxis.com",
+
+    active: true,
+  },
+];

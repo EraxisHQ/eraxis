@@ -51,6 +51,7 @@ export default function LocationTable() {
                 id: crypto.randomUUID(),
 
                 tenantId: "tenant-1",
+                brandId: "brand-001",
 
                 code: locationCode,
                 name: locationName,

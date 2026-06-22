@@ -2,6 +2,8 @@ export interface ManagedLocation {
   id: string;
   tenantId: string;
 
+  brandId: string;
+
   code: string;
   name: string;
 

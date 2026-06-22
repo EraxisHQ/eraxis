@@ -95,6 +95,8 @@ import ReportTestPage from "../../pages/report-test";
 
 import LocationsPage from "../../pages/locations";
 
+import BrandingSettingsPage from "../../pages/settings/branding";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -176,6 +178,7 @@ export default function AppRouter() {
         <Route path="/report-test" element={<ReportTestPage />} />
 
         <Route path="/locations" element={<LocationsPage />} />
+        <Route path="/settings/branding" element={<BrandingSettingsPage />} />
       </Routes>
     </BrowserRouter>
   );

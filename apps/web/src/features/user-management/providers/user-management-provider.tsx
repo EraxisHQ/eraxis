@@ -1,82 +1,30 @@
-// import {
-//   UserManagementContext,
-// } from "../context/user-management-context";
+import { useEffect, useState } from "react";
 
-// import {
-//   DEFAULT_USERS,
-// } from "../constants/default-users";
+import { UserManagementContext } from "../context/user-management-context";
 
-// type Props = {
-//   children: React.ReactNode;
-// };
+import { getUsers } from "../services/user.service";
 
-// export function UserManagementProvider({
-//   children,
-// }: Props) {
-
-//   return (
-//     <UserManagementContext.Provider
-//       value={DEFAULT_USERS}
-//     >
-//       {children}
-//     </UserManagementContext.Provider>
-//   );
-// }
-
-
-import {
-  useEffect,
-  useState,
-} from "react";
-
-import {
-  UserManagementContext,
-} from "../context/user-management-context";
-
-import {
-  getUsers,
-} from "../services/user.service";
-
-import type {
-  ManagedUser,
-} from "../types/managed-user";
+import type { ManagedUser } from "../types/managed-user";
 
 type Props = {
-  children:
-    React.ReactNode;
+  children: React.ReactNode;
 };
 
-export function UserManagementProvider({
-  children,
-}: Props) {
-
-  const [
-    users,
-    setUsers,
-  ] = useState<
-    ManagedUser[]
-  >([]);
+export function UserManagementProvider({ children }: Props) {
+  const [users, setUsers] = useState<ManagedUser[]>([]);
 
   useEffect(() => {
-
     async function loadUsers() {
+      const result = await getUsers();
 
-      const result =
-        await getUsers();
-
-      setUsers(
-        result
-      );
+      setUsers(result);
     }
 
     loadUsers();
-
   }, []);
 
   return (
-    <UserManagementContext.Provider
-      value={users}
-    >
+    <UserManagementContext.Provider value={users}>
       {children}
     </UserManagementContext.Provider>
   );

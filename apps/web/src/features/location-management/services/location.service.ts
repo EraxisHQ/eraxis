@@ -4,6 +4,7 @@ const locations: ManagedLocation[] = [
   {
     id: "1",
     tenantId: "1",
+    brandId: "brand-001",
     code: "LKO",
     name: "Lucknow Shop",
     address: "Lucknow",
@@ -15,6 +16,7 @@ const locations: ManagedLocation[] = [
   {
     id: "2",
     tenantId: "1",
+    brandId: "brand-002",
     code: "DEL",
     name: "Delhi Shop",
     address: "Delhi",
