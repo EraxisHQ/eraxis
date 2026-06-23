@@ -342,4 +342,16 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
 
     order: 28,
   },
+
+  {
+    id: "licenses",
+
+    label: "Licenses",
+
+    path: "/settings/licenses",
+
+    group: "Administration",
+
+    order: 29,
+  },
 ];
