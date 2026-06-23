@@ -97,6 +97,14 @@ import LocationsPage from "../../pages/locations";
 
 import BrandingSettingsPage from "../../pages/settings/branding";
 
+import BillingSettingsPage from "../../pages/settings/billing";
+
+import BillingPage from "../../pages/settings/billing";
+
+import SubscriptionSettingsPage from "../../pages/settings/subscriptions";
+
+import LicenseSettingsPage from "../../pages/settings/licenses";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -179,6 +187,15 @@ export default function AppRouter() {
 
         <Route path="/locations" element={<LocationsPage />} />
         <Route path="/settings/branding" element={<BrandingSettingsPage />} />
+
+        <Route path="/settings/billing" element={<BillingSettingsPage />} />
+
+        <Route path="/settings/billing" element={<BillingPage />} />
+        <Route
+          path="/settings/subscriptions"
+          element={<SubscriptionSettingsPage />}
+        />
+        <Route path="/settings/licenses" element={<LicenseSettingsPage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -59,7 +59,15 @@ import { AuthProvider } from "./providers/auth-provider";
 import { initializePersistence } from "./features/persistence/services/persistence-bootstrap";
 
 import { initializeStorage } from "./features/persistence/services/storage-bootstrap";
+
 import { BrandProvider } from "./features/brands/providers/brand-provider";
+
+import { BillingProvider } from "./features/billing/providers/billing-provider";
+
+import { SubscriptionProvider } from "./features/subscriptions/providers/subscription-provider";
+
+import { LicenseProvider } from "./features/licenses/providers/license-provider";
+
 
 initializePersistence();
 initializeStorage();
@@ -99,6 +107,21 @@ createRoot(document.getElementById("root")!).render(
                                                     </UserProvider>
                                                   </TenantProvider>
                                                 </BrandProvider>
+                                                <TenantProvider>
+                                                  <LicenseProvider>
+                                                    <SubscriptionProvider>
+                                                      <BillingProvider>
+                                                        <UserProvider>
+                                                          <PermissionProvider>
+                                                            <AuthProvider>
+                                                              <App />
+                                                            </AuthProvider>
+                                                          </PermissionProvider>
+                                                        </UserProvider>
+                                                      </BillingProvider>
+                                                    </SubscriptionProvider>
+                                                  </LicenseProvider>
+                                                </TenantProvider>
                                               </CommandProvider>
                                             </FeatureFlagProvider>
                                           </UserPreferencesProvider>
