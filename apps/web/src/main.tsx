@@ -70,6 +70,8 @@ import { LicenseProvider } from "./features/licenses/providers/license-provider"
 
 import { WorkflowProvider } from "./features/workflows/providers/workflow-provider";
 
+import { MetadataProvider } from "./features/metadata/providers/metadata-provider";
+
 initializePersistence();
 initializeStorage();
 
@@ -97,25 +99,27 @@ createRoot(document.getElementById("root")!).render(
                                           <UserPreferencesProvider>
                                             <FeatureFlagProvider>
                                               <CommandProvider>
-                                                <WorkflowProvider>
-                                                  <BrandProvider>
-                                                    <BillingProvider>
-                                                      <SubscriptionProvider>
-                                                        <LicenseProvider>
-                                                          <TenantProvider>
-                                                            <UserProvider>
-                                                              <PermissionProvider>
-                                                                <AuthProvider>
-                                                                  <App />
-                                                                </AuthProvider>
-                                                              </PermissionProvider>
-                                                            </UserProvider>
-                                                          </TenantProvider>
-                                                        </LicenseProvider>
-                                                      </SubscriptionProvider>
-                                                    </BillingProvider>
-                                                  </BrandProvider>
-                                                </WorkflowProvider>
+                                                <MetadataProvider>
+                                                  <WorkflowProvider>
+                                                    <BrandProvider>
+                                                      <BillingProvider>
+                                                        <SubscriptionProvider>
+                                                          <LicenseProvider>
+                                                            <TenantProvider>
+                                                              <UserProvider>
+                                                                <PermissionProvider>
+                                                                  <AuthProvider>
+                                                                    <App />
+                                                                  </AuthProvider>
+                                                                </PermissionProvider>
+                                                              </UserProvider>
+                                                            </TenantProvider>
+                                                          </LicenseProvider>
+                                                        </SubscriptionProvider>
+                                                      </BillingProvider>
+                                                    </BrandProvider>
+                                                  </WorkflowProvider>
+                                                </MetadataProvider>
                                               </CommandProvider>
                                             </FeatureFlagProvider>
                                           </UserPreferencesProvider>

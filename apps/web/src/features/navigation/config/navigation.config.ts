@@ -366,4 +366,15 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
 
     order: 30,
   },
+  {
+    id: "metadata",
+
+    label: "Metadata",
+
+    path: "/settings/metadata",
+
+    group: "Administration",
+
+    order: 31,
+  },
 ];
