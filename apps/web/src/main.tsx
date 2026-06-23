@@ -1,128 +1,71 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
-import './index.css';
-import App from './App';
+import "./index.css";
+import App from "./App";
 
-import {
-  ThemeProvider,
-} from "./features/theme/context/theme-context";
+import { ThemeProvider } from "./features/theme/context/theme-context";
 
-import {
-  LocalizationProvider,
-} from "./features/localization/context/localization-context";
+import { LocalizationProvider } from "./features/localization/context/localization-context";
 
-import {
-  PermissionProvider,
-} from "./features/rbac/providers/permission-provider";
+import { PermissionProvider } from "./features/rbac/providers/permission-provider";
 
-import {
-  UserProvider,
-} from "./features/users/providers/user-provider";
+import { UserProvider } from "./features/users/providers/user-provider";
 
-import {
-  TenantProvider,
-} from "./features/tenants/providers/tenant-provider";
+import { TenantProvider } from "./features/tenants/providers/tenant-provider";
 
-import {
-  ApplicationProvider,
-} from "./features/application-registry/providers/application-provider";
+import { ApplicationProvider } from "./features/application-registry/providers/application-provider";
 
-import {
-  PluginProvider,
-} from "./features/plugin-registry/providers/plugin-provider";
+import { PluginProvider } from "./features/plugin-registry/providers/plugin-provider";
 
-import {
-  ProfileProvider,
-} from "./features/profile/providers/profile-provider";
+import { ProfileProvider } from "./features/profile/providers/profile-provider";
 
-import {
-  NotificationProvider,
-} from "./features/notifications/providers/notification-provider";
+import { NotificationProvider } from "./features/notifications/providers/notification-provider";
 
-import {
-  AuditProvider,
-} from "./features/audit/providers/audit-provider";
+import { AuditProvider } from "./features/audit/providers/audit-provider";
 
-import {
-  DashboardProvider,
-} from "./features/dashboard/providers/dashboard-provider";
+import { DashboardProvider } from "./features/dashboard/providers/dashboard-provider";
 
-import {
-  SearchProvider,
-} from "./features/search/providers/search-provider";
+import { SearchProvider } from "./features/search/providers/search-provider";
 
-import {
-  CommandProvider,
-} from "./features/command-palette/providers/command-provider";
+import { CommandProvider } from "./features/command-palette/providers/command-provider";
 
-import {
-  FeatureFlagProvider,
-} from "./features/feature-flags/providers/feature-flag-provider";
+import { FeatureFlagProvider } from "./features/feature-flags/providers/feature-flag-provider";
 
-import {
-  UserPreferencesProvider,
-} from "./features/user-preferences/providers/user-preferences-provider";
+import { UserPreferencesProvider } from "./features/user-preferences/providers/user-preferences-provider";
 
-import {
-  ActivityProvider,
-} from "./features/activity-center/providers/activity-provider";
+import { ActivityProvider } from "./features/activity-center/providers/activity-provider";
 
-import {
-  StorageProvider,
-} from "./features/file-storage/providers/storage-provider";
+import { StorageProvider } from "./features/file-storage/providers/storage-provider";
 
-import {
-  MediaProvider,
-} from "./features/media-library/providers/media-provider";
+import { MediaProvider } from "./features/media-library/providers/media-provider";
 
-import {
-  RealtimeProvider,
-} from "./features/realtime-events/providers/realtime-provider";
+import { RealtimeProvider } from "./features/realtime-events/providers/realtime-provider";
 
-import {
-  HealthProvider,
-} from "./features/system-health/providers/health-provider";
+import { HealthProvider } from "./features/system-health/providers/health-provider";
 
-import {
-  UserManagementProvider,
-} from "./features/user-management/providers/user-management-provider";
+import { UserManagementProvider } from "./features/user-management/providers/user-management-provider";
 
-import {
-  RoleProvider,
-} from "./features/role-management/providers/role-provider";
+import { RoleProvider } from "./features/role-management/providers/role-provider";
 
-import {
-  PermissionManagementProvider,
-} from "./features/permission-management/providers/permission-management-provider";
+import { PermissionManagementProvider } from "./features/permission-management/providers/permission-management-provider";
 
-import {
-  TenantManagementProvider,
-} from "./features/tenant-management/providers/tenant-management-provider";
+import { TenantManagementProvider } from "./features/tenant-management/providers/tenant-management-provider";
 
-import {
-  BranchProvider,
-} from "./features/branch-management/providers/branch-provider";
+import { BranchProvider } from "./features/branch-management/providers/branch-provider";
 
-import {
-  AuthProvider,
-} from "./providers/auth-provider";
+import { AuthProvider } from "./providers/auth-provider";
 
+import { initializePersistence } from "./features/persistence/services/persistence-bootstrap";
 
-import {
-  initializePersistence,
-} from "./features/persistence/services/persistence-bootstrap";
+import { initializeStorage } from "./features/persistence/services/storage-bootstrap";
 
-import {
-  initializeStorage,
-} from "./features/persistence/services/storage-bootstrap";
+import { BillingProvider } from "./features/billing/providers/billing-provider";
 
 initializePersistence();
 initializeStorage();
 
-createRoot(
-  document.getElementById("root")!
-).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider>
       <LocalizationProvider>
@@ -134,39 +77,41 @@ createRoot(
                   <DashboardProvider>
                     <SearchProvider>
                       <BranchProvider>
-                      <TenantManagementProvider>
-                      <PermissionManagementProvider>
-                        <RoleProvider>
-                          <UserManagementProvider>
-                            <HealthProvider>
-                              <RealtimeProvider>
-                                <MediaProvider>
-                                  <StorageProvider>
-                                    <ActivityProvider>
-                                      <UserPreferencesProvider>
-                                        <FeatureFlagProvider>
-                                          <CommandProvider>
-                                            <TenantProvider>
-                                              <UserProvider>
-                                                <PermissionProvider>
-                                                  <AuthProvider>
-                                                  <App />
-                                                  </AuthProvider>
-                                                </PermissionProvider>
-                                              </UserProvider>
-                                            </TenantProvider>
-                                          </CommandProvider>
-                                        </FeatureFlagProvider>
-                                      </UserPreferencesProvider>
-                                    </ActivityProvider>
-                                  </StorageProvider>
-                                </MediaProvider>
-                              </RealtimeProvider>
-                            </HealthProvider>
-                          </UserManagementProvider>
-                        </RoleProvider>
-                      </PermissionManagementProvider>
-                      </TenantManagementProvider>
+                        <TenantManagementProvider>
+                          <PermissionManagementProvider>
+                            <RoleProvider>
+                              <UserManagementProvider>
+                                <HealthProvider>
+                                  <RealtimeProvider>
+                                    <MediaProvider>
+                                      <StorageProvider>
+                                        <ActivityProvider>
+                                          <UserPreferencesProvider>
+                                            <FeatureFlagProvider>
+                                              <CommandProvider>
+                                                <TenantProvider>
+                                                  <BillingProvider>
+                                                    <UserProvider>
+                                                      <PermissionProvider>
+                                                        <AuthProvider>
+                                                          <App />
+                                                        </AuthProvider>
+                                                      </PermissionProvider>
+                                                    </UserProvider>
+                                                  </BillingProvider>
+                                                </TenantProvider>
+                                              </CommandProvider>
+                                            </FeatureFlagProvider>
+                                          </UserPreferencesProvider>
+                                        </ActivityProvider>
+                                      </StorageProvider>
+                                    </MediaProvider>
+                                  </RealtimeProvider>
+                                </HealthProvider>
+                              </UserManagementProvider>
+                            </RoleProvider>
+                          </PermissionManagementProvider>
+                        </TenantManagementProvider>
                       </BranchProvider>
                     </SearchProvider>
                   </DashboardProvider>
@@ -177,5 +122,5 @@ createRoot(
         </ProfileProvider>
       </LocalizationProvider>
     </ThemeProvider>
-  </StrictMode >
+  </StrictMode>,
 );

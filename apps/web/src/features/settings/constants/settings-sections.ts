@@ -36,4 +36,12 @@ export const SETTINGS_SECTIONS: SettingsSection[] = [
     name: "Branding",
     route: "/settings/branding",
   },
+
+  {
+    id: "billing",
+
+    name: "Billing",
+
+    route: "/settings/billing",
+  },
 ];
