@@ -354,4 +354,16 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
 
     order: 29,
   },
+
+  {
+    id: "workflows",
+
+    label: "Workflows",
+
+    path: "/settings/workflows",
+
+    group: "Administration",
+
+    order: 30,
+  },
 ];

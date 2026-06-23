@@ -68,6 +68,8 @@ import { SubscriptionProvider } from "./features/subscriptions/providers/subscri
 
 import { LicenseProvider } from "./features/licenses/providers/license-provider";
 
+import { WorkflowProvider } from "./features/workflows/providers/workflow-provider";
+
 initializePersistence();
 initializeStorage();
 
@@ -95,23 +97,25 @@ createRoot(document.getElementById("root")!).render(
                                           <UserPreferencesProvider>
                                             <FeatureFlagProvider>
                                               <CommandProvider>
-                                                <BrandProvider>
-                                                  <BillingProvider>
-                                                    <SubscriptionProvider>
-                                                      <LicenseProvider>
-                                                        <TenantProvider>
-                                                          <UserProvider>
-                                                            <PermissionProvider>
-                                                              <AuthProvider>
-                                                                <App />
-                                                              </AuthProvider>
-                                                            </PermissionProvider>
-                                                          </UserProvider>
-                                                        </TenantProvider>
-                                                      </LicenseProvider>
-                                                    </SubscriptionProvider>
-                                                  </BillingProvider>
-                                                </BrandProvider>
+                                                <WorkflowProvider>
+                                                  <BrandProvider>
+                                                    <BillingProvider>
+                                                      <SubscriptionProvider>
+                                                        <LicenseProvider>
+                                                          <TenantProvider>
+                                                            <UserProvider>
+                                                              <PermissionProvider>
+                                                                <AuthProvider>
+                                                                  <App />
+                                                                </AuthProvider>
+                                                              </PermissionProvider>
+                                                            </UserProvider>
+                                                          </TenantProvider>
+                                                        </LicenseProvider>
+                                                      </SubscriptionProvider>
+                                                    </BillingProvider>
+                                                  </BrandProvider>
+                                                </WorkflowProvider>
                                               </CommandProvider>
                                             </FeatureFlagProvider>
                                           </UserPreferencesProvider>
