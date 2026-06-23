@@ -101,6 +101,8 @@ import BillingSettingsPage from "../../pages/settings/billing";
 
 import BillingPage from "../../pages/settings/billing";
 
+import SubscriptionSettingsPage from "../../pages/settings/subscriptions";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -187,6 +189,10 @@ export default function AppRouter() {
         <Route path="/settings/billing" element={<BillingSettingsPage />} />
 
         <Route path="/settings/billing" element={<BillingPage />} />
+        <Route
+          path="/settings/subscriptions"
+          element={<SubscriptionSettingsPage />}
+        />
       </Routes>
     </BrowserRouter>
   );

@@ -5,7 +5,7 @@ Status: IN PROGRESS
 Sub Modules
 
 ✓ E041 Billing Foundation
-⏳ E042 Subscription Engine
+✓ E042 Subscription Engine
 ⏳ E043 License Engine
 
 Description

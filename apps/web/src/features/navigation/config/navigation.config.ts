@@ -330,4 +330,16 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
 
     order: 27,
   },
+
+  {
+    id: "subscriptions",
+
+    label: "Subscriptions",
+
+    path: "/settings/subscriptions",
+
+    group: "Administration",
+
+    order: 28,
+  },
 ];

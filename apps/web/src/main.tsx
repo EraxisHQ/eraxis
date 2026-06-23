@@ -62,6 +62,8 @@ import { initializeStorage } from "./features/persistence/services/storage-boots
 
 import { BillingProvider } from "./features/billing/providers/billing-provider";
 
+import { SubscriptionProvider } from "./features/subscriptions/providers/subscription-provider";
+
 initializePersistence();
 initializeStorage();
 
@@ -90,15 +92,17 @@ createRoot(document.getElementById("root")!).render(
                                             <FeatureFlagProvider>
                                               <CommandProvider>
                                                 <TenantProvider>
-                                                  <BillingProvider>
-                                                    <UserProvider>
-                                                      <PermissionProvider>
-                                                        <AuthProvider>
-                                                          <App />
-                                                        </AuthProvider>
-                                                      </PermissionProvider>
-                                                    </UserProvider>
-                                                  </BillingProvider>
+                                                  <SubscriptionProvider>
+                                                    <BillingProvider>
+                                                      <UserProvider>
+                                                        <PermissionProvider>
+                                                          <AuthProvider>
+                                                            <App />
+                                                          </AuthProvider>
+                                                        </PermissionProvider>
+                                                      </UserProvider>
+                                                    </BillingProvider>
+                                                  </SubscriptionProvider>
                                                 </TenantProvider>
                                               </CommandProvider>
                                             </FeatureFlagProvider>
