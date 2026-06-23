@@ -16,320 +16,318 @@
  * M001-03-01
  * =====================================
  */
-import { ROUTES }
-  from "../constants/routes";
+import { ROUTES } from "../constants/routes";
 
-import type {
-  NavigationItem,
-} from "../types/navigation-item";
+import type { NavigationItem } from "../types/navigation-item";
 
-export const NAVIGATION_ITEMS:
-  NavigationItem[] = [
-    {
-      id: "dashboard",
+export const NAVIGATION_ITEMS: NavigationItem[] = [
+  {
+    id: "dashboard",
 
-      label: "Dashboard",
+    label: "Dashboard",
 
-      path: ROUTES.DASHBOARD,
+    path: ROUTES.DASHBOARD,
 
-      group: "General",
+    group: "General",
 
-      permission: "dashboard:view",
+    permission: "dashboard:view",
 
-      applicationId: "CORE",
+    applicationId: "CORE",
 
-      order: 1,
-    },
-    {
-      id: "applications",
+    order: 1,
+  },
+  {
+    id: "applications",
 
-      label: "Applications",
+    label: "Applications",
 
-      path: ROUTES.APPLICATIONS,
+    path: ROUTES.APPLICATIONS,
 
-      group: "Applications",
+    group: "Applications",
 
-      permission: "applications:view",
+    permission: "applications:view",
 
-      applicationId: "CORE",
+    applicationId: "CORE",
 
-      order: 2,
-    },
-    {
-      id: "administration",
+    order: 2,
+  },
+  {
+    id: "administration",
 
-      label: "Administration",
+    label: "Administration",
 
-      path: ROUTES.ADMINISTRATION,
+    path: ROUTES.ADMINISTRATION,
 
-      group: "Administration",
+    group: "Administration",
 
-      permission: "administration:view",
+    permission: "administration:view",
 
-      applicationId: "CORE",
+    applicationId: "CORE",
 
-      order: 3,
-    },
-    {
-      id: "settings",
+    order: 3,
+  },
+  {
+    id: "settings",
 
-      label: "Settings",
+    label: "Settings",
 
-      path: ROUTES.SETTINGS,
+    path: ROUTES.SETTINGS,
 
-      group: "Administration",
+    group: "Administration",
 
-      permission: "settings:view",
+    permission: "settings:view",
 
-      applicationId: "CORE",
+    applicationId: "CORE",
 
-      order: 4,
-    },
-    {
-      id: "commerce",
+    order: 4,
+  },
+  {
+    id: "commerce",
 
-      label: "Commerce",
+    label: "Commerce",
 
-      path: "/commerce",
+    path: "/commerce",
 
-      group: "Applications",
+    group: "Applications",
 
-      applicationId: "COMMERCE",
+    applicationId: "COMMERCE",
 
-      order: 10,
-    },
+    order: 10,
+  },
 
-    {
-      id: "products",
+  {
+    id: "products",
 
-      label: "Products",
+    label: "Products",
 
-      path: "/products",
+    path: "/products",
 
-      group: "Applications",
+    group: "Applications",
 
-      applicationId: "COMMERCE",
+    applicationId: "COMMERCE",
 
-      order: 11,
-    },
+    order: 11,
+  },
 
-    {
-      id: "categories",
+  {
+    id: "categories",
 
-      label: "Categories",
+    label: "Categories",
 
-      path: "/categories",
+    path: "/categories",
 
-      group: "Applications",
+    group: "Applications",
 
-      applicationId: "COMMERCE",
+    applicationId: "COMMERCE",
 
-      order: 12,
-    },
+    order: 12,
+  },
 
-    {
-      id: "inventory",
+  {
+    id: "inventory",
 
-      label: "Inventory",
+    label: "Inventory",
 
-      path: "/inventory",
+    path: "/inventory",
 
-      group: "Applications",
+    group: "Applications",
 
-      applicationId: "COMMERCE",
+    applicationId: "COMMERCE",
 
-      order: 13,
-    },
+    order: 13,
+  },
 
-    {
-      id: "customers",
+  {
+    id: "customers",
 
-      label: "Customers",
+    label: "Customers",
 
-      path: "/customers",
+    path: "/customers",
 
-      group: "Applications",
+    group: "Applications",
 
-      applicationId: "COMMERCE",
+    applicationId: "COMMERCE",
 
-      order: 14,
-    },
+    order: 14,
+  },
 
-    {
-      id: "orders",
+  {
+    id: "orders",
 
-      label: "Orders",
+    label: "Orders",
 
-      path: "/orders",
+    path: "/orders",
 
-      group: "Applications",
+    group: "Applications",
 
-      applicationId: "COMMERCE",
+    applicationId: "COMMERCE",
 
-      order: 15,
-    },
+    order: 15,
+  },
 
-    {
-      id: "pricing",
+  {
+    id: "pricing",
 
-      label: "Pricing",
+    label: "Pricing",
 
-      path: "/pricing",
+    path: "/pricing",
 
-      group: "Applications",
+    group: "Applications",
 
-      applicationId: "COMMERCE",
+    applicationId: "COMMERCE",
 
-      order: 16,
-    },
+    order: 16,
+  },
 
-    {
-      id: "brands",
+  {
+    id: "brands",
 
-      label: "Brands",
+    label: "Brands",
 
-      path: "/brands",
+    path: "/brands",
 
-      group: "Applications",
+    group: "Applications",
 
-      applicationId: "COMMERCE",
+    applicationId: "COMMERCE",
 
-      order: 17,
-    },
+    order: 17,
+  },
 
-    {
-      id: "product-variants",
+  {
+    id: "product-variants",
 
-      label: "Product Variants",
+    label: "Product Variants",
 
-      path: "/product-variants",
+    path: "/product-variants",
 
-      group: "Applications",
+    group: "Applications",
 
-      applicationId: "COMMERCE",
+    applicationId: "COMMERCE",
 
-      order: 18,
-    },
+    order: 18,
+  },
 
-    {
-      id: "customer-addresses",
+  {
+    id: "customer-addresses",
 
-      label:
-        "Customer Addresses",
+    label: "Customer Addresses",
 
-      path:
-        "/customer-addresses",
+    path: "/customer-addresses",
 
-      group:
-        "Applications",
+    group: "Applications",
 
-      applicationId:
-        "COMMERCE",
+    applicationId: "COMMERCE",
 
-      order: 19,
-    },
+    order: 19,
+  },
 
-    {
-      id: "order-lifecycle",
+  {
+    id: "order-lifecycle",
 
-      label:
-        "Order Lifecycle",
+    label: "Order Lifecycle",
 
-      path:
-        "/order-lifecycle",
+    path: "/order-lifecycle",
 
-      group:
-        "Applications",
+    group: "Applications",
 
-      applicationId:
-        "COMMERCE",
+    applicationId: "COMMERCE",
 
-      order: 20,
-    },
+    order: 20,
+  },
 
-    {
-      id: "order-items",
+  {
+    id: "order-items",
 
-      label: "Order Items",
+    label: "Order Items",
 
-      path: "/order-items",
+    path: "/order-items",
 
-      group: "Applications",
+    group: "Applications",
 
-      applicationId: "COMMERCE",
+    applicationId: "COMMERCE",
 
-      order: 21,
-    },
+    order: 21,
+  },
 
-    {
-      id: "invoices",
+  {
+    id: "invoices",
 
-      label: "Invoices",
+    label: "Invoices",
 
-      path: "/invoices",
+    path: "/invoices",
 
-      group: "Applications",
+    group: "Applications",
 
-      applicationId: "COMMERCE",
+    applicationId: "COMMERCE",
 
-      order: 22,
-    },
+    order: 22,
+  },
 
-    {
-      id: "payments",
+  {
+    id: "payments",
 
-      label: "Payments",
+    label: "Payments",
 
-      path: "/payments",
+    path: "/payments",
 
-      group: "Applications",
+    group: "Applications",
 
-      applicationId: "COMMERCE",
+    applicationId: "COMMERCE",
 
-      order: 23,
-    },
+    order: 23,
+  },
 
-    {
-      id: "taxes",
+  {
+    id: "taxes",
 
-      label: "Taxes",
+    label: "Taxes",
 
-      path: "/taxes",
+    path: "/taxes",
 
-      group: "Applications",
+    group: "Applications",
 
-      applicationId: "COMMERCE",
+    applicationId: "COMMERCE",
 
-      order: 24,
-    },
+    order: 24,
+  },
 
-    {
-      id: "discounts",
+  {
+    id: "discounts",
 
-      label: "Discounts",
+    label: "Discounts",
 
-      path: "/discounts",
+    path: "/discounts",
 
-      group: "Applications",
+    group: "Applications",
 
-      applicationId: "COMMERCE",
+    applicationId: "COMMERCE",
 
-      order: 25,
-    },
+    order: 25,
+  },
 
-    {
-      id: "shipping",
+  {
+    id: "shipping",
 
-      label: "Shipping",
+    label: "Shipping",
 
-      path: "/shipping",
+    path: "/shipping",
 
-      group: "Applications",
+    group: "Applications",
 
-      applicationId: "COMMERCE",
+    applicationId: "COMMERCE",
 
-      order: 26,
-    },
+    order: 26,
+  },
 
-  ];
+  {
+    id: "billing",
 
+    label: "Billing",
+
+    path: "/settings/billing",
+
+    group: "Administration",
+
+    order: 27,
+  },
+];

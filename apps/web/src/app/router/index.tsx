@@ -99,6 +99,8 @@ import BrandingSettingsPage from "../../pages/settings/branding";
 
 import BillingSettingsPage from "../../pages/settings/billing";
 
+import BillingPage from "../../pages/settings/billing";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -183,6 +185,8 @@ export default function AppRouter() {
         <Route path="/settings/branding" element={<BrandingSettingsPage />} />
 
         <Route path="/settings/billing" element={<BillingSettingsPage />} />
+
+        <Route path="/settings/billing" element={<BillingPage />} />
       </Routes>
     </BrowserRouter>
   );
