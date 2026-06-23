@@ -107,6 +107,8 @@ import LicenseSettingsPage from "../../pages/settings/licenses";
 
 import WorkflowsPage from "../../pages/settings/workflows";
 
+import MetadataPage from "../../pages/settings/metadata";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -200,6 +202,8 @@ export default function AppRouter() {
         <Route path="/settings/licenses" element={<LicenseSettingsPage />} />
 
         <Route path="/settings/workflows" element={<WorkflowsPage />} />
+
+        <Route path="/settings/metadata" element={<MetadataPage />} />
       </Routes>
     </BrowserRouter>
   );
