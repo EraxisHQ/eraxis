@@ -105,6 +105,8 @@ import SubscriptionSettingsPage from "../../pages/settings/subscriptions";
 
 import LicenseSettingsPage from "../../pages/settings/licenses";
 
+import WorkflowsPage from "../../pages/settings/workflows";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -196,6 +198,8 @@ export default function AppRouter() {
           element={<SubscriptionSettingsPage />}
         />
         <Route path="/settings/licenses" element={<LicenseSettingsPage />} />
+
+        <Route path="/settings/workflows" element={<WorkflowsPage />} />
       </Routes>
     </BrowserRouter>
   );
