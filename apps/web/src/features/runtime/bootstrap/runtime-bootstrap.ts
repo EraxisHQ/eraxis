@@ -10,8 +10,13 @@ import {
   bootstrapRoutes,
 } from "./route-bootstrap";
 
+import {
+  bootstrapNavigation,
+} from "./navigation-bootstrap";
+
 export function bootstrapRuntime() {
   bootstrapPlugins();
   bootstrapModules();
   bootstrapRoutes();
+  bootstrapNavigation();
 }
