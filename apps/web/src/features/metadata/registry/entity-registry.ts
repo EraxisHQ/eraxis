@@ -1,4 +1,3 @@
-import type { DynamicEntity }
-from "../types/dynamic-entity";
+import type { DynamicEntity } from "../types/dynamic-entity";
 
 export const ENTITY_REGISTRY: DynamicEntity[] = [];
