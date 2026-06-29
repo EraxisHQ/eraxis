@@ -1,7 +1,13 @@
 import {
-  loadModules,
-} from "../services/module-loader";
+  commercePlugin,
+} from "../../../plugins/commerce";
+
+type RuntimeModule = {
+  bootstrap: () => void;
+};
 
 export function bootstrapModules() {
-  return loadModules();
+  for (const module of (commercePlugin.modules ?? []) as RuntimeModule[]) {
+    module.bootstrap();
+  }
 }
