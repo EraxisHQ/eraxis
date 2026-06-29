@@ -12,4 +12,7 @@ export type Plugin = {
   enabled: boolean;
 
   dependencies?: string[];
+
+manifest?: unknown;
+  modules?: unknown[];
 };
