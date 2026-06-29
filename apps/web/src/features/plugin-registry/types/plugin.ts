@@ -1,3 +1,7 @@
+import type {
+  RuntimeModule,
+} from "../../runtime/types/runtime-module";
+
 export type Plugin = {
   id: string;
 
@@ -13,6 +17,6 @@ export type Plugin = {
 
   dependencies?: string[];
 
-manifest?: unknown;
-  modules?: unknown[];
+  manifest?: unknown;
+  modules?: RuntimeModule[];
 };
