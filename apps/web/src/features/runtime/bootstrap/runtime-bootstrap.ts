@@ -14,9 +14,14 @@ import {
   bootstrapNavigation,
 } from "./navigation-bootstrap";
 
+import {
+  bootstrapPermissions,
+} from "./permission-bootstrap";
+
 export function bootstrapRuntime() {
   bootstrapPlugins();
   bootstrapModules();
   bootstrapRoutes();
   bootstrapNavigation();
+bootstrapPermissions();
 }
