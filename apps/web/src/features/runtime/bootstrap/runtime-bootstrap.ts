@@ -18,10 +18,15 @@ import {
   bootstrapPermissions,
 } from "./permission-bootstrap";
 
+import {
+  bootstrapSearch,
+} from "./search-bootstrap";
+
 export function bootstrapRuntime() {
   bootstrapPlugins();
   bootstrapModules();
   bootstrapRoutes();
   bootstrapNavigation();
-bootstrapPermissions();
+  bootstrapPermissions();
+  bootstrapSearch();
 }
