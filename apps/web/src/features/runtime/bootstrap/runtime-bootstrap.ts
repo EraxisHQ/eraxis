@@ -22,6 +22,10 @@ import {
   bootstrapSearch,
 } from "./search-bootstrap";
 
+import {
+  bootstrapCommands,
+} from "./command-bootstrap";
+
 export function bootstrapRuntime() {
   bootstrapPlugins();
   bootstrapModules();
@@ -29,4 +33,5 @@ export function bootstrapRuntime() {
   bootstrapNavigation();
   bootstrapPermissions();
   bootstrapSearch();
+  bootstrapCommands();
 }
