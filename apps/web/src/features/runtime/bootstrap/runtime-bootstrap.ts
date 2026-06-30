@@ -44,6 +44,10 @@ import {
   bootstrapDashboard,
 } from "./dashboard-bootstrap";
 
+import {
+  bootstrapApplications,
+} from "./application-bootstrap";
+
 export function bootstrapRuntime() {
   bootstrapPlugins();
   bootstrapModules();
@@ -57,4 +61,5 @@ export function bootstrapRuntime() {
   bootstrapJobs();
   bootstrapFeatureFlags();
   bootstrapDashboard();
+  bootstrapApplications();
 }
