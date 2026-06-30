@@ -36,6 +36,10 @@ import {
   bootstrapJobs,
 } from "./job-bootstrap";
 
+import {
+  bootstrapFeatureFlags,
+} from "./feature-flag-bootstrap";
+
 export function bootstrapRuntime() {
   bootstrapPlugins();
   bootstrapModules();
@@ -47,4 +51,5 @@ export function bootstrapRuntime() {
   bootstrapSettings();
   bootstrapEvents();
   bootstrapJobs();
+  bootstrapFeatureFlags();
 }
