@@ -3,12 +3,9 @@ import {
 } from "../../../../../features/runtime/routes/route-registry";
 
 import {
-  productCatalogRoutes,
+  PRODUCT_CATALOG_ROUTE,
 } from "../routes/product-catalog.routes";
 
-export function
-registerProductCatalogRoutes() {
-  productCatalogRoutes.forEach(
-    route => registerRoute(route),
-  );
+export function registerProductCatalogRoutes() {
+  registerRoute(PRODUCT_CATALOG_ROUTE);
 }
