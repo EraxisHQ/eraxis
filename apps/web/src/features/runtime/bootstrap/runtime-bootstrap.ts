@@ -26,6 +26,16 @@ import {
   bootstrapCommands,
 } from "./command-bootstrap";
 
+import {
+  bootstrapSettings,
+} from "./setting-bootstrap";
+
+import { bootstrapEvents } from "./event-bootstrap";
+
+import {
+  bootstrapJobs,
+} from "./job-bootstrap";
+
 export function bootstrapRuntime() {
   bootstrapPlugins();
   bootstrapModules();
@@ -34,4 +44,7 @@ export function bootstrapRuntime() {
   bootstrapPermissions();
   bootstrapSearch();
   bootstrapCommands();
+  bootstrapSettings();
+  bootstrapEvents();
+  bootstrapJobs();
 }
