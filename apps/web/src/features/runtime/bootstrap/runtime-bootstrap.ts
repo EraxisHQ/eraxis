@@ -40,6 +40,10 @@ import {
   bootstrapFeatureFlags,
 } from "./feature-flag-bootstrap";
 
+import {
+  bootstrapDashboard,
+} from "./dashboard-bootstrap";
+
 export function bootstrapRuntime() {
   bootstrapPlugins();
   bootstrapModules();
@@ -52,4 +56,5 @@ export function bootstrapRuntime() {
   bootstrapEvents();
   bootstrapJobs();
   bootstrapFeatureFlags();
+  bootstrapDashboard();
 }
