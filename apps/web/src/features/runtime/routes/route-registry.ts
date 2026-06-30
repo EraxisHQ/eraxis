@@ -1,18 +1,11 @@
-import type {
-  RouteObject,
-} from "react-router-dom";
+import type { RuntimeRoute } from "../types/runtime-route";
 
-const ROUTES:
-  RouteObject[] = [];
+const ROUTES: RuntimeRoute[] = [];
 
-export function
-registerRoute(
-  route: RouteObject,
-) {
+export function registerRoute(route: RuntimeRoute) {
   ROUTES.push(route);
 }
 
-export function
-getRoutes() {
+export function getRoutes() {
   return ROUTES;
 }
