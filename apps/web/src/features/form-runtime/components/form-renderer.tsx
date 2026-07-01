@@ -167,11 +167,20 @@ export function FormRenderer({ schema }: Props) {
                 return;
               }
 
-              const submitHandler = getSubmitHandler(schema.id);
+const submitHandler =
+  getSubmitHandler(schema.id);
 
-              if (submitHandler) {
-                await submitHandler(values);
-              }
+if (!submitHandler) {
+  console.error(
+    `No submit handler registered for ${schema.id}`,
+  );
+
+  return;
+}
+
+await submitHandler(values);          
+
+
             }}
           >
             Submit

@@ -136,7 +136,9 @@ export const PRODUCT_FORM: FormSchema = {
     },
   ],
 
-  onSubmit: async (values) => {
-    console.log("SUBMIT", values);
-  },
+onSubmit: async () => {
+  // Placeholder only.
+  // Actual submission is handled by register-submit-handlers.ts
+},
+
 };
