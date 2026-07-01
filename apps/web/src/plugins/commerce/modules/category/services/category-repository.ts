@@ -6,3 +6,5 @@ export class CategoryRepository extends BaseRepository<Category> {
     super("categories");
   }
 }
+
+export const categoryRepository = new CategoryRepository();

@@ -1,23 +1,24 @@
-import { CategoryRepository } from "./category-repository";
+import { categoryRepository } from "./category-repository";
 import type { Category } from "../types/category";
 
-const repository = new CategoryRepository();
-
 export const categoryService = {
-  findAll: () => repository.findAll(),
+  findAll() {
+    return categoryRepository.findAll();
+  },
 
-  findById: (id: string) =>
-    repository.findById(id),
+  findById(id: string) {
+    return categoryRepository.findById(id);
+  },
 
-  create: (category: Category) =>
-    repository.create(category),
+  create(category: Category) {
+    return categoryRepository.create(category);
+  },
 
-  update: (
-    id: string,
-    category: Category,
-  ) =>
-    repository.update(id, category),
+  update(id: string, category: Category) {
+    return categoryRepository.update(id, category);
+  },
 
-  delete: (id: string) =>
-    repository.delete(id),
+  delete(id: string) {
+    return categoryRepository.delete(id);
+  },
 };
