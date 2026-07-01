@@ -1,4 +1,4 @@
-import type { FormSchema } from "../types/form-schema";
+import type { FormSchema } from "../../../../../features/form-runtime/types/form-schema";
 
 export const PRODUCT_FORM: FormSchema = {
   id: "product",

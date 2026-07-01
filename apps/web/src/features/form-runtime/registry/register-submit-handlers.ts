@@ -1,6 +1,11 @@
 import { registerSubmitHandler } from "../services/form-submit-registry";
+
 import { productService } from "../../products/services/product-service";
-import type { Product } from "../../products/types/product";
+
+import {
+  mapFormToProduct,
+} from "../../../plugins/commerce/modules/product-catalog/utils/product-mapper";
+
 import {
   getEditingId,
   clearForm,
@@ -16,28 +21,34 @@ const id =
   editingId ??
   crypto.randomUUID();
 
-    const product: Product = {
-      id,
-      sku: String(values.sku),
-      name: String(values.name),
-      description: String(values.description ?? ""),
-      categoryId: String(values.category ?? ""),
-      brandId: "",
-      price: Number(values.price ?? 0),
-      active: Boolean(values.active),
-      isGstRegistered: Boolean(
-        values.isGstRegistered,
-      ),
-      gstNumber: String(
-        values.gstNumber ?? "",
-      ),
-      warrantyMonths: Number(
-        values.warrantyMonths ?? 0,
-      ),
-      variantIds: [],
-    };
+    // const product: Product = {
+    //   id,
+    //   sku: String(values.sku),
+    //   name: String(values.name),
+    //   description: String(values.description ?? ""),
+    //   categoryId: String(values.category ?? ""),
+    //   brandId: "",
+    //   price: Number(values.price ?? 0),
+    //   active: Boolean(values.active),
+    //   isGstRegistered: Boolean(
+    //     values.isGstRegistered,
+    //   ),
+    //   gstNumber: String(
+    //     values.gstNumber ?? "",
+    //   ),
+    //   warrantyMonths: Number(
+    //     values.warrantyMonths ?? 0,
+    //   ),
+    //   variantIds: [],
+    // };
 
-console.log("Editing ID:", editingId);
+const product =
+    mapFormToProduct(
+        id,
+        values,
+    );
+
+    console.log("Editing ID:", editingId);
 console.log("Product:", product);
 
 if (editingId) {

@@ -6,6 +6,14 @@ import { deleteProduct } from "../services/product-catalog-service";
 
 import { loadForm } from "../../../../../features/form-runtime/services/form-session-service";
 
+import {
+  mapProductToForm,
+} from "../utils/product-mapper";
+
+import {
+  PRODUCT_PAGE_SIZE,
+} from "../constants/product.constants";
+
 export default function ProductTable() {
   const products = useProducts();
 
@@ -19,15 +27,27 @@ export default function ProductTable() {
 
   const [page, setPage] = useState(1);
 
-  const pageSize = 10;
+  const pageSize = PRODUCT_PAGE_SIZE; 
 
   function handleEdit(product: (typeof products)[number]) {
-    loadForm(product.id, {
-      sku: product.sku,
-      name: product.name,
-      active: product.active,
-    });
-  }
+  // loadForm(product.id, {
+  //   sku: product.sku,
+  //   name: product.name,
+  //   description: product.description,
+  //   price: product.price,
+  //   category: product.categoryId,
+  //   active: product.active,
+  //   isGstRegistered: product.isGstRegistered,
+  //   gstNumber: product.gstNumber,
+  //   warrantyMonths: product.warrantyMonths,
+  // });
+  loadForm(
+  product.id,
+  mapProductToForm(product),
+);
+}
+
+
 
   async function handleDelete(id: string) {
     const confirmed = window.confirm("Delete this product?");

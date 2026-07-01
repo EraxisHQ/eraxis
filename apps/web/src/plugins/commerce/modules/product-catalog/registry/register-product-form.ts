@@ -4,7 +4,7 @@ import {
 
 import {
   PRODUCT_FORM,
-} from "../../../../../features/form-runtime/registry/product-form";
+} from "../forms/product-form";
 
 export function
 registerProductForm() {

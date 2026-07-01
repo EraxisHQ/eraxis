@@ -1,8 +1,6 @@
-import "../../features/form-runtime/registry/register-forms";
-
 import "../../features/form-runtime/registry/register-submit-handlers";
 
-import "../../features/form-runtime/registry/register-options-providers";
+import "../../plugins/commerce/modules/product-catalog";
 
 import DashboardLayout from "../../shell/dashboard-layout/dashboard-layout";
 

@@ -12,7 +12,14 @@ import {
   registerProductForm,
 } from "../registry/register-product-form";
 
+
+import {
+  registerProductOptions,
+} from "../registry/register-product-options";
+
 export function bootstrapProductCatalog() {
   registerProductForm();
+   registerProductOptions();
   registerRoute(PRODUCT_CATALOG_ROUTE);
+ 
 }
