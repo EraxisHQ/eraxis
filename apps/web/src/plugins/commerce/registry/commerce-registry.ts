@@ -42,6 +42,9 @@ import {
   bootstrapCustomer,
 } from "../modules/customer";
 
+import { SUPPLIER_MANIFEST } from "../modules/supplier";
+import { bootstrapSupplier } from "../modules/supplier";
+
 export const COMMERCE_REGISTRY: RuntimeModule[] = [ 
   {
     manifest: PRODUCT_CATALOG_MANIFEST,
@@ -63,5 +66,9 @@ export const COMMERCE_REGISTRY: RuntimeModule[] = [
     manifest: CUSTOMER_MANIFEST,
     bootstrap: bootstrapCustomer,
   },
+  {
+  manifest: SUPPLIER_MANIFEST,
+  bootstrap: bootstrapSupplier,
+},
 ];
 
