@@ -2,6 +2,7 @@ import { TextField } from "./text-field";
 import { SelectField } from "./select-field";
 import { CheckboxField } from "./checkbox-field";
 import { TextareaField } from "./textarea-field";
+import { TableField } from "./table-field";
 
 interface Props {
   field: any;
@@ -42,6 +43,16 @@ export function FieldRenderer({ field, value, onChange, disabled }: Props) {
           disabled={disabled}
         />
       );
+
+    case "table":
+  return (
+    <TableField
+      field={field}
+      value={value}
+      onChange={onChange}
+      disabled={disabled}
+    />
+  );
 
     default:
       return (

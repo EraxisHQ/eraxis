@@ -25,7 +25,8 @@ export interface FormField {
     | "date"
     | "checkbox"
     | "select"
-    | "textarea";
+    | "textarea"
+    | "table";
 
   required: boolean;
 
@@ -48,6 +49,8 @@ export interface FormField {
   }[];
 
   optionsProvider?: string;
+ 
+  tableColumns?: FormField[];
 
   visibleWhen?: {
     field: string;
