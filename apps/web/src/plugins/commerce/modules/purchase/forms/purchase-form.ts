@@ -24,6 +24,51 @@ export const PURCHASE_FORM: FormSchema = {
       optionsProvider: "suppliers",
     },
     {
+  id: "items",
+  label: "Purchase Items",
+  type: "table",
+  required: true,
+  tableColumns: [
+    {
+      id: "productId",
+      label: "Product",
+      type: "select",
+      required: true,
+      optionsProvider: "products",
+    },
+    {
+      id: "quantity",
+      label: "Quantity",
+      type: "number",
+      required: true,
+    },
+    {
+      id: "unitPrice",
+      label: "Unit Price",
+      type: "number",
+      required: true,
+    },
+    {
+      id: "discount",
+      label: "Discount",
+      type: "number",
+      required: false,
+    },
+    {
+      id: "tax",
+      label: "Tax",
+      type: "number",
+      required: false,
+    },
+    {
+      id: "total",
+      label: "Total",
+      type: "number",
+      required: false,
+    },
+  ],
+},
+    {
       id: "remarks",
       label: "Remarks",
       type: "textarea",

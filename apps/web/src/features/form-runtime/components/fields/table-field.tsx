@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 interface Props {
   field: any;
   value?: unknown;
@@ -5,20 +7,63 @@ interface Props {
   disabled?: boolean;
 }
 
-export function TableField({ field }: Props) {
-  return (
-    <div
-      style={{
-        border: "1px solid #d1d5db",
-        borderRadius: "8px",
-        padding: "12px",
-      }}
-    >
-      <strong>{field.label}</strong>
+export function TableField({
+  field,
+  value,
+  onChange,
+}: Props) {
+  const [rows, setRows] = useState<any[]>(
+    Array.isArray(value) ? value : [],
+  );
 
-      <div style={{ marginTop: "8px", color: "#6b7280" }}>
-        Table Field (Placeholder)
-      </div>
+  function update(nextRows: any[]) {
+    setRows(nextRows);
+    onChange?.(field.id, nextRows);
+  }
+
+  function addRow() {
+    const row: Record<string, unknown> = {};
+
+    field.tableColumns?.forEach((column: any) => {
+      row[column.id] = "";
+    });
+
+    update([...rows, row]);
+  }
+
+  function removeRow(index: number) {
+    update(rows.filter((_, i) => i !== index));
+  }
+
+  return (
+    <div>
+      <button
+        type="button"
+        onClick={addRow}
+      >
+        + Add Item
+      </button>
+
+      {rows.map((_, index) => (
+        <div
+          key={index}
+          style={{
+            border: "1px solid #ddd",
+            padding: "12px",
+            marginTop: "12px",
+          }}
+        >
+          Row {index + 1}
+
+          <button
+            type="button"
+            onClick={() => removeRow(index)}
+            style={{ marginLeft: "12px" }}
+          >
+            Remove
+          </button>
+        </div>
+      ))}
     </div>
   );
 }
