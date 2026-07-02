@@ -26,6 +26,14 @@ import {
   bootstrapBrand,
 } from "../modules/brand";
 
+import {
+  UNIT_MANIFEST,
+} from "../modules/unit";
+
+import {
+  bootstrapUnit,
+} from "../modules/unit";
+
 export const COMMERCE_REGISTRY: RuntimeModule[] = [ 
   {
     manifest: PRODUCT_CATALOG_MANIFEST,
@@ -38,6 +46,10 @@ export const COMMERCE_REGISTRY: RuntimeModule[] = [
   {
     manifest: BRAND_MANIFEST,
     bootstrap: bootstrapBrand,
+  },
+  {
+    manifest: UNIT_MANIFEST,
+    bootstrap: bootstrapUnit,
   }
 ];
 
