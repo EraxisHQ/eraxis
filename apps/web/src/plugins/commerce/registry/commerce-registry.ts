@@ -53,6 +53,14 @@ import {
   bootstrapPurchase,
 } from "../modules/purchase";
 
+import {
+  INVENTORY_MANIFEST,
+} from "../modules/inventory";
+
+import {
+  bootstrapInventory,
+} from "../modules/inventory";
+
 export const COMMERCE_REGISTRY: RuntimeModule[] = [ 
   {
     manifest: PRODUCT_CATALOG_MANIFEST,
@@ -81,6 +89,10 @@ export const COMMERCE_REGISTRY: RuntimeModule[] = [
 {
   manifest: PURCHASE_MANIFEST,
   bootstrap: bootstrapPurchase,
+},
+{
+  manifest: INVENTORY_MANIFEST,
+  bootstrap: bootstrapInventory,
 },
 ];
 
