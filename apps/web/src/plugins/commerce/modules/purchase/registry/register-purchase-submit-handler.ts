@@ -15,6 +15,10 @@ import {
   refreshPurchases,
 } from "../services/purchase-store";
 
+import {
+  increaseStock,
+} from "../../inventory/services/inventory-transaction-service";
+
 registerSubmitHandler(
   "purchase",
   async (values) => {
@@ -36,6 +40,21 @@ registerSubmitHandler(
     } else {
       await purchaseService.create(purchase);
     }
+
+if (
+  purchase.status === "Completed" &&
+  Array.isArray(values.items)
+) {
+  for (const item of values.items as Array<{
+    productId: string;
+    quantity: number;
+  }>) {
+    await increaseStock(
+      item.productId,
+      Number(item.quantity),
+    );
+  }
+}
 
     await refreshPurchases();
 

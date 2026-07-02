@@ -46,3 +46,27 @@ Requires:
 ## Next Milestone
 
 CM005 Inventory Management
+
+
+## Enhancement
+
+### Purchase → Inventory Integration
+
+Implemented automatic inventory updates when a purchase is completed.
+
+Workflow:
+
+Purchase
+↓
+
+Purchase Items
+↓
+
+Inventory Transaction Service
+↓
+
+Inventory Update
+
+Status
+
+✅ Completed
