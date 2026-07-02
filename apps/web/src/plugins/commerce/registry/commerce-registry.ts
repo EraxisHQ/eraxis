@@ -18,6 +18,14 @@ import {
   bootstrapCategory,
 } from "../modules/category";
 
+import {
+  BRAND_MANIFEST,
+} from "../modules/brand";
+
+import {
+  bootstrapBrand,
+} from "../modules/brand";
+
 export const COMMERCE_REGISTRY: RuntimeModule[] = [ 
   {
     manifest: PRODUCT_CATALOG_MANIFEST,
@@ -27,5 +35,9 @@ export const COMMERCE_REGISTRY: RuntimeModule[] = [
   manifest: CATEGORY_MANIFEST,
   bootstrap: bootstrapCategory,
 },
+  {
+    manifest: BRAND_MANIFEST,
+    bootstrap: bootstrapBrand,
+  }
 ];
 
