@@ -77,6 +77,12 @@ import {
   bootstrapInvoice,
 } from "../modules/invoice";
 
+
+import {
+  REPORTS_MANIFEST,
+  bootstrapReports,
+} from "../modules/reports";
+
 export const COMMERCE_REGISTRY: RuntimeModule[] = [ 
   {
     manifest: PRODUCT_CATALOG_MANIFEST,
@@ -117,6 +123,10 @@ export const COMMERCE_REGISTRY: RuntimeModule[] = [
 {
   manifest: INVOICE_MANIFEST,
   bootstrap: bootstrapInvoice,
-}
+},
+{
+  manifest: REPORTS_MANIFEST,
+  bootstrap: bootstrapReports,
+},
 ];
 
