@@ -1,36 +1,86 @@
 import { useState } from "react";
 
+import {
+  getEditingId,
+  getFormValues,
+  setEditingId,
+  setFormValues,
+  subscribeFormSession,
+} from "../services/form-session-service";
+
+import {
+  useEffect,
+} from "react";
+
 export function useForm() {
-  const [values, setValues] = useState<Record<string, unknown>>({});
+ const [values, setValues] =
+  useState(
+    getFormValues(),
+  );
 
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] =
+    useState<Record<string, string>>({});
 
-  function updateValue(fieldId: string, value: unknown) {
-    setValues((current) => ({
-      ...current,
-      [fieldId]: value,
-    }));
-  }
+ const [editingId, setEditingIdState] =
+  useState(
+    getEditingId(),
+  );
 
-  function removeValue(fieldId: string) {
-    setValues((current) => {
-      const next = { ...current };
+useEffect(() => {
+  return subscribeFormSession(
+    () => {
+      setValues(
+        getFormValues(),
+      );
 
-      delete next[fieldId];
+      setEditingIdState(
+        getEditingId(),
+      );
+    },
+  );
+}, []);
 
-      return next;
-    });
-  }
+function updateValue(
+  fieldId: string,
+  value: unknown,
+) {
+  const next = {
+    ...values,
+    [fieldId]: value,
+  };
+
+  setFormValues(next);
+}
+
+function removeValue(
+  fieldId: string,
+) {
+  const next = {
+    ...values,
+  };
+
+  delete next[fieldId];
+
+  setFormValues(next);
+}
+
+ function updateFormValues(
+  values: Record<string, unknown>,
+) {
+  setFormValues(
+    values,
+  );
+}
+
 
   return {
     values,
-
     errors,
-
+    editingId,
     setErrors,
-
     updateValue,
-
     removeValue,
+    setFormValues:updateFormValues,
+    setEditingId,
   };
 }

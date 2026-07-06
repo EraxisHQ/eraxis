@@ -99,8 +99,6 @@ import BrandingSettingsPage from "../../pages/settings/branding";
 
 import BillingSettingsPage from "../../pages/settings/billing";
 
-import BillingPage from "../../pages/settings/billing";
-
 import SubscriptionSettingsPage from "../../pages/settings/subscriptions";
 
 import LicenseSettingsPage from "../../pages/settings/licenses";
@@ -109,11 +107,13 @@ import WorkflowsPage from "../../pages/settings/workflows";
 
 import MetadataPage from "../../pages/settings/metadata";
 
+import { getRoutes } from "../../features/runtime/routes/route-registry";
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element=<LoginPage /> />
+        <Route path="/" element={<LoginPage />} />
         <Route
           path="/dashboard"
           element={
@@ -194,8 +194,7 @@ export default function AppRouter() {
 
         <Route path="/settings/billing" element={<BillingSettingsPage />} />
 
-        <Route path="/settings/billing" element={<BillingPage />} />
-        <Route
+                <Route
           path="/settings/subscriptions"
           element={<SubscriptionSettingsPage />}
         />
@@ -204,7 +203,15 @@ export default function AppRouter() {
         <Route path="/settings/workflows" element={<WorkflowsPage />} />
 
         <Route path="/settings/metadata" element={<MetadataPage />} />
-      </Routes>
+{getRoutes().map((route) => (
+  <Route
+    key={route.path}
+    path={route.path}
+    element={route.element}
+  />
+))}     
+
+ </Routes>
     </BrowserRouter>
   );
 }

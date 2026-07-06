@@ -72,8 +72,11 @@ import { WorkflowProvider } from "./features/workflows/providers/workflow-provid
 
 import { MetadataProvider } from "./features/metadata/providers/metadata-provider";
 
+import { bootstrapRuntime } from "./features/runtime/bootstrap/runtime-bootstrap";
+
 initializePersistence();
 initializeStorage();
+bootstrapRuntime();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
