@@ -83,6 +83,11 @@ import {
   bootstrapReports,
 } from "../modules/reports";
 
+import {
+  DASHBOARD_MANIFEST,
+  bootstrapDashboard,
+} from "../modules/dashboard";
+
 export const COMMERCE_REGISTRY: RuntimeModule[] = [ 
   {
     manifest: PRODUCT_CATALOG_MANIFEST,
@@ -128,5 +133,9 @@ export const COMMERCE_REGISTRY: RuntimeModule[] = [
   manifest: REPORTS_MANIFEST,
   bootstrap: bootstrapReports,
 },
+{
+  manifest: DASHBOARD_MANIFEST,
+  bootstrap: bootstrapDashboard,
+}
 ];
 
