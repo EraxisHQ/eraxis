@@ -88,6 +88,11 @@ import {
   bootstrapDashboard,
 } from "../modules/dashboard";
 
+import {
+  SETTINGS_MANIFEST,
+  bootstrapSettings,
+} from "../modules/settings";
+
 export const COMMERCE_REGISTRY: RuntimeModule[] = [ 
   {
     manifest: PRODUCT_CATALOG_MANIFEST,
@@ -136,6 +141,10 @@ export const COMMERCE_REGISTRY: RuntimeModule[] = [
 {
   manifest: DASHBOARD_MANIFEST,
   bootstrap: bootstrapDashboard,
-}
+},
+{
+  manifest: SETTINGS_MANIFEST,
+  bootstrap: bootstrapSettings,
+},
 ];
 
