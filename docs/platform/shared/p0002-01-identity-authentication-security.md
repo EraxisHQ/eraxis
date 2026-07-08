@@ -1,15 +1,31 @@
 # P0002-01 Identity, Authentication & Security
 
-Status: 🚧 In Progress
+## Status
 
-Branch:
+🚧 In Progress
+
+## Branch
+
 p0002-01-identity-authentication-security
 
-Purpose
+## Purpose
 
-Build the shared authentication and identity platform used by every Eraxis plugin.
+Build the production-ready shared Identity Platform for Eraxis.
 
-Scope
+This milestone must be reusable by:
+
+• Commerce
+• HRMS
+• Fleet
+• CRM
+• Manufacturing
+• Future Plugins
+
+No business logic is allowed in this milestone.
+
+---
+
+## Scope
 
 • Authentication
 • Authorization
@@ -26,29 +42,25 @@ Scope
 • Protected Routes
 • Runtime Integration
 
-Completion Criteria
+---
 
-• Production-ready
-• Fully reusable
-• No hardcoded business logic
-• Runtime integrated
-• Build passes
+## Rules
+
+• No hardcoded values
+• No mock data
+• Runtime compatible
+• Plugin compatible
+• Multi-tenant
+• Multi-branch
 • Type-safe
-• Documented
+• Build must remain green
 
-Dependencies
+---
 
-• P0001 Foundation
+## Completion Criteria
 
-Used By
-
-• Commerce
-• HRMS
-• Fleet
-• CRM
-• Manufacturing
-• Future Plugins
-
-Technical Debt
-
-None
+• Authentication complete
+• Dynamic RBAC complete
+• Platform Session complete
+• Runtime integrated
+• Production ready
