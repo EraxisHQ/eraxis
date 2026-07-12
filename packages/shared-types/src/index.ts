@@ -7,3 +7,5 @@ export * from "./user/user-entity";
 
 export * from "./api/api-response";
 export * from "./api/pagination";
+
+export * from "./session/platform-session";
