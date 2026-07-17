@@ -74,6 +74,7 @@ export interface PlatformSession {
   branch: PlatformBranch;
   authorization: PlatformAuthorization;
   features: PlatformFeatures;
+  licensing: PlatformLicensing;
   preferences: PlatformPreferences;
   session: PlatformSessionInfo;
 }
