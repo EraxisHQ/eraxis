@@ -1,3 +1,6 @@
+
+import { supabase } from "../lib/supabase";
+
 import {
   createContext,
   useContext,
@@ -17,10 +20,6 @@ import {
   getCurrentUser,
 } from "../features/auth/services/current-user.service";
 
-// import {
-//   can,
-//   hasRole,
-// } from "../features/auth";
 
 type AuthContextValue = {
   user: AuthUser | null;
@@ -51,23 +50,45 @@ export function AuthProvider({
     setLoading,
   ] = useState(true);
 
+  
+
   useEffect(() => {
+  async function loadUser() {
+    setLoading(true);
 
-    async function loadUser() {
+    const result = await getCurrentUser();
 
-      const result =
-        await getCurrentUser();
+    setUser(result);
+    setLoading(false);
+  }
 
+  loadUser();
 
+  const {
+    data: { subscription },
+  } = supabase.auth.onAuthStateChange(async (event) => {
+    switch (event) {
+      case "SIGNED_OUT":
+        setUser(null);
+        setLoading(false);
+        break;
 
-      setUser(result);
+      case "INITIAL_SESSION":
+      case "SIGNED_IN":
+      case "TOKEN_REFRESHED":
+      case "USER_UPDATED":
+        await loadUser();
+        break;
 
-      setLoading(false);
+      default:
+        break;
     }
+  });
 
-    loadUser();
-
-  }, []);
+  return () => {
+    subscription.unsubscribe();
+  };
+}, []);
 
   return (
     <AuthContext.Provider
