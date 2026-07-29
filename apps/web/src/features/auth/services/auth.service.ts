@@ -15,6 +15,21 @@ export const authService = {
     });
   },
 
+async resetPassword(email: string) {
+  return supabase.auth.resetPasswordForEmail(
+    email,
+    {
+      redirectTo: `${window.location.origin}/reset-password`,
+    }
+  );
+},
+
+async updatePassword(password: string) {
+  return supabase.auth.updateUser({
+    password,
+  });
+},
+
   async signOut() {
     return supabase.auth.signOut();
   },

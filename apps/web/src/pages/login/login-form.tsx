@@ -10,8 +10,10 @@ import { authService }
   from "../../features/auth";
 
 import {
+  Link,
   useNavigate,
 } from "react-router-dom";
+
 
 export function LoginForm() {
   const [email, setEmail] =
@@ -40,14 +42,6 @@ export function LoginForm() {
         email,
         password
       );
-
-
-
-    //     if (error) {
-    //   setError(error.message);
-    //   setLoading(false);
-    //   return;
-    // }
     if (error) {
       setError(error.message);
       setLoading(false);
@@ -57,8 +51,6 @@ export function LoginForm() {
     navigate(
       "/dashboard"
     );
-    // window.location.href =
-    //   "/dashboard";
   }
 
   return (
@@ -91,6 +83,12 @@ export function LoginForm() {
           ? "Signing In..."
           : "Login"}
       </button>
+
+<p>
+  <Link to="/forgot-password">
+    Forgot Password?
+  </Link>
+</p>
 
       {error && (
         <p>{error}</p>

@@ -14,6 +14,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import LoginPage from "../../pages/login";
+import ForgotPasswordPage from "../../pages/forgot-password";
+import ResetPasswordPage from "../../pages/reset-password";
 import DashboardPage from "../../pages/dashboard";
 import ApplicationsPage from "../../pages/applications";
 import AdministrationPage from "../../pages/administration";
@@ -112,16 +114,28 @@ import { getRoutes } from "../../features/runtime/routes/route-registry";
 export default function AppRouter() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route
-          path="/dashboard"
-          element={
-            <ProtectedRoute permission="dashboard:view">
-              <DashboardPage />
-            </ProtectedRoute>
-          }
-        />
+   <Routes>
+
+   <Route path="/" element={<LoginPage />} />
+
+   <Route
+    path="/forgot-password"
+    element={<ForgotPasswordPage />}
+    />
+
+<Route
+  path="/reset-password"
+  element={<ResetPasswordPage />}
+/>
+
+    <Route
+     path="/dashboard"
+     element={
+      <ProtectedRoute permission="dashboard:view">
+        <DashboardPage />
+      </ProtectedRoute>
+      }
+      />
         <Route path="/applications" element={<ApplicationsPage />} />
 
         <Route path="/administration" element={<AdministrationPage />} />
@@ -203,6 +217,12 @@ export default function AppRouter() {
         <Route path="/settings/workflows" element={<WorkflowsPage />} />
 
         <Route path="/settings/metadata" element={<MetadataPage />} />
+   
+<Route
+    path="/forgot-password"
+    element={<ForgotPasswordPage />}
+/>
+
 {getRoutes().map((route) => (
   <Route
     key={route.path}
